@@ -1,0 +1,21 @@
+%======================================================================
+%   "Mixed Finite Element Methods for Coupled 3D/1D Fluid Problems"
+%                     Politecnico di Milano
+%                         A.Y. 2016-2017
+%                 
+%               Copyright (C) 2017 Domenico Notaro - Simone Di Gregorio - Luca Possenti
+%======================================================================
+%	FILE        : RELEASE 1.0 PACS
+%  DESCRIPTION 	    : List of corrections from Notaro original version of code
+%	AUTHORS     : Simone Di Gregorio <simone.digre@gmail.com>
+%		      Luca Possenti <luca.possenti@polimi.it>
+%	DATE        : February 2017
+%======================================================================
+--> improvements from 1.0 version of code:
+
+-added oncotic term
+-added lymphatic
+		-LINEAR
+		-SIGMOID (solved with Fixed Point Method)
+
+
