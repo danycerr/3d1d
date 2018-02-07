@@ -77,9 +77,9 @@ NOISED_T   = '0';
 % Path to import the 3d mesh
 MESH_FILET = ' '; 
 % Path to import the 1d list of points
-MESH_FILEV = '/u/archive/dott/laurino/v2_0/src/6_singlebranch_transp/segment.pts'; 
+MESH_FILEV = './segment.pts'; 
 MESH_FILEV_TRANSP = './segment_wells.pts';
-RFILE= '/u/archive/dott/laurino/v2_0/src/6_singlebranch_transp/radius.pts';
+RFILE= './radius.pts';
 %===================================
 %  GETFEM DESCRIPTORS
 %===================================
