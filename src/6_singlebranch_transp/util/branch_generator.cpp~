@@ -71,8 +71,8 @@ int main (){
     std::vector<double> p2={0.7,0.33,0.1}; double pt2d=1.;
     branch b1(p1,p2,10, pt1d,pt2d);
 
-    std::vector<double> p3={0.65,0.33,0};double pt3d=0.77;
-    std::vector<double> p4={0.1,0.33,0.1};double pt4d=0.;
+    std::vector<double> p3={0.1,0.33,0};double pt3d=0.77;
+    std::vector<double> p4={0.65,0.33,0.1};double pt4d=0.;
     branch b2(p3,p4,10, pt3d,pt4d);
 
 std::vector<branch> branches;

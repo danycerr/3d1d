@@ -78,7 +78,7 @@ NOISED_T   = '0';
 MESH_FILET = ' '; 
 % Path to import the 1d list of points
 MESH_FILEV = './segment.pts'; 
-MESH_FILEV_TRANSP = './segment_wells.pts';
+MESH_FILEV_TRANSP = './util/seg.pts';
 RFILE= './radius.pts';
 %===================================
 %  GETFEM DESCRIPTORS

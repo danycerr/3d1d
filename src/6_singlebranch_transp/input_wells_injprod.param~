@@ -77,9 +77,9 @@ NOISED_T   = '0';
 % Path to import the 3d mesh
 MESH_FILET = ' '; 
 % Path to import the 1d list of points
-MESH_FILEV = '/u/archive/dott/laurino/v2_0/src/6_singlebranch_transp/segment.pts'; 
+MESH_FILEV = './segment.pts'; 
 MESH_FILEV_TRANSP = './segment_wells.pts';
-RFILE= '/u/archive/dott/laurino/v2_0/src/6_singlebranch_transp/radius.pts';
+RFILE= './radius.pts';
 %===================================
 %  GETFEM DESCRIPTORS
 %===================================
@@ -266,9 +266,9 @@ P0=0;
 
 % Faces:   x=0  x=L  y=0  y=L  z=0  z=L
 % BC labels (DIR / MIX)
-BClabel_transp = 'MIX MIX MIX MIX  DIR MIX '
+BClabel_transp = 'MIX MIX MIX MIX MIX MIX'
 % BC values
-BCvalue_transp = '0.0 0.0  0.00  0.0  0.5 0.0';
+BCvalue_transp = '0.0 0.0  0.00  0.0  0.0  0.0';
 % Coefficient for MIX condition in tissue
 %BETAtissue_transp = 1.0;
 BETAtissue_transp = 1.0E-14;
