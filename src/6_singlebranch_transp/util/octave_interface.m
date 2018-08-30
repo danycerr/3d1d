@@ -1,12 +1,12 @@
 clear all
 close all
-fid = fopen ('../level4.frm');
+fid = fopen ('../level2.frm');
 txt = fgetl (fid);
 dimensions = fscanf(fid, '%d');
 nnu=dimensions(1)
 nna=dimensions(2)
 fclose (fid);
-fid = fopen ('../level4.amg');
+fid = fopen ('../level2.amg');
 ia = fscanf(fid, '%d',nna+1);
 ja = fscanf(fid, '%d',nnu);
 a = fscanf(fid, '%f',nnu);
