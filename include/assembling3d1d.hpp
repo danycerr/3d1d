@@ -97,6 +97,7 @@ asm_exchange_aux_mat
 				sum_row += (*it_nz);
 			}
 		}
+		gmm::cout<<"=====dof_v"<<i<<"========sum_row"<<sum_row <<gmm::endl;
 		typename gmm::linalg_traits<MAT>::sub_row_type 
 			row = mat_row(Mbar,i);
 		gmm::linalg_traits< gmm::rsvector<scalar_type> >::iterator

@@ -19,12 +19,12 @@
 #include <assembling1d_transp_nano.hpp>
 
 //SAMG
-#define CSC_INTERFACE 
+//#define CSC_INTERFACE 
 //#define SPARSE_INTERFACE
 //#define CSR_INTERFACE 
 // ------------------------------------
-#define DIRECT_SOLVER 
-//#define AMG_STAND_ALONE
+// #define DIRECT_SOLVER 
+ //#define AMG_STAND_ALONE
 //#define AMG_ACCELERATED
 
 
@@ -729,7 +729,7 @@ transport3d1d::assembly_mat(void)
 			x[k]=(k+1)*(1.0/(dof_transp.Cv()));
 			Source_coef[k]=1.0-x[k];
 
-		}
+			}
 		gmm::clear(x);	
 
 		vector_type TTmp(dof_transp.Ct());
@@ -972,6 +972,10 @@ bool transport3d1d::solve (void)
 				scalar_type cond;
 				gmm::SuperLU_solve(A_transp, UM_transp, F_transp, cond);
 				cout << "  Condition number (transport problem): " << cond << endl;
+				gmm::MatrixMarket_IO::write("A_3d1d.mm",A_transp);
+				gmm::MatrixMarket_IO::write("A_3d.mm",gmm::sub_matrix(A_transp, 
+							gmm::sub_interval(0, dof_transp.Ct()),
+							gmm::sub_interval(0, dof_transp.Ct())));
 			}
 			else{
 #ifdef M3D1D_VERBOSE_
@@ -984,7 +988,9 @@ bool transport3d1d::solve (void)
 						gmm::sub_vector(UM_transp, gmm::sub_interval(0, dof_transp.Ct())),
 						gmm::sub_vector(F_transp, gmm::sub_interval(0, dof_transp.Ct())),
 						cond);
-
+				gmm::MatrixMarket_IO::write("A_3d.mm",gmm::sub_matrix(A_transp, 
+							gmm::sub_interval(0, dof_transp.Ct()),
+							gmm::sub_interval(0, dof_transp.Ct())));
 				//costruisco il vettore dei coefficienti della sorgente	perchè non lo voglio costante da input
 				vector_type x(dof_transp.Cv());
 				vector_type Source_coef(dof_transp.Cv());
@@ -1645,10 +1651,10 @@ gmm::copy(AM_temp, A_csr);
 				// 7  Write matrices to disk: level 2 up to the coarsest level. 
 				// 8  Write finest‐level matrix to disk (incl. right hand side etc.). 
 				// 9  Write all matrices to disk. 
-				APPL_INT idump     = 1;       // minimum output during setup
+				APPL_INT idump     = 9;       // minimum output during setup
 				//============================================
 				// iout page 44 Userguide. it controls display outpu. default 2 very verbose 43
-				APPL_INT iout      = 2;        // display residuals per iteration and work statistics
+				APPL_INT iout      = 43;        // display residuals per iteration and work statistics
 
 
 

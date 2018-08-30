@@ -20,7 +20,7 @@ TEST_PARAM = 1; %=0 li importa dimensionali, =1 adimensionali
 TEST_RHS   = 0;
 % Flag to export radius and conductivity of network in vtk file
 EXPORT_PARAM = 0; 
-% Flag to export results
+% Flag to export resultsCou
 VTK_EXPORT = 1;
 % Flag to import the dimensionless radius (to do that TEST_PARAM must be equal to 0 and parameters P U d k mu must be left)
 IMPORT_RADIUS   = 0;
@@ -48,7 +48,7 @@ LINEAR_LYMPHATIC_DRAINAGE = 1;
 %Flag to add adhesive term in vessel
 NANO=0;
 %Flag to have coupling of the problem
-COUPLING=1;	%=1 coupling
+COUPLING=0;	%=1 coupling
 %Flag to have fixed source
 FIXED_SOURCE=1;	%=0 no fixed source
 %Flag to have non null rhs
@@ -69,18 +69,21 @@ OutputDirectory = './vtk/';
 TEST_GEOMETRY = 1;
 GT_T       = 'GT_PK(3,1)'; 
 %NSUBDIV_T  = '[12,11,11]';  
-NSUBDIV_T = '[11,11,11]';
-ORG_T      = '[-0.1,0,0]'; 
+NSUBDIV_T = '[120,120,120]';
+ORG_T      = '[0,0,0]'; 
 %SIZES_T    = '[1,1,1]';
-%SIZES_T    = '[1,0.66,0.1]';   
-SIZES_T    = '[1.2,1,1]';
+SIZES_T    = '[1,1,1]';  
+ORG_T      = '[0,0,0]';
+%SIZES_T    = '[7.4,5,4]'; 
 NOISED_T   = '0';
 % Path to import the 3d mesh
 MESH_FILET = ' '; 
 % Path to import the 1d list of points
+%MESH_FILEV = './rattm93b_norm50.pts'; 
+%MESH_FILEV_TRANSP = './rattm93b_norm50.pts';
 MESH_FILEV = './segment.pts'; 
-MESH_FILEV_TRANSP = '../7_Ybifurcation_transp/bifurcation_transp.pts';
-RFILE= './radius.pts';
+MESH_FILEV_TRANSP = './segment_transp.pts'; 
+RFILE= '/u/archive/dott/laurino/v2_0/src/6_singlebranch_transp/radius.pts';
 %===================================
 %  GETFEM DESCRIPTORS
 %===================================
@@ -92,12 +95,12 @@ MESH_TYPEV  = 'GT_PK(1,1)';
 FEM_TYPET   = 'FEM_RT0(3)';
 FEM_TYPET_P = 'FEM_PK_DISCONTINUOUS(3,0)';
 FEM_TYPET_DATA = 'FEM_PK(3,0)';
-FEM_TYPET_C = 'FEM_PK(3,1)';
+FEM_TYPET_C = 'FEM_PK(3,2)';
 % GetFem type for the 1D Finite Element Methods
 FEM_TYPEV   = 'FEM_PK(1,2)';  
 FEM_TYPEV_P = 'FEM_PK(1,1)';  
 FEM_TYPEV_DATA = 'FEM_PK(1,0)';  
-FEM_TYPEV_C = 'FEM_PK(1,1)';  
+FEM_TYPEV_C = 'FEM_PK(1,2)';  
 % GetFem type for the 3D Integration Method
 IM_TYPET    = 'IM_TETRAHEDRON(6)'; 
 % GetFem type for the 1D Integration Method
@@ -128,15 +131,15 @@ Kv = 2.6759;
 %Kv = 39.3;	%prova fluidod ok
 % Dimensionless average radius of the capillary vessels []
 %RADIUS = 1.0;
-RADIUS =0.1;	%prova fluidod ok
+RADIUS =0.01;	%prova fluidod ok
 %Dimensionless At[]
 At=1.0;	
 %Dimensionless Av[]
-Av=1.0E3;
+Av=1.0;
 %Dimensionless Dalpha[]
 D_alpha=1.585E-2;
 %Dimensionless Y[]
-Y=10000.0;
+Y=1.0;
 %Dimensionless Qpl[]
 Q_pl=2.109E-5;
 % Dimensionless conductivity of lymphatic wall
@@ -167,7 +170,7 @@ k  = 1.0E-18;
 Lp = 1E-12; 
 % Average radius of the capillary vessels [m]
 %RADIUS = 30E-6;
-%RADIUS =0.1;
+RADIUS =0.01;
 % Blood Viscosity [kg/m/s]
 mu_v = 4E-3;
 % Interstial Fluid Viscosity [kg/m/s]
@@ -191,7 +194,7 @@ sigma = 0.9;
 Perm = 1.0;
 %Perm = 0.0;
 %Coefficient for fixed source
-Source_coef=0.0E2;
+Source_coef=1;
 %=================================
 %  NANO
 %=================================
