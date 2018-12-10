@@ -1,0 +1,258 @@
+%======================================================================
+%   "Mixed Finite Element Methods for Coupled 3D/1D Fluid Problems"
+%       Course on Advanced Programming for Scientific Computing
+%                     Politecnico di Milano
+%                         A.Y. 2014-2015
+%                 
+%               Copyright (C) 2015 Domenico Notaro
+%======================================================================
+%	FILE        : input.param
+%  DESCRIPTION : List of parameters for the uncoupled benchmark
+%	AUTHOR      : Domenico Notaro <domenico.not@gmail.com>
+%	DATE        : October 2015
+%======================================================================
+
+%  FLAGS
+%===================================
+% Flag to import dimensionless param
+TEST_PARAM = 0;
+% Flag to select a specific rhs
+TEST_RHS   = 0;
+% Flag to export radius and conductivity of network in vtk file
+EXPORT_PARAM = 0; 
+% Flag to export results
+VTK_EXPORT = 1;
+% Flag to import the dimensionless radius (to do that TEST_PARAM must be equal to 0 and parameters P U d k mu must be left)
+IMPORT_RADIUS   = 0;
+%Flag to add diffusion terms
+DIFFUSION_T=1;
+DIFFUSION_V=1;
+%Flag to add advection terms
+ADVECTION_T=1;
+ADVECTION_V=1;
+%Flag to add reaction terms
+REACTION=0;
+%Flag to take the stationary problem
+STATIONARY=0;
+%Flag to add adhesive term in vessel
+NANO=0;
+%Flag for the new formulation
+NEW_FORMULATION = 1;
+% Flag to export the absolute value of vessel fluid velocity
+ABS_VEL         = 1;
+% Flag to export the real value of vessel fluid velocity (taken only if ABS_VEL = 1, otherwise it is equal to 1)
+EXPORT_REAL_VELOCITY  = 1;
+% Flag to print residuals of Fixed Point Method
+PRINT_RESIDUALS       = 1;
+% Flag to choose Lymphatic Drainage Curve (0 = sigmoid; 1= linear)
+LINEAR_LYMPHATIC_DRAINAGE = 1;
+% Output directory
+OUTPUT   = '/u/laurino/Desktop/Release2_0_and_nano/src/6_singlebranch_transp/vtk/';
+% Output directory where parameters EXPORT_PARAM=1 are saved 
+OutputDir       = '/u/laurino/Desktop/Release2_0_and_nano/src/6_singlebranch_transp/vtk/';
+OutputDirectory = '/u/laurino/Desktop/Release2_0_and_nano/src/6_singlebranch_transp/vtk/';
+%===================================
+%  MESH
+%===================================
+% Flags to build a regular 3d mesh
+TEST_GEOMETRY = 1;
+GT_T       = 'GT_PK(3,1)'; 
+NSUBDIV_T  = '[11,11,11]';  
+ORG_T      = '[0,0,0]'; 
+SIZES_T    = '[1,1,1]';  
+NOISED_T   = '0';
+% Path to import the 3d mesh
+MESH_FILET = ' '; 
+% Path to import the 1d list of points
+MESH_FILEV = '/u/laurino/Desktop/Release2_0_and_nano/src/6_singlebranch_transp/segment.pts'; 
+MESH_FILEV_TRANSP = '/u/laurino/Desktop/Release2_0_and_nano/src/6_singlebranch_transp/segment_transp.pts';
+RFILE= '/u/laurino/Desktop/Release2.0/src/6_singlebranch_transp/radius.pts';
+%===================================
+%  GETFEM DESCRIPTORS
+%===================================
+% GetFem type for the 3D mesh
+MESH_TYPET  = 'GT_PK(3,1)';   
+% GetFem type for the 1D mesh
+MESH_TYPEV  = 'GT_PK(1,1)';        
+% GetFem type for the 3D Finite Element Methods
+FEM_TYPET   = 'FEM_RT0(3)';
+FEM_TYPET_P = 'FEM_PK_DISCONTINUOUS(3,0)';
+FEM_TYPET_DATA = 'FEM_PK(3,0)';
+FEM_TYPET_C = 'FEM_PK(3,1)';
+% GetFem type for the 1D Finite Element Methods
+FEM_TYPEV   = 'FEM_PK(1,2)';  
+FEM_TYPEV_P = 'FEM_PK(1,1)';  
+FEM_TYPEV_DATA = 'FEM_PK(1,0)';  
+FEM_TYPEV_C = 'FEM_PK(1,1)';  
+% GetFem type for the 3D Integration Method
+IM_TYPET    = 'IM_TETRAHEDRON(6)'; 
+% GetFem type for the 1D Integration Method
+IM_TYPEV    = 'IM_GAUSS1D(6)'; 
+% GetFem type for the 1D Integration Method
+IM_TYPEV_TRANSP    = 'IM_GAUSS1D(6)'; 
+% Solver for the monolithic 3D/1D linear system
+% direct:    'SuperLU'
+% iterative: 'CG','BiCGstab','GMRES','QMR','LSCG'
+SOLVE_METHOD = 'SuperLU';
+% Maximum number of iterations for iterative solvers
+MAXITER  = 100;
+% Residu for conjugate gradient
+RESIDUAL = 1E-16;    
+% Nb of discretisation point for 3D-1D interpolation
+NInt = 50;
+%===================================
+%  MODEL PARAMETERS
+%===================================
+% Dimensionless conductivity of the tissue
+%Kt = 2E-5;
+%Kt = 4.0;	%prova fluidod ok
+% Dimensionless conductivity of the capillary wall
+%Q  = 9.6007E-7;
+%Q  = 6.28;	%prova fluidod ok
+% Dimensionless conductivity of the capillary bed
+%Kv = 2.6759;
+%Kv = 39.3;	%prova fluidod ok
+% Dimensionless average radius of the capillary vessels []
+%RADIUS = 1.0;
+%RADIUS = 1.0E-2;	%prova fluidod ok
+%Dimensionless At[]
+%At=3.74E-2;	
+%Dimensionless Av[]
+%Av=13.852;
+%Dimensionless Dalpha[]
+%D_alpha=1.585E-2;
+%Dimensionless Y[]
+%Y=0.0;
+%Dimensionless Qpl[]
+%Q_pl=2.109E-5;
+% Dimensionless conductivity of lymphatic wall
+%Q_LF = 5.2088E-5;
+%Q_LF = 0.0;
+% Coefficient of lymphatic flow modelled as a SIGMOID of equation QLF = A - B / ( 1 + exp ( ( Pt + D ) / C )
+% Dimensionless Parameter A
+%QLF_A = 1.7170E-5;
+% Dimensionless Parameter B
+%QLF_B = 1.6485E-5;
+% Dimensionless Parameter C
+%QLF_C = 0.6573;
+% Dimensionless Parameter D
+%QLF_D = -2;
+
+
+% hydraulic conductivity of the interstitium [m^2]
+%k  = 1.0E-18;
+k  = 1.0E-18;
+% hydraulic conductivity of the capillary walls [m^2 s/kg]
+Lp = 1.0E-12;
+% average interstitial pressure [Pa]-> characteristic pressure for fluid dynamical problem
+P  = 133.32;
+% Typical pressure drop vessel [Pa] -> characteristic pressure for transport problem
+dP  = 40.56;
+% characteristic flow speed in the capillary bed [m/s]
+U  = 100E-06;
+% characteristic length of the problem [m]
+d  = 50E-06;
+% average radius of the capillary vessels []
+RADIUS = 7.64E-6;
+% Viscosity of the blood [kg/ms]
+mu_v = 4E-3; 	
+% Viscosity of the interstitial fluid [kg/ms]
+mu_t = 1E-3; 
+%Density of the fluid (blood) [kg/m^3] 
+rho = 1000; 
+%Diffusivity in the tissue [m^2/s]  
+Dt = 1.87E-10;
+%Diffusivity in the vessels [m^2/s] 
+Dv = 6.926E-8;
+%rate of metabolization [1/s]
+m =0.0317 ; %in realtà no, è una funzione di ct, non è costante
+%Permeability of the vessel wall [m/s]
+Perm = 0.0;
+% surface area of lymphatic vessels per unit volume of tissue [1/m]
+SV = 1;
+% Oncotic plasma pressure [-] (mmHg)
+Pi_v = 0;
+% Oncotic Interstitial pressure [-] (mmHg)
+Pi_t = 0;
+% Reflection Coefficient of Starling Equation [-]
+sigma = 0.9;
+%=================================
+%  NANO
+%=================================
+
+% ligand surface density  on the particle[1 / m^2]
+m_l=3.82E16;
+% receptor surface density on the capillary wall [1 / m^2]
+m_r=7.64E16;
+% affinity constant ligand-receptor [m^2]
+Ka=2.3E-7;
+% max distance for a ligand-receptor bond [m]
+h_0=3.0E-9;
+% chord at h_0 [m]
+r_0=5.47E-8;
+% beta_nano= 6 F lambda /k_B T  [s^2 /Kg m] -> F=1.668; lambda=3.0E-9 m; K_BT= 4.142E-21 J
+beta_nano=7.249E12;
+
+%diameter of the nanoparticle [m]
+dp=2.0E-8;
+%=================================
+%  LYMPHATIC FLOW
+%=================================
+% LINEAR case
+%hydraulic conductivity of the lymphatic wall [kg * m/s]     --> Lp_LF * S/V = 0.5 mmHg^-1 * h^-1  = 1.042E-06 *Pa^-1 * s^-1
+%Lp_LF = 1.04E-06;
+Lp_LF = 0.0;
+% Pressure inside lymphatic capillaries [-]
+PL=0;
+% Coefficient of lymphatic flow modelled as a SIGMOID of equation QLF = A - B / ( 1 + exp ( ( Pt + D ) / C )
+% Coefficient A [s-1]
+A_LF = 1.7170E-5;
+% Coefficient B [s-1]
+B_LF = 1.6485E-5;
+% Coefficient C [Pa]
+C_LF = 0.6573*133.32;
+% Coefficient D [Pa]
+D_LF = -2*133.32;
+
+%===================================
+%  TIME
+%===================================
+% simulation time length [s]
+T = 10;
+% time step [s]
+dt = 0.2;
+%===================================
+%  BOUNDARY CONDITIONS
+%===================================
+% Faces:   x=0  x=L  y=0  y=L  z=0  z=L
+% BC labels (DIR / MIX)
+BClabel = 'MIX  MIX  MIX  MIX  MIX  MIX'
+% BC values
+BCvalue = '0.0  0.0  0.00  0.0  0.0  0.0'
+% Coefficient for MIX condition
+BETA = 1.91E-14
+%BETA=1.0
+P0=0;
+
+% Faces:   x=0  x=L  y=0  y=L  z=0  z=L
+% BC labels (DIR / MIX)
+BClabel_transp = 'MIX MIX MIX MIX MIX MIX '
+% BC values
+BCvalue_transp = '0.0 0.0  0.00  0.0  0.0  0.0';
+% Coefficient for MIX condition in tissue
+BETAtissue_transp = 1.0E-5;
+% Coefficient for MIX condition in vessels
+BETAvessel_transp = 1.0E-12; 
+%===================================
+%  FIXED POINT METHOD (FPM)
+%===================================
+% Residual for Solution of FPM
+Residual_Sol_FPM   = 1E-12;
+% Residual for Conservation of Mass FPM
+Residual_Mass_FPM  = 1E-10;
+% Maximum number of iterations for FPM
+Number_Iteration   = 15;
+% Under-relaxation coefficient
+UNDER_RELAXATION_COEFFICIENT  = 1;
+% Number of iteration between saving progress
+Saving_Iteration   = 1;
