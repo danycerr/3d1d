@@ -1,0 +1,862 @@
+mesht description: GT='GT_PK(3,1)'; NSUBDIV=[40,40,40]; ORG=[0,0,0]; SIZES=[1,1,1]; NOISED=0
+initialize transport problem...
+
+init part 1: import data!......
+Importing descriptors for tissue and vessel problems ...
+---- TRANSPORT PROBLEM DESCRIPTORS--------------------------
+ FEM TYPE  3D concentration     : FEM_PK(3,1)
+ FEM TYPE  1D concentration     : FEM_PK(1,2)
+--------------------------------------------------
+Building the regular 3D mesh for the tissue ...  
+mesht description: GT='GT_PK(3,1)'; NSUBDIV=[40,40,40]; ORG=[0,0,0]; SIZES=[1,1,1]; NOISED=0
+Importing the 1D mesh for the vessel (transport problem)... 
+init part 2: set fem methods!......
+Setting FEMs for tissue and vessel problems ...
+Setting IMs and FEMs for tissue ...
+Setting IMs and FEMs for vessel branches ...
+Setting FEM dimensions for tissue and vessel problems ...
+--- DEGREES OF FREEDOM --- 
+  nb_dof_Ct     : 68921
+  nb_dof_Cv     : 41
+  nb_dof_tot    : 68962
+-------------------------- 
+init part 3: build dimensionless parameters!
+Building parameters for tissue and vessel problems ...
+  Assembling dimensionless parameters Dt, Dv, Dalpha, Q_pl ... 
+--- PHYSICAL PARAMS ------
+  At     : 1.000000e+00
+  Av : 1.000000e+00
+  Y      : 1.000000e+00
+  Q_pl : 2.109000e-05
+  D_alpha : 1.585000e-02
+  T : 1.000000e+01
+  dt : 2.000000e-01
+--------------------------
+--- PHYSICAL PARAMS ------
+  At     : 1.000000e+00
+  Av : 1.000000e+00
+  Y      : 1.000000e+00
+  Q_pl : 2.109000e-05
+  D_alpha : 1.585000e-02
+  T : 1.000000e+01
+  dt : 2.000000e-01
+--------------------------
+Building vessel boundary ...
+--- NETWORK ASSEMBLY ------------------ 
+  Branches:   1
+  Vertices:   21
+  Extrema:    [0 20]
+    -  label=DIR, value=1.000000e+00, ind=0, rg=1, branches=vector(1) [ 0 ]
+    -  label=DIR, value=0.000000e+00, ind=20, rg=2, branches=vector(1) [ 0 ]
+  Junctions: []
+---------------------------------------- 
+Building tissue boundary ...
+  face 0 : ('MIX',0.000000e+00,0,0)
+  face 1 : ('MIX',0.000000e+00,0,1)
+  face 2 : ('MIX',0.000000e+00,0,2)
+  face 3 : ('MIX',0.000000e+00,0,3)
+  face 4 : ('MIX',0.000000e+00,0,4)
+  face 5 : ('MIX',0.000000e+00,0,5)
+('MIX',0.000000e+00,0,0)
+('MIX',0.000000e+00,0,1)
+('MIX',0.000000e+00,0,2)
+('MIX',0.000000e+00,0,3)
+('MIX',0.000000e+00,0,4)
+('MIX',0.000000e+00,0,5)
+assemble transport problem
+Allocating AM, UM, FM ...
+Assembling the monolithic matrix AM ...
+  Assembling  Dt ...
+  Assembling  Dv ...
+  Assembling aux exchange matrices Mbar and Mlin ...
+*=====dof_v0========sum_row5.000000e+01
+*=====dof_v1========sum_row5.000000e+01
+*=====dof_v2========sum_row5.000000e+01
+*=====dof_v3========sum_row5.000000e+01
+*=====dof_v4========sum_row5.000000e+01
+*=====dof_v5========sum_row5.000000e+01
+*=====dof_v6========sum_row5.000000e+01
+*=====dof_v7========sum_row5.000000e+01
+*=====dof_v8========sum_row5.000000e+01
+*=====dof_v9========sum_row5.000000e+01
+*=====dof_v10========sum_row5.000000e+01
+*=====dof_v11========sum_row5.000000e+01
+*=====dof_v12========sum_row5.000000e+01
+*=====dof_v13========sum_row5.000000e+01
+*=====dof_v14========sum_row5.000000e+01
+*=====dof_v15========sum_row5.000000e+01
+*=====dof_v16========sum_row5.000000e+01
+*=====dof_v17========sum_row5.000000e+01
+*=====dof_v18========sum_row5.000000e+01
+*=====dof_v19========sum_row5.000000e+01
+*=====dof_v20========sum_row5.000000e+01
+*=====dof_v21========sum_row5.000000e+01
+*=====dof_v22========sum_row5.000000e+01
+*=====dof_v23========sum_row5.000000e+01
+*=====dof_v24========sum_row5.000000e+01
+*=====dof_v25========sum_row5.000000e+01
+*=====dof_v26========sum_row5.000000e+01
+*=====dof_v27========sum_row5.000000e+01
+*=====dof_v28========sum_row5.000000e+01
+*=====dof_v29========sum_row5.000000e+01
+*=====dof_v30========sum_row5.000000e+01
+*=====dof_v31========sum_row5.000000e+01
+*=====dof_v32========sum_row5.000000e+01
+*=====dof_v33========sum_row5.000000e+01
+*=====dof_v34========sum_row5.000000e+01
+*=====dof_v35========sum_row5.000000e+01
+*=====dof_v36========sum_row5.000000e+01
+*=====dof_v37========sum_row5.000000e+01
+*=====dof_v38========sum_row5.000000e+01
+*=====dof_v39========sum_row5.000000e+01
+*=====dof_v40========sum_row5.000000e+01
+
+  Assembling exchange matrices ...
+*=====dof_v0========sum_row5.000000e+01
+*=====dof_v1========sum_row5.000000e+01
+*=====dof_v2========sum_row5.000000e+01
+*=====dof_v3========sum_row5.000000e+01
+*=====dof_v4========sum_row5.000000e+01
+*=====dof_v5========sum_row5.000000e+01
+*=====dof_v6========sum_row5.000000e+01
+*=====dof_v7========sum_row5.000000e+01
+*=====dof_v8========sum_row5.000000e+01
+*=====dof_v9========sum_row5.000000e+01
+*=====dof_v10========sum_row5.000000e+01
+*=====dof_v11========sum_row5.000000e+01
+*=====dof_v12========sum_row5.000000e+01
+*=====dof_v13========sum_row5.000000e+01
+*=====dof_v14========sum_row5.000000e+01
+*=====dof_v15========sum_row5.000000e+01
+*=====dof_v16========sum_row5.000000e+01
+*=====dof_v17========sum_row5.000000e+01
+*=====dof_v18========sum_row5.000000e+01
+*=====dof_v19========sum_row5.000000e+01
+*=====dof_v20========sum_row5.000000e+01
+
+    Assembling Bvv ...
+    Assembling Bvt ...
+    Assembling Btv (alternative form) ...
+    Assembling Btt (alternative form) ...
+solve transport problem
+
+Solving the monolithic system ... 
+iteration number:1.000000e+00
+time = 0.000000e+00 s
+Assembling the monolithic rhs FM ... 
+  Initializing RHS for FM ...
+  Building tissue boundary term ...
+assemble BC for tissue
+*** parameters SAMG matrix   68921 parameters gmm matrix 68962
+*** parameters SAMG matrix   68921 parameters gmm matrix 68962
+start solving with samg 
+ >>> MESSG: Current number of threads=  2
+ =============================================================================
+ chktol      =-0.100D+01    idump    =           -1    iout        =        43
+ a_cmplx     =    2.2000    g_cmplx  =       1.7000    w_avrge     =    2.4000
+ p_cmplx     =    0.0000
+ -----------------------------------------------------------------------------
+ matrix      =        22    nnu      =        68921    nna         =    476681
+ nsys        =         1    npnts    =            0
+ -----------------------------------------------------------------------------
+ nsolve      =         2    iswtch   =      5120000    ifirst      =         1
+ ncyc        =     10050    eps      =    0.100D-05    iter_pre    =         0
+ -----------------------------------------------------------------------------
+ levelx      =        25    nptmn    =          100
+ nrd         =       131    nrc      =           11    nru         =       131
+ ncg         =         4    nwt      =            2    ntr         =         1
+ ecg         =   21.2500    ewt      =       0.2000    etr         =   12.2000
+ =============================================================================
+ 
+ Parallelization: OPENMP
+ =======================
+ icolor_omp      =        2    irestriction    =       2
+ iordered_omp    =        0
+ 
+ Special parameters:
+ ===================
+ opt_matrix_ops  =        1    cldense_ctrl    =       1
+ eps_abs         = 0.00E+00    ncyc_min        =       0
+ nint_rowsum1    =        0    nstar_typ       =       2
+ prim_norm       =        0    ntr_prim        =       0
+ neg_diag        =       20    neg_diag_brute  =      20
+ nptmax          =     1500    maxop_restart   =       2
+ clsolver_finest =        0    iauto_stop      =      11
+ ndyn_smo        =        0    nkcycle         =       0
+ nkdim_default   =       30    nxtyp_coarse    =      -1
+ eps_dd          = 0.90E+00    nrc_emergency   =       3
+ eps_diag        = 0.10E-04    ntake_res_in    =       1
+ factor_quasi_res= 0.15E+01    nth_res_scratch =       0
+ -----------------------------------------------------------------------------
+ -----------------------------------------------------------------------------
+ 
+ Running SAMG, Release 27a1 (10 Jan 2013), .....
+ 
+ 
+ List of all internal SAMG variables
+ ===================================
+ 
+ a_cmplx_agg_default:        0.1200D+01
+ a_cmplx_default:            0.2500D+01
+ allow_filnam_in:                     F
+ allow_private_in:                    F
+ allow_elim:                          1
+ alluns_at_allpnts:                   F
+ b_cmplx:                    0.2000D+01
+ b_cmplx_agg_default:        0.1200D+01
+ b_cmplx_default:            0.2000D+01
+ backup:                              T
+ blk_fillexp:                0.5000D+00
+ blk_stab:                   0.2500D+00
+ block_scale:                         0
+ block_scale2:                        0
+ bnd_partition_file:         bnd_partition
+ check_allpnts:                       T
+ check_order:                         F
+ cl_cpl:                              4
+ cl_order:                            2
+ cl_level_dep:                        0
+ cl_auto_size:                        0
+ cl_proc_border:                      0
+ cl_quality_measure:         0.1000D+02
+ cl_global_quality:         -0.1000D+01
+ cl_omp:                              1
+ cl_cmk_reorder:                      F
+ clsolver_finest:                     0
+ cldense_ctrl:                        1
+ cntrl_enforce:                       1
+ cntrl_logfile:                       F
+ cntrl_method:                        2
+ cntrl_release:                       F
+ cntrl_res_diff:                      2
+ cntrl_retry_iter:                   10
+ cntrl_steady:                        0
+ conv_stop:                  0.1000D-01
+ cset_lastpnt:                        0
+ cset_lessvars:                       0
+ cset_longrow:                        0
+ cset_read:
+ cset_zerodiag:                       0
+ cset_unknown:                        0
+ cset_unknown1:                       0
+ cset_unknown2:                       0
+ delta_milu:                 0.1000D+01
+ densx:                      0.2000D+00
+ divergence:                 0.1100D+01
+ droptol:                    0.5000D-02
+ droptol_cl:                 0.5000D-02
+ droptol_2nd:                0.5000D-02
+ droptol_smo:                0.5000D-02
+ dump_correctw:                       0
+ ecg:                       -0.2000D+51
+ ecg_default:                0.2125D+02
+ eps_abs:                    0.0000D+00
+ eps_accept_jac_uzawa:       0.1000D+00
+ eps_converg_jac_uzawa:      0.1000D-01
+ eps_dd:                     0.9000D+00
+ eps_diverg_jac_uzawa:       0.1000D+05
+ eps_diag:                   0.1000D-04
+ eps_lsq:                    0.5000D-02
+ etr:                       -0.2000D+51
+ etr_default:                0.1220D+02
+ etr2_smo:                   0.7500D-01
+ ewt:                       -0.2000D+51
+ ewt_default:                0.2000D+00
+ factor_app_var:             0.1000D-09
+ factor_quasi_res:           0.1500D+01
+ factor_res_var:             0.1010D+01
+ factor_matrix_scale:        0.1100D+01
+ factor_sol_jac_uzawa:       0.8000D+00
+ filnam:                     temp
+ filnam_dump:                level
+ filnam_uzawa:               mod_j.in
+ force_accel:                         F
+ force_accel_2nd:                     T
+ full_pivoting:                       F
+ full_setup:                 0.0000D+00
+ g_cmplx_agg_default:        0.1200D+01
+ g_cmplx_default:            0.1800D+01
+ galerkin_timer:                      F
+ glk_mult_zeros:                      F
+ gmax_multipass:             0.7500D+00
+ iall_smo:                            1
+ iauto_stop:                         11
+ iestim_spect_radius:                 0
+ iestim_smooth_nit:                   5
+ ismoagg_aggressive:                  0
+ ismoagg_overcorrection:              0
+ ismoagg_block_typ:                   0
+ ismoagg_compression:                 0
+ ismoagg_filter_typ:                  1
+ ismoagg_smooth_typ:                  2
+ ismoagg_smooth_nit:                  5
+ ismoagg_smooth_nlev:                 1
+ ib_cmplx:                   0.2000D+01
+ ib_cmplx_agg_default:       0.1200D+01
+ ib_cmplx_default:           0.2000D+01
+ ibgs_pivot:                          0
+ icase_jac_uzawa:                     1
+ icheck_smoint:                       0
+ icolor_omp:                          2
+ iordered_omp:                        0
+ icrits:                            110
+ idtest_uzawa:                        0
+ ihuge:                               0
+ ijac_uzawa:                          0
+ ilu4allschwarz:                      F
+ ilu_speed:                           1
+ impldo_read_write_len:         2000000
+ info_keepmem:                        F
+ inner_accel:                         1
+ iodump:                             32
+ iofile_opta:
+ ioform:                     f
+ iogrid:                             33
+ iomovie:                            34
+ ioscratch_default:                  31
+ iounit_opta:                         6
+ ipass_max_set:                       0
+ irestriction_openmp:                 2
+ ipressure_uzawa:                     0
+ isat_uzawa:                          0
+ iset_vio_dd:                         1
+ isstep_uzawa:                        1
+ isteering:                           0
+ iswit3_user:                         0
+ iter_check:                          3
+ iter_matrix_scale:                 100
+ iter_pre:                            0
+ itmax_conv:                        200
+ itrace_amgmain:                      0
+ itracelevel:                         0
+ itrace_clsol:                        0
+ itrace_cldense:                      0
+ itrace_jac_uzawa:                    0
+ itrace_matrix_storage:               0
+ itrace_schwarz:                      0
+ itrace_smo:                          0
+ itrace_sol:                          0
+ itrace_split:                        0
+ itrace_uzawa:                        0
+ stacktrace:                          F
+ keepmem:                             F
+ k_disable_krylov1:                   T
+ k_dyncyc:                            0
+ lastgrid:                            0
+ lev_coarsening_too_slow:            -1
+ levels_uzawa:                       25
+ levelx:                    -1000000000
+ levelx_2nd:                          1
+ lfil_cl:                           -10
+ lfil_2nd:                           20
+ lfil_smo:                            9
+ logfile:
+ logio:                               6
+ lu_reuse:                            F
+ matrix_scale_renorm:                 0
+ max_calls:                           4
+ max_cl_size:                         0
+ maxcorr_cluster:                     2
+ max_level:                          25
+ max_nb_list_size:                    0
+ maxiter_jac_uzawa:                 500
+ maxop_restart:                       2
+ maxretry_jac_uzawa:                  4
+ milu:                                0
+ min_cl_size:                         0
+ min_multi_size:                  25000
+ miniter_jac_uzawa:                  10
+ mode_cntrl:                          5
+ mode_debug:                          1
+ mode_mess:                           0
+ modify_mat:                          0
+ multipass_allcoup:                   0
+ nblk_debug:                          0
+ nblk_max:                         5000
+ nblk_overlap:                        0
+ nblk_resid:                          0
+ nblk_solve:                          1
+ nblk_solver:                         3
+ nbnd_omega:                          0
+ nbnd_omega_uzawa:                    0
+ nbnd_sweeps:                         2
+ nbnd_sweeps_uzawa:                   2
+ ncframes:                           -1
+ ncg:                       -1000000000
+ ncgrad_default:                      0
+ ncyc_default:                    11030
+ ncyc_min:                            0
+ ncyc_2nd:                       110100
+ ncyc_start:                          2
+ ndyn_smo:                            0
+ neg_diag:                           20
+ neg_diag_brute:                     20
+ new_entries:                         1
+ new_topology:                        2
+ nilu_reorder:                        0
+ nint_rowsum1:                        0
+ nkcycle:                             0
+ nkdim_default:                      30
+ nsmoagg:                             0
+ nsmoagglev:                         25
+ nmin_matrix:                         1
+ nmin_matrix_resc:                    1
+ nmin_vector:                         1
+ notalluns_cheap:                     T
+ np_mod1:                             0
+ np_mod2:                             0
+ np_opt:                    -1000000000
+ nprim_at_allpnts:                    F
+ nptmax:                           1500
+ nptmn:                     -1000000000
+ nrc:                       -1000000000
+ nrc_emergency:                       3
+ nrd:                       -1000000000
+ nrd_2nd:                             1
+ nru:                       -1000000000
+ nru_2nd:                             0
+ nsimple_emergency:                   0
+ nsolve_default:                      2
+ nsolve_2nd:                         21
+ nsolve_uzawa:                        0
+ nstar_typ:                           2
+ nsw_omega_uzawa:                    50
+ nsw_uzawa:                           1
+ ntake_res_in:                        1
+ nth_res_scratch:                     0
+ ntr:                       -1000000000
+ ntr_prim:                            0
+ ntyp_accel:                          0
+ ntyp_galerkin:                       0
+ numtry_max_set:                      0
+ nversion:                            4
+ nwt:                       -1000000000
+ nxtyp_coarse:                       -1
+ omega_jac_es_uzawa:         0.3000D+00
+ omega_jac_p_uzawa:          0.4000D+00
+ omega_jacobi:               0.5000D+00
+ omega_sor_do:               0.0000D+00
+ omega_sor_up:               0.0000D+00
+ omega_smo:                  0.5000D+00
+ omega_uzawa:                0.1250D+00
+ omp_partition_file:
+ omp_num_threads_external:            0
+ opt_matrix_ops:                      1
+ p_cmplx_agg_default:        0.1200D+01
+ p_cmplx_default:            0.1800D+01
+ partial_frac:               0.3000D+00
+ partition_file:             partition
+ perf_meter_enabled:                  F
+ prim_norm:                           0
+ prim_print:                          0
+ print_nxtyp_coarse_msg:              F
+ print_setup_ilu_or_direct:           F
+ prnt_stat_schwarz:                   0
+ reduct_kcycle:              0.1000D-05
+ rcondx:                     0.1000D-05
+ read_uzawa_parms:                    F
+ read_marian_coarsening:              F
+ refresh_called:                      F
+ rho_min:                    0.9000D+00
+ rho_ok:                     0.1000D+00
+ show_un_res:                         0
+ scratchfile:                scratch.samg
+ slow_coarsening:            0.7500D+00
+ stability:                  0.2500D+00
+ struct_ident:                        F
+ tau_uzawa:                  0.1250D+00
+ term_coarsening:            0.9000D+00
+ trackmem:                            F
+ track_ap_p:                          F
+ use_ic:                              2
+ vio_dd:                              0
+ w_avrge_agg_default:        0.1200D+01
+ w_avrge_default:            0.2500D+01
+ wcoupled:                            0
+ wft:                        0.0000D+00
+ write_cluster_id:                    0
+ wtsl:                       0.0000D+00
+ 
+ nomega_jacobi:                 0
+ 
+ 
+ 
+ 
+ AMG solver information
+ ======================
+ 
+ Basic Method: AMG on  5 levels (V-cycle)
+               Approach:   variable-based
+               Smoothing:  Gauss-Seidel, variable-wise
+ Acceleration: None
+ Coarse level: size = 101
+ Coarse level: Direct solution by
+               Pardiso direct solver (MKL)
+ Scaling:      None
+ 
+ >>> MESSG: reset opt_matrix_ops to 0: accelerator type not supported
+ 
+ 
+ cycl   0:   in-res=0.365D-02     cfac
+ 
+ -------------------------------------
+ grid    norm  residual        process
+ -------------------------------------
+ 
+  1      (L2) 0.408D-02     after gsc>
+  1      (L2) 0.264D-02     after gsf>
+  2      (L2) 0.266D-02     after resc
+  2      (L2) 0.270D-02     after gsc>
+  2      (L2) 0.171D-02     after gsf>
+  3      (L2) 0.331D-02     after resc
+  3      (L2) 0.337D-02     after gsc>
+  3      (L2) 0.198D-02     after gsf>
+  4      (L2) 0.442D-02     after resc
+  4      (L2) 0.444D-02     after gsc>
+  4      (L2) 0.252D-02     after gsf>
+  5      (L2) 0.483D-02     after resc
+  5      (L2) 0.575D-15     after solv
+  4      (L2) 0.162D-02     after inta
+  4      (L2) 0.123D-02     after gsc>
+  4      (L2) 0.249D-03     after gsf>
+  3      (L2) 0.150D-02     after inta
+  3      (L2) 0.114D-02     after gsc>
+  3      (L2) 0.236D-03     after gsf>
+  2      (L2) 0.168D-02     after inta
+  2      (L2) 0.953D-03     after gsc>
+  2      (L2) 0.264D-03     after gsf>
+  1      (L2) 0.509D-03     after inta
+  1      (L2) 0.403D-03     after gsc>
+  1      (L2) 0.182D-03     after gsf>
+ 
+ cycl   1:   L2-res=0.182D-03   0.497D-01
+ 
+ -------------------------------------
+ grid    norm  residual        process
+ -------------------------------------
+ 
+  1      (L2) 0.150D-03     after gsc>
+  1      (L2) 0.117D-03     after gsf>
+  2      (L2) 0.122D-03     after resc
+  2      (L2) 0.126D-03     after gsc>
+  2      (L2) 0.905D-04     after gsf>
+  3      (L2) 0.183D-03     after resc
+  3      (L2) 0.187D-03     after gsc>
+  3      (L2) 0.122D-03     after gsf>
+  4      (L2) 0.282D-03     after resc
+  4      (L2) 0.285D-03     after gsc>
+  4      (L2) 0.176D-03     after gsf>
+  5      (L2) 0.334D-03     after resc
+  5      (L2) 0.107D-17     after solv
+  4      (L2) 0.180D-03     after inta
+  4      (L2) 0.168D-03     after gsc>
+  4      (L2) 0.349D-04     after gsf>
+  3      (L2) 0.166D-03     after inta
+  3      (L2) 0.157D-03     after gsc>
+  3      (L2) 0.309D-04     after gsf>
+  2      (L2) 0.105D-03     after inta
+  2      (L2) 0.987D-04     after gsc>
+  2      (L2) 0.207D-04     after gsf>
+  1      (L2) 0.613D-04     after inta
+  1      (L2) 0.423D-04     after gsc>
+  1      (L2) 0.187D-04     after gsf>
+ 
+ cycl   2:   L2-res=0.187D-04   0.103D+00
+ 
+ -------------------------------------
+ grid    norm  residual        process
+ -------------------------------------
+ 
+  1      (L2) 0.150D-04     after gsc>
+  1      (L2) 0.130D-04     after gsf>
+  2      (L2) 0.136D-04     after resc
+  2      (L2) 0.145D-04     after gsc>
+  2      (L2) 0.126D-04     after gsf>
+  3      (L2) 0.278D-04     after resc
+  3      (L2) 0.289D-04     after gsc>
+  3      (L2) 0.235D-04     after gsf>
+  4      (L2) 0.562D-04     after resc
+  4      (L2) 0.578D-04     after gsc>
+  4      (L2) 0.382D-04     after gsf>
+  5      (L2) 0.751D-04     after resc
+  5      (L2) 0.733D-19     after solv
+  4      (L2) 0.423D-04     after inta
+  4      (L2) 0.397D-04     after gsc>
+  4      (L2) 0.852D-05     after gsf>
+  3      (L2) 0.386D-04     after inta
+  3      (L2) 0.364D-04     after gsc>
+  3      (L2) 0.771D-05     after gsf>
+  2      (L2) 0.256D-04     after inta
+  2      (L2) 0.241D-04     after gsc>
+  2      (L2) 0.528D-05     after gsf>
+  1      (L2) 0.136D-04     after inta
+  1      (L2) 0.932D-05     after gsc>
+  1      (L2) 0.454D-05     after gsf>
+ 
+ cycl   3:   L2-res=0.454D-05   0.242D+00
+ 
+ -------------------------------------
+ grid    norm  residual        process
+ -------------------------------------
+ 
+  1      (L2) 0.366D-05     after gsc>
+  1      (L2) 0.327D-05     after gsf>
+  2      (L2) 0.341D-05     after resc
+  2      (L2) 0.365D-05     after gsc>
+  2      (L2) 0.328D-05     after gsf>
+  3      (L2) 0.726D-05     after resc
+  3      (L2) 0.756D-05     after gsc>
+  3      (L2) 0.615D-05     after gsf>
+  4      (L2) 0.146D-04     after resc
+  4      (L2) 0.149D-04     after gsc>
+  4      (L2) 0.966D-05     after gsf>
+  5      (L2) 0.189D-04     after resc
+  5      (L2) 0.130D-19     after solv
+  4      (L2) 0.109D-04     after inta
+  4      (L2) 0.103D-04     after gsc>
+  4      (L2) 0.223D-05     after gsf>
+  3      (L2) 0.101D-04     after inta
+  3      (L2) 0.953D-05     after gsc>
+  3      (L2) 0.208D-05     after gsf>
+  2      (L2) 0.696D-05     after inta
+  2      (L2) 0.657D-05     after gsc>
+  2      (L2) 0.146D-05     after gsf>
+  1      (L2) 0.380D-05     after inta
+  1      (L2) 0.261D-05     after gsc>
+  1      (L2) 0.126D-05     after gsf>
+ 
+ cycl   4:   L2-res=0.126D-05   0.278D+00
+ 
+ -------------------------------------
+ grid    norm  residual        process
+ -------------------------------------
+ 
+  1      (L2) 0.101D-05     after gsc>
+  1      (L2) 0.900D-06     after gsf>
+  2      (L2) 0.940D-06     after resc
+  2      (L2) 0.101D-05     after gsc>
+  2      (L2) 0.904D-06     after gsf>
+  3      (L2) 0.200D-05     after resc
+  3      (L2) 0.209D-05     after gsc>
+  3      (L2) 0.169D-05     after gsf>
+  4      (L2) 0.397D-05     after resc
+  4      (L2) 0.406D-05     after gsc>
+  4      (L2) 0.258D-05     after gsf>
+  5      (L2) 0.503D-05     after resc
+  5      (L2) 0.404D-20     after solv
+  4      (L2) 0.291D-05     after inta
+  4      (L2) 0.275D-05     after gsc>
+  4      (L2) 0.600D-06     after gsf>
+  3      (L2) 0.275D-05     after inta
+  3      (L2) 0.259D-05     after gsc>
+  3      (L2) 0.573D-06     after gsf>
+  2      (L2) 0.193D-05     after inta
+  2      (L2) 0.182D-05     after gsc>
+  2      (L2) 0.409D-06     after gsf>
+  1      (L2) 0.107D-05     after inta
+  1      (L2) 0.733D-06     after gsc>
+  1      (L2) 0.353D-06     after gsf>
+ 
+ cycl   5:   L2-res=0.353D-06   0.280D+00
+ 
+ -------------------------------------
+ grid    norm  residual        process
+ -------------------------------------
+ 
+  1      (L2) 0.280D-06     after gsc>
+  1      (L2) 0.251D-06     after gsf>
+  2      (L2) 0.261D-06     after resc
+  2      (L2) 0.280D-06     after gsc>
+  2      (L2) 0.252D-06     after gsf>
+  3      (L2) 0.559D-06     after resc
+  3      (L2) 0.582D-06     after gsc>
+  3      (L2) 0.469D-06     after gsf>
+  4      (L2) 0.110D-05     after resc
+  4      (L2) 0.113D-05     after gsc>
+  4      (L2) 0.704D-06     after gsf>
+  5      (L2) 0.137D-05     after resc
+  5      (L2) 0.106D-20     after solv
+  4      (L2) 0.792D-06     after inta
+  4      (L2) 0.751D-06     after gsc>
+  4      (L2) 0.164D-06     after gsf>
+  3      (L2) 0.759D-06     after inta
+  3      (L2) 0.716D-06     after gsc>
+  3      (L2) 0.159D-06     after gsf>
+  2      (L2) 0.537D-06     after inta
+  2      (L2) 0.507D-06     after gsc>
+  2      (L2) 0.115D-06     after gsf>
+  1      (L2) 0.301D-06     after inta
+  1      (L2) 0.207D-06     after gsc>
+  1      (L2) 0.990D-07     after gsf>
+ 
+ cycl   6:   L2-res=0.990D-07   0.281D+00
+ 
+ -------------------------------------
+ grid    norm  residual        process
+ -------------------------------------
+ 
+  1      (L2) 0.784D-07     after gsc>
+  1      (L2) 0.701D-07     after gsf>
+  2      (L2) 0.730D-07     after resc
+  2      (L2) 0.782D-07     after gsc>
+  2      (L2) 0.703D-07     after gsf>
+  3      (L2) 0.156D-06     after resc
+  3      (L2) 0.163D-06     after gsc>
+  3      (L2) 0.131D-06     after gsf>
+  4      (L2) 0.307D-06     after resc
+  4      (L2) 0.314D-06     after gsc>
+  4      (L2) 0.195D-06     after gsf>
+  5      (L2) 0.378D-06     after resc
+  5      (L2) 0.277D-21     after solv
+  4      (L2) 0.218D-06     after inta
+  4      (L2) 0.207D-06     after gsc>
+  4      (L2) 0.453D-07     after gsf>
+  3      (L2) 0.211D-06     after inta
+  3      (L2) 0.199D-06     after gsc>
+  3      (L2) 0.445D-07     after gsf>
+  2      (L2) 0.150D-06     after inta
+  2      (L2) 0.142D-06     after gsc>
+  2      (L2) 0.322D-07     after gsf>
+  1      (L2) 0.848D-07     after inta
+  1      (L2) 0.582D-07     after gsc>
+  1      (L2) 0.278D-07     after gsf>
+ 
+ cycl   7:   L2-res=0.278D-07   0.281D+00
+ 
+ -------------------------------------
+ grid    norm  residual        process
+ -------------------------------------
+ 
+  1      (L2) 0.220D-07     after gsc>
+  1      (L2) 0.196D-07     after gsf>
+  2      (L2) 0.204D-07     after resc
+  2      (L2) 0.219D-07     after gsc>
+  2      (L2) 0.197D-07     after gsf>
+  3      (L2) 0.438D-07     after resc
+  3      (L2) 0.456D-07     after gsc>
+  3      (L2) 0.366D-07     after gsf>
+  4      (L2) 0.857D-07     after resc
+  4      (L2) 0.876D-07     after gsc>
+  4      (L2) 0.541D-07     after gsf>
+  5      (L2) 0.105D-06     after resc
+  5      (L2) 0.798D-22     after solv
+  4      (L2) 0.605D-07     after inta
+  4      (L2) 0.575D-07     after gsc>
+  4      (L2) 0.125D-07     after gsf>
+  3      (L2) 0.590D-07     after inta
+  3      (L2) 0.557D-07     after gsc>
+  3      (L2) 0.124D-07     after gsf>
+  2      (L2) 0.420D-07     after inta
+  2      (L2) 0.397D-07     after gsc>
+  2      (L2) 0.904D-08     after gsf>
+  1      (L2) 0.239D-07     after inta
+  1      (L2) 0.164D-07     after gsc>
+  1      (L2) 0.781D-08     after gsf>
+ 
+ cycl   8:   L2-res=0.781D-08   0.281D+00
+ 
+ -------------------------------------
+ grid    norm  residual        process
+ -------------------------------------
+ 
+  1      (L2) 0.615D-08     after gsc>
+  1      (L2) 0.550D-08     after gsf>
+  2      (L2) 0.572D-08     after resc
+  2      (L2) 0.612D-08     after gsc>
+  2      (L2) 0.551D-08     after gsf>
+  3      (L2) 0.123D-07     after resc
+  3      (L2) 0.128D-07     after gsc>
+  3      (L2) 0.103D-07     after gsf>
+  4      (L2) 0.240D-07     after resc
+  4      (L2) 0.245D-07     after gsc>
+  4      (L2) 0.151D-07     after gsf>
+  5      (L2) 0.294D-07     after resc
+  5      (L2) 0.213D-22     after solv
+  4      (L2) 0.168D-07     after inta
+  4      (L2) 0.160D-07     after gsc>
+  4      (L2) 0.349D-08     after gsf>
+  3      (L2) 0.165D-07     after inta
+  3      (L2) 0.156D-07     after gsc>
+  3      (L2) 0.348D-08     after gsf>
+  2      (L2) 0.118D-07     after inta
+  2      (L2) 0.111D-07     after gsc>
+  2      (L2) 0.254D-08     after gsf>
+  1      (L2) 0.673D-08     after inta
+  1      (L2) 0.462D-08     after gsc>
+  1      (L2) 0.219D-08     after gsf>
+ 
+ cycl   9:   L2-res=0.219D-08   0.281D+00
+ 
+ 
+ AMG workcount and statistics
+ ============================
+ 
+ number of cycles :          9
+ L2-resid (before):  0.365D-02
+ L2-resid (after) :  0.219D-08
+ average reduction:  0.204D+00
+ average reduction:  0.274D+00 ( 2 cycles skipped)
+ 
+   prep         sec     sol       sec/cyc
+ ------------------------------------------
+   rwsrt       0.008    relax       0.014
+   split       0.020    transfer    0.002
+   reduce      0.000    cg-solve    0.001
+   pwint       0.062    resid       0.013
+   pwiter      0.000    cyc_opt     0.000
+   opdfn       0.051    acceler     0.000
+   others      0.002    scaling     0.000
+   extent      0.008    others      0.000
+   primmat     0.000 -- sol/fixed -- sec
+                        cg-dcmp     0.002
+ ------------------------------------------
+   sum         0.150    per cyc     0.030       0.422 sec  (excl. overhead)
+                        fixed       0.002
+ ------------------------------------------
+   total       0.154    per cyc     0.021       0.346 sec  (incl. overhead)
+                        fixed       0.002
+ ------------------------------------------
+ 
+ complexities and average row-lengths:
+   a_cmplx:  2.8737      a_avrge:  12.5857
+   b_cmplx:  0.0000      b_avrge:   0.0000
+  ib_cmplx:  0.0000
+   g_cmplx:  1.5792      t_cmplx:   3.3650
+   w_avrge:  3.3697      c_cmplx:   3.4549  (depends on dimensioning!)
+   p_cmplx:  0.0000      e_cmplx:   4.3133  (depends on dimensioning!)
+ 
+ req. dimensioning:       provided:    extended by:     wasted:
+   ndima  >=   1369826       1049746        326580          6500
+   ndimb  >=         0             0             0             0
+   ndimib >=         0             0             0             0
+   ndimu  >=    108840        117282             0          8442
+   ndimw  >=    366759        282884        110865         26990
+   ndimv  >=         0             0             0             0
+ 
+ req. amg memory:       provided:   extended by:    wasted:    1st level:
+      22.78 MB           18.38 MB      5.01 MB      0.61 MB       6.77 MB
+ 
+ used peak memory (depends on dimensioning!):
+   cycling:    23.39 MB
+   overall:    29.20 MB
+
+*** time to solve the system using SAMG with gmm time: 9.230060e-01 seconds
+
+... time to solve the system using SAMG with assembling********= 1.250056e+00 seconds
+
+ ***** total run time: 9.496094e+00 ***** 
+
+ ***** total run time with assembling: 9.832031e+00 ***** 
+solved! going to export...
+Exporting the solution (vtk format) to ./vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+Exporting the solution (vtk format) to ./vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+
+... time to solve : 2.490385e+01 seconds

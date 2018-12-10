@@ -23,9 +23,9 @@ cd ${PBS_O_WORKDIR}
 # YOUR LAUNCH COMMAND BELOW completed with I/O redirection if needed
 
 source ../../configure.sh
-./M3D1D input_stationary_nano_linf_merge.param > gigat_output 2>&1
-
-#source tester.sh > gigat_output 2>&1
+#./M3D1D input_stationary_nano_linf_merge.param > gigat_output 2>&1
+export OMP_NUM_THREADS=8
+source tester.sh > gigat_output 2>&1
 
 
 #---------------------------------------------------------------------#

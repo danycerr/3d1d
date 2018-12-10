@@ -69,7 +69,7 @@ OutputDirectory = './vtk/';
 TEST_GEOMETRY = 1;
 GT_T       = 'GT_PK(3,1)'; 
 %NSUBDIV_T  = '[12,11,11]';  
-NSUBDIV_T = '[120,120,120]';
+NSUBDIV_T = '[60,60,60]';
 ORG_T      = '[0,0,0]'; 
 %SIZES_T    = '[1,1,1]';
 SIZES_T    = '[1,1,1]';  
@@ -95,7 +95,7 @@ MESH_TYPEV  = 'GT_PK(1,1)';
 FEM_TYPET   = 'FEM_RT0(3)';
 FEM_TYPET_P = 'FEM_PK_DISCONTINUOUS(3,0)';
 FEM_TYPET_DATA = 'FEM_PK(3,0)';
-FEM_TYPET_C = 'FEM_PK(3,2)';
+FEM_TYPET_C = 'FEM_PK(3,1)';
 % GetFem type for the 1D Finite Element Methods
 FEM_TYPEV   = 'FEM_PK(1,2)';  
 FEM_TYPEV_P = 'FEM_PK(1,1)';  

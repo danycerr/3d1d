@@ -24,7 +24,7 @@
 //#define CSR_INTERFACE 
 // ------------------------------------
 // #define DIRECT_SOLVER 
- //#define AMG_STAND_ALONE
+//#define AMG_STAND_ALONE
 //#define AMG_ACCELERATED
 
 
@@ -1651,7 +1651,7 @@ gmm::copy(AM_temp, A_csr);
 				// 7  Write matrices to disk: level 2 up to the coarsest level. 
 				// 8  Write finest‐level matrix to disk (incl. right hand side etc.). 
 				// 9  Write all matrices to disk. 
-				APPL_INT idump     = 9;       // minimum output during setup
+				APPL_INT idump     = -1;       // minimum output during setup
 				//============================================
 				// iout page 44 Userguide. it controls display outpu. default 2 very verbose 43
 				APPL_INT iout      = 43;        // display residuals per iteration and work statistics
