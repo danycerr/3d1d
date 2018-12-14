@@ -72,15 +72,17 @@ GT_T       = 'GT_PK(3,1)';
 NSUBDIV_T = '[11,11,11]';
 %ORG_T      = '[-0.1,0,0]'; 
 ORG_T      = '[0,0,0]';
-SIZES_T    = '[1,1,1]';
+SIZES_T    = '[0.1,0.1,1]';
 %SIZES_T    = '[1,0.66,0.1]';   
-%SIZES_T    = '[1.2,1,1]';
+%SIZES_T    = '[0.1,0.1,1]';
 NOISED_T   = '0';
 % Path to import the 3d mesh
 MESH_FILET = ' '; 
 % Path to import the 1d list of points
 MESH_FILEV = './segment.pts'; 
-MESH_FILEV_TRANSP = './segment_transp.pts'; 
+% MESH_FILEV_TRANSP = './single_assembly.pts'; 
+% MESH_FILEV_TRANSP = './assembly_grid_9p9.pts';
+MESH_FILEV_TRANSP = './assembly_grid_17p17.pts';
 RFILE= './radius.pts';
 %===================================
 %  GETFEM DESCRIPTORS
@@ -125,19 +127,19 @@ Kt = 2E-1;
 Q  = 9.6007E-7;
 %Q  = 6.28;	%prova fluidod ok
 % Dimensionless conductivity of the capillary bed
-Kv = 2.6759;
-%Kv = 39.3;	%prova fluidod ok
+% Kv = 2.6759;
+ Kv = 39.3E-7;	%prova fluidod ok
 % Dimensionless average radius of the capillary vessels []
 %RADIUS = 1.0;
-RADIUS =0.1;	%prova fluidod ok
+RADIUS =0.002;	%prova fluidod ok
 %Dimensionless At[] % laplace coefficient 
 At=1.0;	
 %Dimensionless Av[]
-Av=1.0E3;
+Av=1.0E-3;
 %Dimensionless Dalpha[]
 D_alpha=1.585E-2;
 %Dimensionless Y[]
-Y=10000.0;
+Y=2.2e+2;
 %Dimensionless Qpl[]
 Q_pl=2.109E-5;
 % Dimensionless conductivity of lymphatic wall
@@ -232,7 +234,7 @@ psi_max=7.4;
 %=================================
 % LINEAR case
 % Hydraulic conductivity of the lymphatic wall [kg * m/s]
-Lp_LF = 1.042E-06;
+Lp_LF = 1.042E-01;
 % surface area of lymphatic vessels per unit volume of tissue [1/m]
 SV = 1;
 % Pressure inside lymphatic capillaries [-]
@@ -268,9 +270,9 @@ P0=0;
 
 % Faces:   x=0  x=L  y=0  y=L  z=0  z=L
 % BC labels (DIR / MIX)
-BClabel_transp = 'MIX MIX MIX MIX MIX MIX'
+BClabel_transp = 'MIX MIX MIX MIX DIR MIX'
 % BC values
-BCvalue_transp = '0.0 0.0  0.00  0.0  0.0  0.0';
+BCvalue_transp = '0.0 0.0  0.00  0.0 20.0  0.0';
 % Coefficient for MIX condition in tissue
 %BETAtissue_transp = 1.0;
 BETAtissue_transp = 1.0E-14;
