@@ -80,9 +80,11 @@ NOISED_T   = '0';
 MESH_FILET = ' '; 
 % Path to import the 1d list of points
 MESH_FILEV = './segment.pts'; 
-% MESH_FILEV_TRANSP = './single_assembly.pts'; 
+ MESH_FILEV_TRANSP = './single_assembly.pts'; 
 % MESH_FILEV_TRANSP = './assembly_grid_9p9.pts';
 MESH_FILEV_TRANSP = './assembly_grid_17p17.pts';
+% read interpolator operator from file
+READ_ITERPOLATOR = 1; 
 RFILE= './radius.pts';
 %===================================
 %  GETFEM DESCRIPTORS
@@ -139,7 +141,7 @@ Av=1.0E-3;
 %Dimensionless Dalpha[]
 D_alpha=1.585E-2;
 %Dimensionless Y[]
-Y=2.2e+2;
+Y=2.2e+0;
 %Dimensionless Qpl[]
 Q_pl=2.109E-5;
 % Dimensionless conductivity of lymphatic wall

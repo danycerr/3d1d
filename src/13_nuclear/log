@@ -1,0 +1,2054 @@
+mesht description: GT='GT_PK(3,1)'; NSUBDIV=[11,11,11]; ORG=[0,0,0]; SIZES=[0.1,0.1,1]; NOISED=0
+initialize transport problem...
+
+init part 1: import data!......
+Importing descriptors for tissue and vessel problems ...
+---- TRANSPORT PROBLEM DESCRIPTORS--------------------------
+ FEM TYPE  3D concentration     : FEM_PK(3,1)
+ FEM TYPE  1D concentration     : FEM_PK(1,1)
+--------------------------------------------------
+Building the regular 3D mesh for the tissue ...  
+mesht description: GT='GT_PK(3,1)'; NSUBDIV=[11,11,11]; ORG=[0,0,0]; SIZES=[0.1,0.1,1]; NOISED=0
+Importing the 1D mesh for the vessel (transport problem)... 
+init part 2: set fem methods!......
+Setting FEMs for tissue and vessel problems ...
+Setting IMs and FEMs for tissue ...
+Setting IMs and FEMs for vessel branches ...
+Setting FEM dimensions for tissue and vessel problems ...
+--- DEGREES OF FREEDOM --- 
+  nb_dof_Ct     : 1728
+  nb_dof_Cv     : 891
+  nb_dof_tot    : 2619
+-------------------------- 
+init part 3: build dimensionless parameters!
+Building parameters for tissue and vessel problems ...
+  Assembling dimensionless parameters Dt, Dv, Dalpha, Q_pl ... 
+--- PHYSICAL PARAMS ------
+  At     : 1.000000e+00
+  Av : 1.000000e-03
+  Y      : 2.200000e+00
+  Q_pl : 2.109000e-05
+  D_alpha : 1.585000e-02
+  T : 1.000000e+01
+  dt : 2.000000e-01
+--------------------------
+--- PHYSICAL PARAMS ------
+  At     : 1.000000e+00
+  Av : 1.000000e-03
+  Y      : 2.200000e+00
+  Q_pl : 2.109000e-05
+  D_alpha : 1.585000e-02
+  T : 1.000000e+01
+  dt : 2.000000e-01
+--------------------------
+Building vessel boundary ...
+--- NETWORK ASSEMBLY ------------------ 
+  Branches:   81
+  Vertices:   811
+  Extrema:    [0 10 11 21 22 32 33 43 44 54 55 65 66 76 77 87 88 98 99 109 110 120 121 131 132 142 143 153 154 164 165 175 176 186 187 197 198 208 209 219 220 230 231 241 242 252 253 263 264 274 275 285 286 296 297 307 308 318 319 329 330 340 341 351 352 362 363 373 374 384 385 395 396 406 407 417 418 428 429 439 440 450 451 461 462 472 473 483 484 494 495 505 506 516 517 527 528 538 539 549 550 560 561 571 572 582 583 593 594 604 605 615 616 626 627 637 638 648 649 659 660 670 671 681 682 692 693 703 704 714 715 725 726 736 737 747 748 758 759 769 770 780 781 791 792 802 803 813 814 824 825 835 836 846 847 857 858 868 869 879 880 890]
+    -  label=MIX, value=0.000000e+00, ind=0, rg=81, branches=vector(1) [ 0 ]
+    -  label=MIX, value=0.000000e+00, ind=10, rg=82, branches=vector(1) [ 0 ]
+    -  label=MIX, value=0.000000e+00, ind=11, rg=83, branches=vector(1) [ 1 ]
+    -  label=MIX, value=0.000000e+00, ind=21, rg=84, branches=vector(1) [ 1 ]
+    -  label=MIX, value=0.000000e+00, ind=22, rg=85, branches=vector(1) [ 2 ]
+    -  label=MIX, value=0.000000e+00, ind=32, rg=86, branches=vector(1) [ 2 ]
+    -  label=MIX, value=0.000000e+00, ind=33, rg=87, branches=vector(1) [ 3 ]
+    -  label=MIX, value=0.000000e+00, ind=43, rg=88, branches=vector(1) [ 3 ]
+    -  label=MIX, value=0.000000e+00, ind=44, rg=89, branches=vector(1) [ 4 ]
+    -  label=MIX, value=0.000000e+00, ind=54, rg=90, branches=vector(1) [ 4 ]
+    -  label=MIX, value=0.000000e+00, ind=55, rg=91, branches=vector(1) [ 5 ]
+    -  label=MIX, value=0.000000e+00, ind=65, rg=92, branches=vector(1) [ 5 ]
+    -  label=MIX, value=0.000000e+00, ind=66, rg=93, branches=vector(1) [ 6 ]
+    -  label=MIX, value=0.000000e+00, ind=76, rg=94, branches=vector(1) [ 6 ]
+    -  label=MIX, value=0.000000e+00, ind=77, rg=95, branches=vector(1) [ 7 ]
+    -  label=MIX, value=0.000000e+00, ind=87, rg=96, branches=vector(1) [ 7 ]
+    -  label=MIX, value=0.000000e+00, ind=88, rg=97, branches=vector(1) [ 8 ]
+    -  label=MIX, value=0.000000e+00, ind=98, rg=98, branches=vector(1) [ 8 ]
+    -  label=MIX, value=0.000000e+00, ind=99, rg=99, branches=vector(1) [ 9 ]
+    -  label=MIX, value=0.000000e+00, ind=109, rg=100, branches=vector(1) [ 9 ]
+    -  label=MIX, value=0.000000e+00, ind=110, rg=101, branches=vector(1) [ 10 ]
+    -  label=MIX, value=0.000000e+00, ind=120, rg=102, branches=vector(1) [ 10 ]
+    -  label=MIX, value=0.000000e+00, ind=121, rg=103, branches=vector(1) [ 11 ]
+    -  label=MIX, value=0.000000e+00, ind=131, rg=104, branches=vector(1) [ 11 ]
+    -  label=MIX, value=0.000000e+00, ind=132, rg=105, branches=vector(1) [ 12 ]
+    -  label=MIX, value=0.000000e+00, ind=142, rg=106, branches=vector(1) [ 12 ]
+    -  label=MIX, value=0.000000e+00, ind=143, rg=107, branches=vector(1) [ 13 ]
+    -  label=MIX, value=0.000000e+00, ind=153, rg=108, branches=vector(1) [ 13 ]
+    -  label=MIX, value=0.000000e+00, ind=154, rg=109, branches=vector(1) [ 14 ]
+    -  label=MIX, value=0.000000e+00, ind=164, rg=110, branches=vector(1) [ 14 ]
+    -  label=MIX, value=0.000000e+00, ind=165, rg=111, branches=vector(1) [ 15 ]
+    -  label=MIX, value=0.000000e+00, ind=175, rg=112, branches=vector(1) [ 15 ]
+    -  label=MIX, value=0.000000e+00, ind=176, rg=113, branches=vector(1) [ 16 ]
+    -  label=MIX, value=0.000000e+00, ind=186, rg=114, branches=vector(1) [ 16 ]
+    -  label=MIX, value=0.000000e+00, ind=187, rg=115, branches=vector(1) [ 17 ]
+    -  label=MIX, value=0.000000e+00, ind=197, rg=116, branches=vector(1) [ 17 ]
+    -  label=MIX, value=0.000000e+00, ind=198, rg=117, branches=vector(1) [ 18 ]
+    -  label=MIX, value=0.000000e+00, ind=208, rg=118, branches=vector(1) [ 18 ]
+    -  label=MIX, value=0.000000e+00, ind=209, rg=119, branches=vector(1) [ 19 ]
+    -  label=MIX, value=0.000000e+00, ind=219, rg=120, branches=vector(1) [ 19 ]
+    -  label=MIX, value=0.000000e+00, ind=220, rg=121, branches=vector(1) [ 20 ]
+    -  label=MIX, value=0.000000e+00, ind=230, rg=122, branches=vector(1) [ 20 ]
+    -  label=MIX, value=0.000000e+00, ind=231, rg=123, branches=vector(1) [ 21 ]
+    -  label=MIX, value=0.000000e+00, ind=241, rg=124, branches=vector(1) [ 21 ]
+    -  label=MIX, value=0.000000e+00, ind=242, rg=125, branches=vector(1) [ 22 ]
+    -  label=MIX, value=0.000000e+00, ind=252, rg=126, branches=vector(1) [ 22 ]
+    -  label=MIX, value=0.000000e+00, ind=253, rg=127, branches=vector(1) [ 23 ]
+    -  label=MIX, value=0.000000e+00, ind=263, rg=128, branches=vector(1) [ 23 ]
+    -  label=MIX, value=0.000000e+00, ind=264, rg=129, branches=vector(1) [ 24 ]
+    -  label=MIX, value=0.000000e+00, ind=274, rg=130, branches=vector(1) [ 24 ]
+    -  label=MIX, value=0.000000e+00, ind=275, rg=131, branches=vector(1) [ 25 ]
+    -  label=MIX, value=0.000000e+00, ind=285, rg=132, branches=vector(1) [ 25 ]
+    -  label=MIX, value=0.000000e+00, ind=286, rg=133, branches=vector(1) [ 26 ]
+    -  label=MIX, value=0.000000e+00, ind=296, rg=134, branches=vector(1) [ 26 ]
+    -  label=MIX, value=0.000000e+00, ind=297, rg=135, branches=vector(1) [ 27 ]
+    -  label=MIX, value=0.000000e+00, ind=307, rg=136, branches=vector(1) [ 27 ]
+    -  label=MIX, value=0.000000e+00, ind=308, rg=137, branches=vector(1) [ 28 ]
+    -  label=MIX, value=0.000000e+00, ind=318, rg=138, branches=vector(1) [ 28 ]
+    -  label=MIX, value=0.000000e+00, ind=319, rg=139, branches=vector(1) [ 29 ]
+    -  label=MIX, value=0.000000e+00, ind=329, rg=140, branches=vector(1) [ 29 ]
+    -  label=MIX, value=0.000000e+00, ind=330, rg=141, branches=vector(1) [ 30 ]
+    -  label=MIX, value=0.000000e+00, ind=340, rg=142, branches=vector(1) [ 30 ]
+    -  label=MIX, value=0.000000e+00, ind=341, rg=143, branches=vector(1) [ 31 ]
+    -  label=MIX, value=0.000000e+00, ind=351, rg=144, branches=vector(1) [ 31 ]
+    -  label=MIX, value=0.000000e+00, ind=352, rg=145, branches=vector(1) [ 32 ]
+    -  label=MIX, value=0.000000e+00, ind=362, rg=146, branches=vector(1) [ 32 ]
+    -  label=MIX, value=0.000000e+00, ind=363, rg=147, branches=vector(1) [ 33 ]
+    -  label=MIX, value=0.000000e+00, ind=373, rg=148, branches=vector(1) [ 33 ]
+    -  label=MIX, value=0.000000e+00, ind=374, rg=149, branches=vector(1) [ 34 ]
+    -  label=MIX, value=0.000000e+00, ind=384, rg=150, branches=vector(1) [ 34 ]
+    -  label=MIX, value=0.000000e+00, ind=385, rg=151, branches=vector(1) [ 35 ]
+    -  label=MIX, value=0.000000e+00, ind=395, rg=152, branches=vector(1) [ 35 ]
+    -  label=MIX, value=0.000000e+00, ind=396, rg=153, branches=vector(1) [ 36 ]
+    -  label=MIX, value=0.000000e+00, ind=406, rg=154, branches=vector(1) [ 36 ]
+    -  label=MIX, value=0.000000e+00, ind=407, rg=155, branches=vector(1) [ 37 ]
+    -  label=MIX, value=0.000000e+00, ind=417, rg=156, branches=vector(1) [ 37 ]
+    -  label=MIX, value=0.000000e+00, ind=418, rg=157, branches=vector(1) [ 38 ]
+    -  label=MIX, value=0.000000e+00, ind=428, rg=158, branches=vector(1) [ 38 ]
+    -  label=MIX, value=0.000000e+00, ind=429, rg=159, branches=vector(1) [ 39 ]
+    -  label=MIX, value=0.000000e+00, ind=439, rg=160, branches=vector(1) [ 39 ]
+    -  label=MIX, value=0.000000e+00, ind=440, rg=161, branches=vector(1) [ 40 ]
+    -  label=MIX, value=0.000000e+00, ind=450, rg=162, branches=vector(1) [ 40 ]
+    -  label=MIX, value=0.000000e+00, ind=451, rg=163, branches=vector(1) [ 41 ]
+    -  label=MIX, value=0.000000e+00, ind=461, rg=164, branches=vector(1) [ 41 ]
+    -  label=MIX, value=0.000000e+00, ind=462, rg=165, branches=vector(1) [ 42 ]
+    -  label=MIX, value=0.000000e+00, ind=472, rg=166, branches=vector(1) [ 42 ]
+    -  label=MIX, value=0.000000e+00, ind=473, rg=167, branches=vector(1) [ 43 ]
+    -  label=MIX, value=0.000000e+00, ind=483, rg=168, branches=vector(1) [ 43 ]
+    -  label=MIX, value=0.000000e+00, ind=484, rg=169, branches=vector(1) [ 44 ]
+    -  label=MIX, value=0.000000e+00, ind=494, rg=170, branches=vector(1) [ 44 ]
+    -  label=MIX, value=0.000000e+00, ind=495, rg=171, branches=vector(1) [ 45 ]
+    -  label=MIX, value=0.000000e+00, ind=505, rg=172, branches=vector(1) [ 45 ]
+    -  label=MIX, value=0.000000e+00, ind=506, rg=173, branches=vector(1) [ 46 ]
+    -  label=MIX, value=0.000000e+00, ind=516, rg=174, branches=vector(1) [ 46 ]
+    -  label=MIX, value=0.000000e+00, ind=517, rg=175, branches=vector(1) [ 47 ]
+    -  label=MIX, value=0.000000e+00, ind=527, rg=176, branches=vector(1) [ 47 ]
+    -  label=MIX, value=0.000000e+00, ind=528, rg=177, branches=vector(1) [ 48 ]
+    -  label=MIX, value=0.000000e+00, ind=538, rg=178, branches=vector(1) [ 48 ]
+    -  label=MIX, value=0.000000e+00, ind=539, rg=179, branches=vector(1) [ 49 ]
+    -  label=MIX, value=0.000000e+00, ind=549, rg=180, branches=vector(1) [ 49 ]
+    -  label=MIX, value=0.000000e+00, ind=550, rg=181, branches=vector(1) [ 50 ]
+    -  label=MIX, value=0.000000e+00, ind=560, rg=182, branches=vector(1) [ 50 ]
+    -  label=MIX, value=0.000000e+00, ind=561, rg=183, branches=vector(1) [ 51 ]
+    -  label=MIX, value=0.000000e+00, ind=571, rg=184, branches=vector(1) [ 51 ]
+    -  label=MIX, value=0.000000e+00, ind=572, rg=185, branches=vector(1) [ 52 ]
+    -  label=MIX, value=0.000000e+00, ind=582, rg=186, branches=vector(1) [ 52 ]
+    -  label=MIX, value=0.000000e+00, ind=583, rg=187, branches=vector(1) [ 53 ]
+    -  label=MIX, value=0.000000e+00, ind=593, rg=188, branches=vector(1) [ 53 ]
+    -  label=MIX, value=0.000000e+00, ind=594, rg=189, branches=vector(1) [ 54 ]
+    -  label=MIX, value=0.000000e+00, ind=604, rg=190, branches=vector(1) [ 54 ]
+    -  label=MIX, value=0.000000e+00, ind=605, rg=191, branches=vector(1) [ 55 ]
+    -  label=MIX, value=0.000000e+00, ind=615, rg=192, branches=vector(1) [ 55 ]
+    -  label=MIX, value=0.000000e+00, ind=616, rg=193, branches=vector(1) [ 56 ]
+    -  label=MIX, value=0.000000e+00, ind=626, rg=194, branches=vector(1) [ 56 ]
+    -  label=MIX, value=0.000000e+00, ind=627, rg=195, branches=vector(1) [ 57 ]
+    -  label=MIX, value=0.000000e+00, ind=637, rg=196, branches=vector(1) [ 57 ]
+    -  label=MIX, value=0.000000e+00, ind=638, rg=197, branches=vector(1) [ 58 ]
+    -  label=MIX, value=0.000000e+00, ind=648, rg=198, branches=vector(1) [ 58 ]
+    -  label=MIX, value=0.000000e+00, ind=649, rg=199, branches=vector(1) [ 59 ]
+    -  label=MIX, value=0.000000e+00, ind=659, rg=200, branches=vector(1) [ 59 ]
+    -  label=MIX, value=0.000000e+00, ind=660, rg=201, branches=vector(1) [ 60 ]
+    -  label=MIX, value=0.000000e+00, ind=670, rg=202, branches=vector(1) [ 60 ]
+    -  label=MIX, value=0.000000e+00, ind=671, rg=203, branches=vector(1) [ 61 ]
+    -  label=MIX, value=0.000000e+00, ind=681, rg=204, branches=vector(1) [ 61 ]
+    -  label=MIX, value=0.000000e+00, ind=682, rg=205, branches=vector(1) [ 62 ]
+    -  label=MIX, value=0.000000e+00, ind=692, rg=206, branches=vector(1) [ 62 ]
+    -  label=MIX, value=0.000000e+00, ind=693, rg=207, branches=vector(1) [ 63 ]
+    -  label=MIX, value=0.000000e+00, ind=703, rg=208, branches=vector(1) [ 63 ]
+    -  label=MIX, value=0.000000e+00, ind=704, rg=209, branches=vector(1) [ 64 ]
+    -  label=MIX, value=0.000000e+00, ind=714, rg=210, branches=vector(1) [ 64 ]
+    -  label=MIX, value=0.000000e+00, ind=715, rg=211, branches=vector(1) [ 65 ]
+    -  label=MIX, value=0.000000e+00, ind=725, rg=212, branches=vector(1) [ 65 ]
+    -  label=MIX, value=0.000000e+00, ind=726, rg=213, branches=vector(1) [ 66 ]
+    -  label=MIX, value=0.000000e+00, ind=736, rg=214, branches=vector(1) [ 66 ]
+    -  label=MIX, value=0.000000e+00, ind=737, rg=215, branches=vector(1) [ 67 ]
+    -  label=MIX, value=0.000000e+00, ind=747, rg=216, branches=vector(1) [ 67 ]
+    -  label=MIX, value=0.000000e+00, ind=748, rg=217, branches=vector(1) [ 68 ]
+    -  label=MIX, value=0.000000e+00, ind=758, rg=218, branches=vector(1) [ 68 ]
+    -  label=MIX, value=0.000000e+00, ind=759, rg=219, branches=vector(1) [ 69 ]
+    -  label=MIX, value=0.000000e+00, ind=769, rg=220, branches=vector(1) [ 69 ]
+    -  label=MIX, value=0.000000e+00, ind=770, rg=221, branches=vector(1) [ 70 ]
+    -  label=MIX, value=0.000000e+00, ind=780, rg=222, branches=vector(1) [ 70 ]
+    -  label=MIX, value=0.000000e+00, ind=781, rg=223, branches=vector(1) [ 71 ]
+    -  label=MIX, value=0.000000e+00, ind=791, rg=224, branches=vector(1) [ 71 ]
+    -  label=MIX, value=0.000000e+00, ind=792, rg=225, branches=vector(1) [ 72 ]
+    -  label=MIX, value=0.000000e+00, ind=802, rg=226, branches=vector(1) [ 72 ]
+    -  label=MIX, value=0.000000e+00, ind=803, rg=227, branches=vector(1) [ 73 ]
+    -  label=MIX, value=0.000000e+00, ind=813, rg=228, branches=vector(1) [ 73 ]
+    -  label=MIX, value=0.000000e+00, ind=814, rg=229, branches=vector(1) [ 74 ]
+    -  label=MIX, value=0.000000e+00, ind=824, rg=230, branches=vector(1) [ 74 ]
+    -  label=MIX, value=0.000000e+00, ind=825, rg=231, branches=vector(1) [ 75 ]
+    -  label=MIX, value=0.000000e+00, ind=835, rg=232, branches=vector(1) [ 75 ]
+    -  label=MIX, value=0.000000e+00, ind=836, rg=233, branches=vector(1) [ 76 ]
+    -  label=MIX, value=0.000000e+00, ind=846, rg=234, branches=vector(1) [ 76 ]
+    -  label=MIX, value=0.000000e+00, ind=847, rg=235, branches=vector(1) [ 77 ]
+    -  label=MIX, value=0.000000e+00, ind=857, rg=236, branches=vector(1) [ 77 ]
+    -  label=MIX, value=0.000000e+00, ind=858, rg=237, branches=vector(1) [ 78 ]
+    -  label=MIX, value=0.000000e+00, ind=868, rg=238, branches=vector(1) [ 78 ]
+    -  label=MIX, value=0.000000e+00, ind=869, rg=239, branches=vector(1) [ 79 ]
+    -  label=MIX, value=0.000000e+00, ind=879, rg=240, branches=vector(1) [ 79 ]
+    -  label=MIX, value=0.000000e+00, ind=880, rg=241, branches=vector(1) [ 80 ]
+    -  label=MIX, value=0.000000e+00, ind=890, rg=242, branches=vector(1) [ 80 ]
+  Junctions: []
+---------------------------------------- 
+Building tissue boundary ...
+  face 0 : ('MIX',0.000000e+00,0,0)
+  face 1 : ('MIX',0.000000e+00,0,1)
+  face 2 : ('MIX',0.000000e+00,0,2)
+  face 3 : ('MIX',0.000000e+00,0,3)
+  face 4 : ('DIR',2.000000e+01,0,4)
+  face 5 : ('MIX',0.000000e+00,0,5)
+('MIX',0.000000e+00,0,0)
+('MIX',0.000000e+00,0,1)
+('MIX',0.000000e+00,0,2)
+('MIX',0.000000e+00,0,3)
+('DIR',2.000000e+01,0,4)
+('MIX',0.000000e+00,0,5)
+assemble transport problem
+Allocating AM, UM, FM ...
+Assembling the monolithic matrix AM ...
+  Assembling  Dt ...
+  Assembling  Dv ...
+  Assembling aux exchange matrices Mbar and Mlin ...
+=====dof_v0========sum_row5.000000e+01
+=====dof_v1========sum_row5.000000e+01
+=====dof_v2========sum_row5.000000e+01
+=====dof_v3========sum_row5.000000e+01
+=====dof_v4========sum_row5.000000e+01
+=====dof_v5========sum_row5.000000e+01
+=====dof_v6========sum_row5.000000e+01
+=====dof_v7========sum_row5.000000e+01
+*=====dof_v8========sum_row5.000000e+01
+=====dof_v9========sum_row5.000000e+01
+=====dof_v10========sum_row5.000000e+01
+=====dof_v11========sum_row2.500000e+01
+=====dof_v12========sum_row5.000000e+01
+=====dof_v13========sum_row5.000000e+01
+=====dof_v14========sum_row5.000000e+01
+=====dof_v15========sum_row5.000000e+01
+=====dof_v16========sum_row5.000000e+01
+*=====dof_v17========sum_row5.000000e+01
+=====dof_v18========sum_row5.000000e+01
+=====dof_v19========sum_row5.000000e+01
+=====dof_v20========sum_row5.000000e+01
+=====dof_v21========sum_row5.000000e+01
+=====dof_v22========sum_row2.500000e+01
+=====dof_v23========sum_row5.000000e+01
+=====dof_v24========sum_row5.000000e+01
+=====dof_v25========sum_row5.000000e+01
+*=====dof_v26========sum_row5.000000e+01
+=====dof_v27========sum_row5.000000e+01
+=====dof_v28========sum_row5.000000e+01
+=====dof_v29========sum_row5.000000e+01
+=====dof_v30========sum_row5.000000e+01
+=====dof_v31========sum_row5.000000e+01
+=====dof_v32========sum_row5.000000e+01
+=====dof_v33========sum_row2.500000e+01
+=====dof_v34========sum_row5.000000e+01
+*=====dof_v35========sum_row5.000000e+01
+=====dof_v36========sum_row5.000000e+01
+=====dof_v37========sum_row5.000000e+01
+=====dof_v38========sum_row5.000000e+01
+=====dof_v39========sum_row5.000000e+01
+=====dof_v40========sum_row5.000000e+01
+=====dof_v41========sum_row5.000000e+01
+=====dof_v42========sum_row5.000000e+01
+=====dof_v43========sum_row5.000000e+01
+*=====dof_v44========sum_row2.500000e+01
+=====dof_v45========sum_row5.000000e+01
+=====dof_v46========sum_row5.000000e+01
+=====dof_v47========sum_row5.000000e+01
+=====dof_v48========sum_row5.000000e+01
+=====dof_v49========sum_row5.000000e+01
+=====dof_v50========sum_row5.000000e+01
+=====dof_v51========sum_row5.000000e+01
+=====dof_v52========sum_row5.000000e+01
+*=====dof_v53========sum_row5.000000e+01
+=====dof_v54========sum_row5.000000e+01
+=====dof_v55========sum_row2.500000e+01
+=====dof_v56========sum_row5.000000e+01
+=====dof_v57========sum_row5.000000e+01
+=====dof_v58========sum_row5.000000e+01
+=====dof_v59========sum_row5.000000e+01
+=====dof_v60========sum_row5.000000e+01
+=====dof_v61========sum_row5.000000e+01
+*=====dof_v62========sum_row5.000000e+01
+=====dof_v63========sum_row5.000000e+01
+=====dof_v64========sum_row5.000000e+01
+=====dof_v65========sum_row5.000000e+01
+=====dof_v66========sum_row2.500000e+01
+=====dof_v67========sum_row5.000000e+01
+=====dof_v68========sum_row5.000000e+01
+=====dof_v69========sum_row5.000000e+01
+=====dof_v70========sum_row5.000000e+01
+*=====dof_v71========sum_row5.000000e+01
+=====dof_v72========sum_row5.000000e+01
+=====dof_v73========sum_row5.000000e+01
+=====dof_v74========sum_row5.000000e+01
+=====dof_v75========sum_row5.000000e+01
+=====dof_v76========sum_row5.000000e+01
+=====dof_v77========sum_row2.500000e+01
+=====dof_v78========sum_row5.000000e+01
+=====dof_v79========sum_row5.000000e+01
+*=====dof_v80========sum_row5.000000e+01
+=====dof_v81========sum_row5.000000e+01
+=====dof_v82========sum_row5.000000e+01
+=====dof_v83========sum_row5.000000e+01
+=====dof_v84========sum_row5.000000e+01
+=====dof_v85========sum_row5.000000e+01
+=====dof_v86========sum_row5.000000e+01
+=====dof_v87========sum_row5.000000e+01
+=====dof_v88========sum_row2.500000e+01
+*=====dof_v89========sum_row5.000000e+01
+=====dof_v90========sum_row5.000000e+01
+=====dof_v91========sum_row5.000000e+01
+=====dof_v92========sum_row5.000000e+01
+=====dof_v93========sum_row5.000000e+01
+=====dof_v94========sum_row5.000000e+01
+=====dof_v95========sum_row5.000000e+01
+=====dof_v96========sum_row5.000000e+01
+=====dof_v97========sum_row5.000000e+01
+*=====dof_v98========sum_row5.000000e+01
+=====dof_v99========sum_row2.500000e+01
+=====dof_v100========sum_row5.000000e+01
+=====dof_v101========sum_row5.000000e+01
+=====dof_v102========sum_row5.000000e+01
+=====dof_v103========sum_row5.000000e+01
+=====dof_v104========sum_row5.000000e+01
+=====dof_v105========sum_row5.000000e+01
+=====dof_v106========sum_row5.000000e+01
+*=====dof_v107========sum_row5.000000e+01
+=====dof_v108========sum_row5.000000e+01
+=====dof_v109========sum_row5.000000e+01
+=====dof_v110========sum_row2.500000e+01
+=====dof_v111========sum_row5.000000e+01
+=====dof_v112========sum_row5.000000e+01
+=====dof_v113========sum_row5.000000e+01
+=====dof_v114========sum_row5.000000e+01
+=====dof_v115========sum_row5.000000e+01
+*=====dof_v116========sum_row5.000000e+01
+=====dof_v117========sum_row5.000000e+01
+=====dof_v118========sum_row5.000000e+01
+=====dof_v119========sum_row5.000000e+01
+=====dof_v120========sum_row5.000000e+01
+=====dof_v121========sum_row2.500000e+01
+=====dof_v122========sum_row5.000000e+01
+=====dof_v123========sum_row5.000000e+01
+=====dof_v124========sum_row5.000000e+01
+*=====dof_v125========sum_row5.000000e+01
+=====dof_v126========sum_row5.000000e+01
+=====dof_v127========sum_row5.000000e+01
+=====dof_v128========sum_row5.000000e+01
+=====dof_v129========sum_row5.000000e+01
+=====dof_v130========sum_row5.000000e+01
+=====dof_v131========sum_row5.000000e+01
+=====dof_v132========sum_row2.500000e+01
+=====dof_v133========sum_row5.000000e+01
+*=====dof_v134========sum_row5.000000e+01
+=====dof_v135========sum_row5.000000e+01
+=====dof_v136========sum_row5.000000e+01
+=====dof_v137========sum_row5.000000e+01
+=====dof_v138========sum_row5.000000e+01
+=====dof_v139========sum_row5.000000e+01
+=====dof_v140========sum_row5.000000e+01
+=====dof_v141========sum_row5.000000e+01
+=====dof_v142========sum_row5.000000e+01
+*=====dof_v143========sum_row2.500000e+01
+=====dof_v144========sum_row5.000000e+01
+=====dof_v145========sum_row5.000000e+01
+=====dof_v146========sum_row5.000000e+01
+=====dof_v147========sum_row5.000000e+01
+=====dof_v148========sum_row5.000000e+01
+=====dof_v149========sum_row5.000000e+01
+=====dof_v150========sum_row5.000000e+01
+=====dof_v151========sum_row5.000000e+01
+*=====dof_v152========sum_row5.000000e+01
+=====dof_v153========sum_row5.000000e+01
+=====dof_v154========sum_row2.500000e+01
+=====dof_v155========sum_row5.000000e+01
+=====dof_v156========sum_row5.000000e+01
+=====dof_v157========sum_row5.000000e+01
+=====dof_v158========sum_row5.000000e+01
+=====dof_v159========sum_row5.000000e+01
+=====dof_v160========sum_row5.000000e+01
+*=====dof_v161========sum_row5.000000e+01
+=====dof_v162========sum_row5.000000e+01
+=====dof_v163========sum_row5.000000e+01
+=====dof_v164========sum_row5.000000e+01
+=====dof_v165========sum_row2.500000e+01
+=====dof_v166========sum_row5.000000e+01
+=====dof_v167========sum_row5.000000e+01
+=====dof_v168========sum_row5.000000e+01
+=====dof_v169========sum_row5.000000e+01
+*=====dof_v170========sum_row5.000000e+01
+=====dof_v171========sum_row5.000000e+01
+=====dof_v172========sum_row5.000000e+01
+=====dof_v173========sum_row5.000000e+01
+=====dof_v174========sum_row5.000000e+01
+=====dof_v175========sum_row5.000000e+01
+=====dof_v176========sum_row2.500000e+01
+=====dof_v177========sum_row5.000000e+01
+=====dof_v178========sum_row5.000000e+01
+*=====dof_v179========sum_row5.000000e+01
+=====dof_v180========sum_row5.000000e+01
+=====dof_v181========sum_row5.000000e+01
+=====dof_v182========sum_row5.000000e+01
+=====dof_v183========sum_row5.000000e+01
+=====dof_v184========sum_row5.000000e+01
+=====dof_v185========sum_row5.000000e+01
+=====dof_v186========sum_row5.000000e+01
+=====dof_v187========sum_row2.500000e+01
+*=====dof_v188========sum_row5.000000e+01
+=====dof_v189========sum_row5.000000e+01
+=====dof_v190========sum_row5.000000e+01
+=====dof_v191========sum_row5.000000e+01
+=====dof_v192========sum_row5.000000e+01
+=====dof_v193========sum_row5.000000e+01
+=====dof_v194========sum_row5.000000e+01
+=====dof_v195========sum_row5.000000e+01
+=====dof_v196========sum_row5.000000e+01
+*=====dof_v197========sum_row5.000000e+01
+=====dof_v198========sum_row2.500000e+01
+=====dof_v199========sum_row5.000000e+01
+=====dof_v200========sum_row5.000000e+01
+=====dof_v201========sum_row5.000000e+01
+=====dof_v202========sum_row5.000000e+01
+=====dof_v203========sum_row5.000000e+01
+=====dof_v204========sum_row5.000000e+01
+=====dof_v205========sum_row5.000000e+01
+*=====dof_v206========sum_row5.000000e+01
+=====dof_v207========sum_row5.000000e+01
+=====dof_v208========sum_row5.000000e+01
+=====dof_v209========sum_row2.500000e+01
+=====dof_v210========sum_row5.000000e+01
+=====dof_v211========sum_row5.000000e+01
+=====dof_v212========sum_row5.000000e+01
+=====dof_v213========sum_row5.000000e+01
+=====dof_v214========sum_row5.000000e+01
+*=====dof_v215========sum_row5.000000e+01
+=====dof_v216========sum_row5.000000e+01
+=====dof_v217========sum_row5.000000e+01
+=====dof_v218========sum_row5.000000e+01
+=====dof_v219========sum_row5.000000e+01
+=====dof_v220========sum_row2.500000e+01
+=====dof_v221========sum_row5.000000e+01
+=====dof_v222========sum_row5.000000e+01
+=====dof_v223========sum_row5.000000e+01
+*=====dof_v224========sum_row5.000000e+01
+=====dof_v225========sum_row5.000000e+01
+=====dof_v226========sum_row5.000000e+01
+=====dof_v227========sum_row5.000000e+01
+=====dof_v228========sum_row5.000000e+01
+=====dof_v229========sum_row5.000000e+01
+=====dof_v230========sum_row5.000000e+01
+=====dof_v231========sum_row2.500000e+01
+=====dof_v232========sum_row5.000000e+01
+*=====dof_v233========sum_row5.000000e+01
+=====dof_v234========sum_row5.000000e+01
+=====dof_v235========sum_row5.000000e+01
+=====dof_v236========sum_row5.000000e+01
+=====dof_v237========sum_row5.000000e+01
+=====dof_v238========sum_row5.000000e+01
+=====dof_v239========sum_row5.000000e+01
+=====dof_v240========sum_row5.000000e+01
+=====dof_v241========sum_row5.000000e+01
+*=====dof_v242========sum_row2.500000e+01
+=====dof_v243========sum_row5.000000e+01
+=====dof_v244========sum_row5.000000e+01
+=====dof_v245========sum_row5.000000e+01
+=====dof_v246========sum_row5.000000e+01
+=====dof_v247========sum_row5.000000e+01
+=====dof_v248========sum_row5.000000e+01
+=====dof_v249========sum_row5.000000e+01
+=====dof_v250========sum_row5.000000e+01
+*=====dof_v251========sum_row5.000000e+01
+=====dof_v252========sum_row5.000000e+01
+=====dof_v253========sum_row2.500000e+01
+=====dof_v254========sum_row5.000000e+01
+=====dof_v255========sum_row5.000000e+01
+=====dof_v256========sum_row5.000000e+01
+=====dof_v257========sum_row5.000000e+01
+=====dof_v258========sum_row5.000000e+01
+=====dof_v259========sum_row5.000000e+01
+*=====dof_v260========sum_row5.000000e+01
+=====dof_v261========sum_row5.000000e+01
+=====dof_v262========sum_row5.000000e+01
+=====dof_v263========sum_row5.000000e+01
+=====dof_v264========sum_row2.500000e+01
+=====dof_v265========sum_row5.000000e+01
+=====dof_v266========sum_row5.000000e+01
+=====dof_v267========sum_row5.000000e+01
+=====dof_v268========sum_row5.000000e+01
+*=====dof_v269========sum_row5.000000e+01
+=====dof_v270========sum_row5.000000e+01
+=====dof_v271========sum_row5.000000e+01
+=====dof_v272========sum_row5.000000e+01
+=====dof_v273========sum_row5.000000e+01
+=====dof_v274========sum_row5.000000e+01
+=====dof_v275========sum_row2.500000e+01
+=====dof_v276========sum_row5.000000e+01
+=====dof_v277========sum_row5.000000e+01
+*=====dof_v278========sum_row5.000000e+01
+=====dof_v279========sum_row5.000000e+01
+=====dof_v280========sum_row5.000000e+01
+=====dof_v281========sum_row5.000000e+01
+=====dof_v282========sum_row5.000000e+01
+=====dof_v283========sum_row5.000000e+01
+=====dof_v284========sum_row5.000000e+01
+=====dof_v285========sum_row5.000000e+01
+=====dof_v286========sum_row2.500000e+01
+*=====dof_v287========sum_row5.000000e+01
+=====dof_v288========sum_row5.000000e+01
+=====dof_v289========sum_row5.000000e+01
+=====dof_v290========sum_row5.000000e+01
+=====dof_v291========sum_row5.000000e+01
+=====dof_v292========sum_row5.000000e+01
+=====dof_v293========sum_row5.000000e+01
+=====dof_v294========sum_row5.000000e+01
+=====dof_v295========sum_row5.000000e+01
+*=====dof_v296========sum_row5.000000e+01
+=====dof_v297========sum_row2.500000e+01
+=====dof_v298========sum_row5.000000e+01
+=====dof_v299========sum_row5.000000e+01
+=====dof_v300========sum_row5.000000e+01
+=====dof_v301========sum_row5.000000e+01
+=====dof_v302========sum_row5.000000e+01
+=====dof_v303========sum_row5.000000e+01
+=====dof_v304========sum_row5.000000e+01
+*=====dof_v305========sum_row5.000000e+01
+=====dof_v306========sum_row5.000000e+01
+=====dof_v307========sum_row5.000000e+01
+=====dof_v308========sum_row2.500000e+01
+=====dof_v309========sum_row5.000000e+01
+=====dof_v310========sum_row5.000000e+01
+=====dof_v311========sum_row5.000000e+01
+=====dof_v312========sum_row5.000000e+01
+=====dof_v313========sum_row5.000000e+01
+*=====dof_v314========sum_row5.000000e+01
+=====dof_v315========sum_row5.000000e+01
+=====dof_v316========sum_row5.000000e+01
+=====dof_v317========sum_row5.000000e+01
+=====dof_v318========sum_row5.000000e+01
+=====dof_v319========sum_row2.500000e+01
+=====dof_v320========sum_row5.000000e+01
+=====dof_v321========sum_row5.000000e+01
+=====dof_v322========sum_row5.000000e+01
+*=====dof_v323========sum_row5.000000e+01
+=====dof_v324========sum_row5.000000e+01
+=====dof_v325========sum_row5.000000e+01
+=====dof_v326========sum_row5.000000e+01
+=====dof_v327========sum_row5.000000e+01
+=====dof_v328========sum_row5.000000e+01
+=====dof_v329========sum_row5.000000e+01
+=====dof_v330========sum_row2.500000e+01
+=====dof_v331========sum_row5.000000e+01
+*=====dof_v332========sum_row5.000000e+01
+=====dof_v333========sum_row5.000000e+01
+=====dof_v334========sum_row5.000000e+01
+=====dof_v335========sum_row5.000000e+01
+=====dof_v336========sum_row5.000000e+01
+=====dof_v337========sum_row5.000000e+01
+=====dof_v338========sum_row5.000000e+01
+=====dof_v339========sum_row5.000000e+01
+=====dof_v340========sum_row5.000000e+01
+*=====dof_v341========sum_row2.500000e+01
+=====dof_v342========sum_row5.000000e+01
+=====dof_v343========sum_row5.000000e+01
+=====dof_v344========sum_row5.000000e+01
+=====dof_v345========sum_row5.000000e+01
+=====dof_v346========sum_row5.000000e+01
+=====dof_v347========sum_row5.000000e+01
+=====dof_v348========sum_row5.000000e+01
+=====dof_v349========sum_row5.000000e+01
+*=====dof_v350========sum_row5.000000e+01
+=====dof_v351========sum_row5.000000e+01
+=====dof_v352========sum_row2.500000e+01
+=====dof_v353========sum_row5.000000e+01
+=====dof_v354========sum_row5.000000e+01
+=====dof_v355========sum_row5.000000e+01
+=====dof_v356========sum_row5.000000e+01
+=====dof_v357========sum_row5.000000e+01
+=====dof_v358========sum_row5.000000e+01
+*=====dof_v359========sum_row5.000000e+01
+=====dof_v360========sum_row5.000000e+01
+=====dof_v361========sum_row5.000000e+01
+=====dof_v362========sum_row5.000000e+01
+=====dof_v363========sum_row2.500000e+01
+=====dof_v364========sum_row5.000000e+01
+=====dof_v365========sum_row5.000000e+01
+=====dof_v366========sum_row5.000000e+01
+=====dof_v367========sum_row5.000000e+01
+*=====dof_v368========sum_row5.000000e+01
+=====dof_v369========sum_row5.000000e+01
+=====dof_v370========sum_row5.000000e+01
+=====dof_v371========sum_row5.000000e+01
+=====dof_v372========sum_row5.000000e+01
+=====dof_v373========sum_row5.000000e+01
+=====dof_v374========sum_row2.500000e+01
+=====dof_v375========sum_row5.000000e+01
+=====dof_v376========sum_row5.000000e+01
+*=====dof_v377========sum_row5.000000e+01
+=====dof_v378========sum_row5.000000e+01
+=====dof_v379========sum_row5.000000e+01
+=====dof_v380========sum_row5.000000e+01
+=====dof_v381========sum_row5.000000e+01
+=====dof_v382========sum_row5.000000e+01
+=====dof_v383========sum_row5.000000e+01
+=====dof_v384========sum_row5.000000e+01
+=====dof_v385========sum_row2.500000e+01
+*=====dof_v386========sum_row5.000000e+01
+=====dof_v387========sum_row5.000000e+01
+=====dof_v388========sum_row5.000000e+01
+=====dof_v389========sum_row5.000000e+01
+=====dof_v390========sum_row5.000000e+01
+=====dof_v391========sum_row5.000000e+01
+=====dof_v392========sum_row5.000000e+01
+=====dof_v393========sum_row5.000000e+01
+=====dof_v394========sum_row5.000000e+01
+*=====dof_v395========sum_row5.000000e+01
+=====dof_v396========sum_row2.500000e+01
+=====dof_v397========sum_row5.000000e+01
+=====dof_v398========sum_row5.000000e+01
+=====dof_v399========sum_row5.000000e+01
+=====dof_v400========sum_row5.000000e+01
+=====dof_v401========sum_row5.000000e+01
+=====dof_v402========sum_row5.000000e+01
+=====dof_v403========sum_row5.000000e+01
+*=====dof_v404========sum_row5.000000e+01
+=====dof_v405========sum_row5.000000e+01
+=====dof_v406========sum_row5.000000e+01
+=====dof_v407========sum_row2.500000e+01
+=====dof_v408========sum_row5.000000e+01
+=====dof_v409========sum_row5.000000e+01
+=====dof_v410========sum_row5.000000e+01
+=====dof_v411========sum_row5.000000e+01
+=====dof_v412========sum_row5.000000e+01
+*=====dof_v413========sum_row5.000000e+01
+=====dof_v414========sum_row5.000000e+01
+=====dof_v415========sum_row5.000000e+01
+=====dof_v416========sum_row5.000000e+01
+=====dof_v417========sum_row5.000000e+01
+=====dof_v418========sum_row2.500000e+01
+=====dof_v419========sum_row5.000000e+01
+=====dof_v420========sum_row5.000000e+01
+=====dof_v421========sum_row5.000000e+01
+*=====dof_v422========sum_row5.000000e+01
+=====dof_v423========sum_row5.000000e+01
+=====dof_v424========sum_row5.000000e+01
+=====dof_v425========sum_row5.000000e+01
+=====dof_v426========sum_row5.000000e+01
+=====dof_v427========sum_row5.000000e+01
+=====dof_v428========sum_row5.000000e+01
+=====dof_v429========sum_row2.500000e+01
+=====dof_v430========sum_row5.000000e+01
+*=====dof_v431========sum_row5.000000e+01
+=====dof_v432========sum_row5.000000e+01
+=====dof_v433========sum_row5.000000e+01
+=====dof_v434========sum_row5.000000e+01
+=====dof_v435========sum_row5.000000e+01
+=====dof_v436========sum_row5.000000e+01
+=====dof_v437========sum_row5.000000e+01
+=====dof_v438========sum_row5.000000e+01
+=====dof_v439========sum_row5.000000e+01
+*=====dof_v440========sum_row2.500000e+01
+=====dof_v441========sum_row5.000000e+01
+=====dof_v442========sum_row5.000000e+01
+=====dof_v443========sum_row5.000000e+01
+=====dof_v444========sum_row5.000000e+01
+=====dof_v445========sum_row5.000000e+01
+=====dof_v446========sum_row5.000000e+01
+=====dof_v447========sum_row5.000000e+01
+=====dof_v448========sum_row5.000000e+01
+*=====dof_v449========sum_row5.000000e+01
+=====dof_v450========sum_row5.000000e+01
+=====dof_v451========sum_row2.500000e+01
+=====dof_v452========sum_row5.000000e+01
+=====dof_v453========sum_row5.000000e+01
+=====dof_v454========sum_row5.000000e+01
+=====dof_v455========sum_row5.000000e+01
+=====dof_v456========sum_row5.000000e+01
+=====dof_v457========sum_row5.000000e+01
+*=====dof_v458========sum_row5.000000e+01
+=====dof_v459========sum_row5.000000e+01
+=====dof_v460========sum_row5.000000e+01
+=====dof_v461========sum_row5.000000e+01
+=====dof_v462========sum_row2.500000e+01
+=====dof_v463========sum_row5.000000e+01
+=====dof_v464========sum_row5.000000e+01
+=====dof_v465========sum_row5.000000e+01
+=====dof_v466========sum_row5.000000e+01
+*=====dof_v467========sum_row5.000000e+01
+=====dof_v468========sum_row5.000000e+01
+=====dof_v469========sum_row5.000000e+01
+=====dof_v470========sum_row5.000000e+01
+=====dof_v471========sum_row5.000000e+01
+=====dof_v472========sum_row5.000000e+01
+=====dof_v473========sum_row2.500000e+01
+=====dof_v474========sum_row5.000000e+01
+=====dof_v475========sum_row5.000000e+01
+*=====dof_v476========sum_row5.000000e+01
+=====dof_v477========sum_row5.000000e+01
+=====dof_v478========sum_row5.000000e+01
+=====dof_v479========sum_row5.000000e+01
+=====dof_v480========sum_row5.000000e+01
+=====dof_v481========sum_row5.000000e+01
+=====dof_v482========sum_row5.000000e+01
+=====dof_v483========sum_row5.000000e+01
+=====dof_v484========sum_row2.500000e+01
+*=====dof_v485========sum_row5.000000e+01
+=====dof_v486========sum_row5.000000e+01
+=====dof_v487========sum_row5.000000e+01
+=====dof_v488========sum_row5.000000e+01
+=====dof_v489========sum_row5.000000e+01
+=====dof_v490========sum_row5.000000e+01
+=====dof_v491========sum_row5.000000e+01
+=====dof_v492========sum_row5.000000e+01
+=====dof_v493========sum_row5.000000e+01
+*=====dof_v494========sum_row5.000000e+01
+=====dof_v495========sum_row2.500000e+01
+=====dof_v496========sum_row5.000000e+01
+=====dof_v497========sum_row5.000000e+01
+=====dof_v498========sum_row5.000000e+01
+=====dof_v499========sum_row5.000000e+01
+=====dof_v500========sum_row5.000000e+01
+=====dof_v501========sum_row5.000000e+01
+=====dof_v502========sum_row5.000000e+01
+*=====dof_v503========sum_row5.000000e+01
+=====dof_v504========sum_row5.000000e+01
+=====dof_v505========sum_row5.000000e+01
+=====dof_v506========sum_row2.500000e+01
+=====dof_v507========sum_row5.000000e+01
+=====dof_v508========sum_row5.000000e+01
+=====dof_v509========sum_row5.000000e+01
+=====dof_v510========sum_row5.000000e+01
+=====dof_v511========sum_row5.000000e+01
+*=====dof_v512========sum_row5.000000e+01
+=====dof_v513========sum_row5.000000e+01
+=====dof_v514========sum_row5.000000e+01
+=====dof_v515========sum_row5.000000e+01
+=====dof_v516========sum_row5.000000e+01
+=====dof_v517========sum_row2.500000e+01
+=====dof_v518========sum_row5.000000e+01
+=====dof_v519========sum_row5.000000e+01
+=====dof_v520========sum_row5.000000e+01
+*=====dof_v521========sum_row5.000000e+01
+=====dof_v522========sum_row5.000000e+01
+=====dof_v523========sum_row5.000000e+01
+=====dof_v524========sum_row5.000000e+01
+=====dof_v525========sum_row5.000000e+01
+=====dof_v526========sum_row5.000000e+01
+=====dof_v527========sum_row5.000000e+01
+=====dof_v528========sum_row2.500000e+01
+=====dof_v529========sum_row5.000000e+01
+*=====dof_v530========sum_row5.000000e+01
+=====dof_v531========sum_row5.000000e+01
+=====dof_v532========sum_row5.000000e+01
+=====dof_v533========sum_row5.000000e+01
+=====dof_v534========sum_row5.000000e+01
+=====dof_v535========sum_row5.000000e+01
+=====dof_v536========sum_row5.000000e+01
+=====dof_v537========sum_row5.000000e+01
+=====dof_v538========sum_row5.000000e+01
+*=====dof_v539========sum_row2.500000e+01
+=====dof_v540========sum_row5.000000e+01
+=====dof_v541========sum_row5.000000e+01
+=====dof_v542========sum_row5.000000e+01
+=====dof_v543========sum_row5.000000e+01
+=====dof_v544========sum_row5.000000e+01
+=====dof_v545========sum_row5.000000e+01
+=====dof_v546========sum_row5.000000e+01
+=====dof_v547========sum_row5.000000e+01
+*=====dof_v548========sum_row5.000000e+01
+=====dof_v549========sum_row5.000000e+01
+=====dof_v550========sum_row2.500000e+01
+=====dof_v551========sum_row5.000000e+01
+=====dof_v552========sum_row5.000000e+01
+=====dof_v553========sum_row5.000000e+01
+=====dof_v554========sum_row5.000000e+01
+=====dof_v555========sum_row5.000000e+01
+=====dof_v556========sum_row5.000000e+01
+*=====dof_v557========sum_row5.000000e+01
+=====dof_v558========sum_row5.000000e+01
+=====dof_v559========sum_row5.000000e+01
+=====dof_v560========sum_row5.000000e+01
+=====dof_v561========sum_row2.500000e+01
+=====dof_v562========sum_row5.000000e+01
+=====dof_v563========sum_row5.000000e+01
+=====dof_v564========sum_row5.000000e+01
+=====dof_v565========sum_row5.000000e+01
+*=====dof_v566========sum_row5.000000e+01
+=====dof_v567========sum_row5.000000e+01
+=====dof_v568========sum_row5.000000e+01
+=====dof_v569========sum_row5.000000e+01
+=====dof_v570========sum_row5.000000e+01
+=====dof_v571========sum_row5.000000e+01
+=====dof_v572========sum_row2.500000e+01
+=====dof_v573========sum_row5.000000e+01
+=====dof_v574========sum_row5.000000e+01
+*=====dof_v575========sum_row5.000000e+01
+=====dof_v576========sum_row5.000000e+01
+=====dof_v577========sum_row5.000000e+01
+=====dof_v578========sum_row5.000000e+01
+=====dof_v579========sum_row5.000000e+01
+=====dof_v580========sum_row5.000000e+01
+=====dof_v581========sum_row5.000000e+01
+=====dof_v582========sum_row5.000000e+01
+=====dof_v583========sum_row2.500000e+01
+*=====dof_v584========sum_row5.000000e+01
+=====dof_v585========sum_row5.000000e+01
+=====dof_v586========sum_row5.000000e+01
+=====dof_v587========sum_row5.000000e+01
+=====dof_v588========sum_row5.000000e+01
+=====dof_v589========sum_row5.000000e+01
+=====dof_v590========sum_row5.000000e+01
+=====dof_v591========sum_row5.000000e+01
+=====dof_v592========sum_row5.000000e+01
+*=====dof_v593========sum_row5.000000e+01
+=====dof_v594========sum_row2.500000e+01
+=====dof_v595========sum_row5.000000e+01
+=====dof_v596========sum_row5.000000e+01
+=====dof_v597========sum_row5.000000e+01
+=====dof_v598========sum_row5.000000e+01
+=====dof_v599========sum_row5.000000e+01
+=====dof_v600========sum_row5.000000e+01
+=====dof_v601========sum_row5.000000e+01
+*=====dof_v602========sum_row5.000000e+01
+=====dof_v603========sum_row5.000000e+01
+=====dof_v604========sum_row5.000000e+01
+=====dof_v605========sum_row2.500000e+01
+=====dof_v606========sum_row5.000000e+01
+=====dof_v607========sum_row5.000000e+01
+=====dof_v608========sum_row5.000000e+01
+=====dof_v609========sum_row5.000000e+01
+=====dof_v610========sum_row5.000000e+01
+*=====dof_v611========sum_row5.000000e+01
+=====dof_v612========sum_row5.000000e+01
+=====dof_v613========sum_row5.000000e+01
+=====dof_v614========sum_row5.000000e+01
+=====dof_v615========sum_row5.000000e+01
+=====dof_v616========sum_row2.500000e+01
+=====dof_v617========sum_row5.000000e+01
+=====dof_v618========sum_row5.000000e+01
+=====dof_v619========sum_row5.000000e+01
+*=====dof_v620========sum_row5.000000e+01
+=====dof_v621========sum_row5.000000e+01
+=====dof_v622========sum_row5.000000e+01
+=====dof_v623========sum_row5.000000e+01
+=====dof_v624========sum_row5.000000e+01
+=====dof_v625========sum_row5.000000e+01
+=====dof_v626========sum_row5.000000e+01
+=====dof_v627========sum_row2.500000e+01
+=====dof_v628========sum_row5.000000e+01
+*=====dof_v629========sum_row5.000000e+01
+=====dof_v630========sum_row5.000000e+01
+=====dof_v631========sum_row5.000000e+01
+=====dof_v632========sum_row5.000000e+01
+=====dof_v633========sum_row5.000000e+01
+=====dof_v634========sum_row5.000000e+01
+=====dof_v635========sum_row5.000000e+01
+=====dof_v636========sum_row5.000000e+01
+=====dof_v637========sum_row5.000000e+01
+*=====dof_v638========sum_row2.500000e+01
+=====dof_v639========sum_row5.000000e+01
+=====dof_v640========sum_row5.000000e+01
+=====dof_v641========sum_row5.000000e+01
+=====dof_v642========sum_row5.000000e+01
+=====dof_v643========sum_row5.000000e+01
+=====dof_v644========sum_row5.000000e+01
+=====dof_v645========sum_row5.000000e+01
+=====dof_v646========sum_row5.000000e+01
+*=====dof_v647========sum_row5.000000e+01
+=====dof_v648========sum_row5.000000e+01
+=====dof_v649========sum_row2.500000e+01
+=====dof_v650========sum_row5.000000e+01
+=====dof_v651========sum_row5.000000e+01
+=====dof_v652========sum_row5.000000e+01
+=====dof_v653========sum_row5.000000e+01
+=====dof_v654========sum_row5.000000e+01
+=====dof_v655========sum_row5.000000e+01
+*=====dof_v656========sum_row5.000000e+01
+=====dof_v657========sum_row5.000000e+01
+=====dof_v658========sum_row5.000000e+01
+=====dof_v659========sum_row5.000000e+01
+=====dof_v660========sum_row2.500000e+01
+=====dof_v661========sum_row5.000000e+01
+=====dof_v662========sum_row5.000000e+01
+=====dof_v663========sum_row5.000000e+01
+=====dof_v664========sum_row5.000000e+01
+*=====dof_v665========sum_row5.000000e+01
+=====dof_v666========sum_row5.000000e+01
+=====dof_v667========sum_row5.000000e+01
+=====dof_v668========sum_row5.000000e+01
+=====dof_v669========sum_row5.000000e+01
+=====dof_v670========sum_row5.000000e+01
+=====dof_v671========sum_row2.500000e+01
+=====dof_v672========sum_row5.000000e+01
+=====dof_v673========sum_row5.000000e+01
+*=====dof_v674========sum_row5.000000e+01
+=====dof_v675========sum_row5.000000e+01
+=====dof_v676========sum_row5.000000e+01
+=====dof_v677========sum_row5.000000e+01
+=====dof_v678========sum_row5.000000e+01
+=====dof_v679========sum_row5.000000e+01
+=====dof_v680========sum_row5.000000e+01
+=====dof_v681========sum_row5.000000e+01
+=====dof_v682========sum_row2.500000e+01
+*=====dof_v683========sum_row5.000000e+01
+=====dof_v684========sum_row5.000000e+01
+=====dof_v685========sum_row5.000000e+01
+=====dof_v686========sum_row5.000000e+01
+=====dof_v687========sum_row5.000000e+01
+=====dof_v688========sum_row5.000000e+01
+=====dof_v689========sum_row5.000000e+01
+=====dof_v690========sum_row5.000000e+01
+=====dof_v691========sum_row5.000000e+01
+*=====dof_v692========sum_row5.000000e+01
+=====dof_v693========sum_row2.500000e+01
+=====dof_v694========sum_row5.000000e+01
+=====dof_v695========sum_row5.000000e+01
+=====dof_v696========sum_row5.000000e+01
+=====dof_v697========sum_row5.000000e+01
+=====dof_v698========sum_row5.000000e+01
+=====dof_v699========sum_row5.000000e+01
+=====dof_v700========sum_row5.000000e+01
+*=====dof_v701========sum_row5.000000e+01
+=====dof_v702========sum_row5.000000e+01
+=====dof_v703========sum_row5.000000e+01
+=====dof_v704========sum_row2.500000e+01
+=====dof_v705========sum_row5.000000e+01
+=====dof_v706========sum_row5.000000e+01
+=====dof_v707========sum_row5.000000e+01
+=====dof_v708========sum_row5.000000e+01
+=====dof_v709========sum_row5.000000e+01
+*=====dof_v710========sum_row5.000000e+01
+=====dof_v711========sum_row5.000000e+01
+=====dof_v712========sum_row5.000000e+01
+=====dof_v713========sum_row5.000000e+01
+=====dof_v714========sum_row5.000000e+01
+=====dof_v715========sum_row2.500000e+01
+=====dof_v716========sum_row5.000000e+01
+=====dof_v717========sum_row5.000000e+01
+=====dof_v718========sum_row5.000000e+01
+*=====dof_v719========sum_row5.000000e+01
+=====dof_v720========sum_row5.000000e+01
+=====dof_v721========sum_row5.000000e+01
+=====dof_v722========sum_row5.000000e+01
+=====dof_v723========sum_row5.000000e+01
+=====dof_v724========sum_row5.000000e+01
+=====dof_v725========sum_row5.000000e+01
+=====dof_v726========sum_row2.500000e+01
+=====dof_v727========sum_row5.000000e+01
+*=====dof_v728========sum_row5.000000e+01
+=====dof_v729========sum_row5.000000e+01
+=====dof_v730========sum_row5.000000e+01
+=====dof_v731========sum_row5.000000e+01
+=====dof_v732========sum_row5.000000e+01
+=====dof_v733========sum_row5.000000e+01
+=====dof_v734========sum_row5.000000e+01
+=====dof_v735========sum_row5.000000e+01
+=====dof_v736========sum_row5.000000e+01
+*=====dof_v737========sum_row2.500000e+01
+=====dof_v738========sum_row5.000000e+01
+=====dof_v739========sum_row5.000000e+01
+=====dof_v740========sum_row5.000000e+01
+=====dof_v741========sum_row5.000000e+01
+=====dof_v742========sum_row5.000000e+01
+=====dof_v743========sum_row5.000000e+01
+=====dof_v744========sum_row5.000000e+01
+=====dof_v745========sum_row5.000000e+01
+*=====dof_v746========sum_row5.000000e+01
+=====dof_v747========sum_row5.000000e+01
+=====dof_v748========sum_row2.500000e+01
+=====dof_v749========sum_row5.000000e+01
+=====dof_v750========sum_row5.000000e+01
+=====dof_v751========sum_row5.000000e+01
+=====dof_v752========sum_row5.000000e+01
+=====dof_v753========sum_row5.000000e+01
+=====dof_v754========sum_row5.000000e+01
+*=====dof_v755========sum_row5.000000e+01
+=====dof_v756========sum_row5.000000e+01
+=====dof_v757========sum_row5.000000e+01
+=====dof_v758========sum_row5.000000e+01
+=====dof_v759========sum_row2.500000e+01
+=====dof_v760========sum_row5.000000e+01
+=====dof_v761========sum_row5.000000e+01
+=====dof_v762========sum_row5.000000e+01
+=====dof_v763========sum_row5.000000e+01
+*=====dof_v764========sum_row5.000000e+01
+=====dof_v765========sum_row5.000000e+01
+=====dof_v766========sum_row5.000000e+01
+=====dof_v767========sum_row5.000000e+01
+=====dof_v768========sum_row5.000000e+01
+=====dof_v769========sum_row5.000000e+01
+=====dof_v770========sum_row2.500000e+01
+=====dof_v771========sum_row5.000000e+01
+=====dof_v772========sum_row5.000000e+01
+*=====dof_v773========sum_row5.000000e+01
+=====dof_v774========sum_row5.000000e+01
+=====dof_v775========sum_row5.000000e+01
+=====dof_v776========sum_row5.000000e+01
+=====dof_v777========sum_row5.000000e+01
+=====dof_v778========sum_row5.000000e+01
+=====dof_v779========sum_row5.000000e+01
+=====dof_v780========sum_row5.000000e+01
+=====dof_v781========sum_row2.500000e+01
+*=====dof_v782========sum_row5.000000e+01
+=====dof_v783========sum_row5.000000e+01
+=====dof_v784========sum_row5.000000e+01
+=====dof_v785========sum_row5.000000e+01
+=====dof_v786========sum_row5.000000e+01
+=====dof_v787========sum_row5.000000e+01
+=====dof_v788========sum_row5.000000e+01
+=====dof_v789========sum_row5.000000e+01
+=====dof_v790========sum_row5.000000e+01
+*=====dof_v791========sum_row5.000000e+01
+=====dof_v792========sum_row2.500000e+01
+=====dof_v793========sum_row5.000000e+01
+=====dof_v794========sum_row5.000000e+01
+=====dof_v795========sum_row5.000000e+01
+=====dof_v796========sum_row5.000000e+01
+=====dof_v797========sum_row5.000000e+01
+=====dof_v798========sum_row5.000000e+01
+=====dof_v799========sum_row5.000000e+01
+*=====dof_v800========sum_row5.000000e+01
+=====dof_v801========sum_row5.000000e+01
+=====dof_v802========sum_row5.000000e+01
+=====dof_v803========sum_row2.500000e+01
+=====dof_v804========sum_row5.000000e+01
+=====dof_v805========sum_row5.000000e+01
+=====dof_v806========sum_row5.000000e+01
+=====dof_v807========sum_row5.000000e+01
+=====dof_v808========sum_row5.000000e+01
+*=====dof_v809========sum_row5.000000e+01
+=====dof_v810========sum_row5.000000e+01
+=====dof_v811========sum_row5.000000e+01
+=====dof_v812========sum_row5.000000e+01
+=====dof_v813========sum_row5.000000e+01
+=====dof_v814========sum_row2.500000e+01
+=====dof_v815========sum_row5.000000e+01
+=====dof_v816========sum_row5.000000e+01
+=====dof_v817========sum_row5.000000e+01
+*=====dof_v818========sum_row5.000000e+01
+=====dof_v819========sum_row5.000000e+01
+=====dof_v820========sum_row5.000000e+01
+=====dof_v821========sum_row5.000000e+01
+=====dof_v822========sum_row5.000000e+01
+=====dof_v823========sum_row5.000000e+01
+=====dof_v824========sum_row5.000000e+01
+=====dof_v825========sum_row2.500000e+01
+=====dof_v826========sum_row5.000000e+01
+*=====dof_v827========sum_row5.000000e+01
+=====dof_v828========sum_row5.000000e+01
+=====dof_v829========sum_row5.000000e+01
+=====dof_v830========sum_row5.000000e+01
+=====dof_v831========sum_row5.000000e+01
+=====dof_v832========sum_row5.000000e+01
+=====dof_v833========sum_row5.000000e+01
+=====dof_v834========sum_row5.000000e+01
+=====dof_v835========sum_row5.000000e+01
+*=====dof_v836========sum_row2.500000e+01
+=====dof_v837========sum_row5.000000e+01
+=====dof_v838========sum_row5.000000e+01
+=====dof_v839========sum_row5.000000e+01
+=====dof_v840========sum_row5.000000e+01
+=====dof_v841========sum_row5.000000e+01
+=====dof_v842========sum_row5.000000e+01
+=====dof_v843========sum_row5.000000e+01
+=====dof_v844========sum_row5.000000e+01
+*=====dof_v845========sum_row5.000000e+01
+=====dof_v846========sum_row5.000000e+01
+=====dof_v847========sum_row2.500000e+01
+=====dof_v848========sum_row5.000000e+01
+=====dof_v849========sum_row5.000000e+01
+=====dof_v850========sum_row5.000000e+01
+=====dof_v851========sum_row5.000000e+01
+=====dof_v852========sum_row5.000000e+01
+=====dof_v853========sum_row5.000000e+01
+*=====dof_v854========sum_row5.000000e+01
+=====dof_v855========sum_row5.000000e+01
+=====dof_v856========sum_row5.000000e+01
+=====dof_v857========sum_row5.000000e+01
+=====dof_v858========sum_row2.500000e+01
+=====dof_v859========sum_row5.000000e+01
+=====dof_v860========sum_row5.000000e+01
+=====dof_v861========sum_row5.000000e+01
+=====dof_v862========sum_row5.000000e+01
+*=====dof_v863========sum_row5.000000e+01
+=====dof_v864========sum_row5.000000e+01
+=====dof_v865========sum_row5.000000e+01
+=====dof_v866========sum_row5.000000e+01
+=====dof_v867========sum_row5.000000e+01
+=====dof_v868========sum_row5.000000e+01
+=====dof_v869========sum_row2.500000e+01
+=====dof_v870========sum_row5.000000e+01
+=====dof_v871========sum_row5.000000e+01
+*=====dof_v872========sum_row5.000000e+01
+=====dof_v873========sum_row5.000000e+01
+=====dof_v874========sum_row5.000000e+01
+=====dof_v875========sum_row5.000000e+01
+=====dof_v876========sum_row5.000000e+01
+=====dof_v877========sum_row5.000000e+01
+=====dof_v878========sum_row5.000000e+01
+=====dof_v879========sum_row5.000000e+01
+=====dof_v880========sum_row2.500000e+01
+*=====dof_v881========sum_row5.000000e+01
+=====dof_v882========sum_row5.000000e+01
+=====dof_v883========sum_row5.000000e+01
+=====dof_v884========sum_row5.000000e+01
+=====dof_v885========sum_row5.000000e+01
+=====dof_v886========sum_row5.000000e+01
+=====dof_v887========sum_row5.000000e+01
+=====dof_v888========sum_row5.000000e+01
+=====dof_v889========sum_row5.000000e+01
+*=====dof_v890========sum_row5.000000e+01
+
+  Assembling exchange matrices ...
+=====dof_v0========sum_row5.000000e+01
+=====dof_v1========sum_row5.000000e+01
+=====dof_v2========sum_row5.000000e+01
+=====dof_v3========sum_row5.000000e+01
+=====dof_v4========sum_row5.000000e+01
+=====dof_v5========sum_row5.000000e+01
+=====dof_v6========sum_row5.000000e+01
+=====dof_v7========sum_row5.000000e+01
+*=====dof_v8========sum_row5.000000e+01
+=====dof_v9========sum_row5.000000e+01
+=====dof_v10========sum_row5.000000e+01
+=====dof_v11========sum_row2.500000e+01
+=====dof_v12========sum_row5.000000e+01
+=====dof_v13========sum_row5.000000e+01
+=====dof_v14========sum_row5.000000e+01
+=====dof_v15========sum_row5.000000e+01
+=====dof_v16========sum_row5.000000e+01
+*=====dof_v17========sum_row5.000000e+01
+=====dof_v18========sum_row5.000000e+01
+=====dof_v19========sum_row5.000000e+01
+=====dof_v20========sum_row5.000000e+01
+=====dof_v21========sum_row5.000000e+01
+=====dof_v22========sum_row2.500000e+01
+=====dof_v23========sum_row5.000000e+01
+=====dof_v24========sum_row5.000000e+01
+=====dof_v25========sum_row5.000000e+01
+*=====dof_v26========sum_row5.000000e+01
+=====dof_v27========sum_row5.000000e+01
+=====dof_v28========sum_row5.000000e+01
+=====dof_v29========sum_row5.000000e+01
+=====dof_v30========sum_row5.000000e+01
+=====dof_v31========sum_row5.000000e+01
+=====dof_v32========sum_row5.000000e+01
+=====dof_v33========sum_row2.500000e+01
+=====dof_v34========sum_row5.000000e+01
+*=====dof_v35========sum_row5.000000e+01
+=====dof_v36========sum_row5.000000e+01
+=====dof_v37========sum_row5.000000e+01
+=====dof_v38========sum_row5.000000e+01
+=====dof_v39========sum_row5.000000e+01
+=====dof_v40========sum_row5.000000e+01
+=====dof_v41========sum_row5.000000e+01
+=====dof_v42========sum_row5.000000e+01
+=====dof_v43========sum_row5.000000e+01
+*=====dof_v44========sum_row2.500000e+01
+=====dof_v45========sum_row5.000000e+01
+=====dof_v46========sum_row5.000000e+01
+=====dof_v47========sum_row5.000000e+01
+=====dof_v48========sum_row5.000000e+01
+=====dof_v49========sum_row5.000000e+01
+=====dof_v50========sum_row5.000000e+01
+=====dof_v51========sum_row5.000000e+01
+=====dof_v52========sum_row5.000000e+01
+*=====dof_v53========sum_row5.000000e+01
+=====dof_v54========sum_row5.000000e+01
+=====dof_v55========sum_row2.500000e+01
+=====dof_v56========sum_row5.000000e+01
+=====dof_v57========sum_row5.000000e+01
+=====dof_v58========sum_row5.000000e+01
+=====dof_v59========sum_row5.000000e+01
+=====dof_v60========sum_row5.000000e+01
+=====dof_v61========sum_row5.000000e+01
+*=====dof_v62========sum_row5.000000e+01
+=====dof_v63========sum_row5.000000e+01
+=====dof_v64========sum_row5.000000e+01
+=====dof_v65========sum_row5.000000e+01
+=====dof_v66========sum_row2.500000e+01
+=====dof_v67========sum_row5.000000e+01
+=====dof_v68========sum_row5.000000e+01
+=====dof_v69========sum_row5.000000e+01
+=====dof_v70========sum_row5.000000e+01
+*=====dof_v71========sum_row5.000000e+01
+=====dof_v72========sum_row5.000000e+01
+=====dof_v73========sum_row5.000000e+01
+=====dof_v74========sum_row5.000000e+01
+=====dof_v75========sum_row5.000000e+01
+=====dof_v76========sum_row5.000000e+01
+=====dof_v77========sum_row2.500000e+01
+=====dof_v78========sum_row5.000000e+01
+=====dof_v79========sum_row5.000000e+01
+*=====dof_v80========sum_row5.000000e+01
+=====dof_v81========sum_row5.000000e+01
+=====dof_v82========sum_row5.000000e+01
+=====dof_v83========sum_row5.000000e+01
+=====dof_v84========sum_row5.000000e+01
+=====dof_v85========sum_row5.000000e+01
+=====dof_v86========sum_row5.000000e+01
+=====dof_v87========sum_row5.000000e+01
+=====dof_v88========sum_row2.500000e+01
+*=====dof_v89========sum_row5.000000e+01
+=====dof_v90========sum_row5.000000e+01
+=====dof_v91========sum_row5.000000e+01
+=====dof_v92========sum_row5.000000e+01
+=====dof_v93========sum_row5.000000e+01
+=====dof_v94========sum_row5.000000e+01
+=====dof_v95========sum_row5.000000e+01
+=====dof_v96========sum_row5.000000e+01
+=====dof_v97========sum_row5.000000e+01
+*=====dof_v98========sum_row5.000000e+01
+=====dof_v99========sum_row2.500000e+01
+=====dof_v100========sum_row5.000000e+01
+=====dof_v101========sum_row5.000000e+01
+=====dof_v102========sum_row5.000000e+01
+=====dof_v103========sum_row5.000000e+01
+=====dof_v104========sum_row5.000000e+01
+=====dof_v105========sum_row5.000000e+01
+=====dof_v106========sum_row5.000000e+01
+*=====dof_v107========sum_row5.000000e+01
+=====dof_v108========sum_row5.000000e+01
+=====dof_v109========sum_row5.000000e+01
+=====dof_v110========sum_row2.500000e+01
+=====dof_v111========sum_row5.000000e+01
+=====dof_v112========sum_row5.000000e+01
+=====dof_v113========sum_row5.000000e+01
+=====dof_v114========sum_row5.000000e+01
+=====dof_v115========sum_row5.000000e+01
+*=====dof_v116========sum_row5.000000e+01
+=====dof_v117========sum_row5.000000e+01
+=====dof_v118========sum_row5.000000e+01
+=====dof_v119========sum_row5.000000e+01
+=====dof_v120========sum_row5.000000e+01
+=====dof_v121========sum_row2.500000e+01
+=====dof_v122========sum_row5.000000e+01
+=====dof_v123========sum_row5.000000e+01
+=====dof_v124========sum_row5.000000e+01
+*=====dof_v125========sum_row5.000000e+01
+=====dof_v126========sum_row5.000000e+01
+=====dof_v127========sum_row5.000000e+01
+=====dof_v128========sum_row5.000000e+01
+=====dof_v129========sum_row5.000000e+01
+=====dof_v130========sum_row5.000000e+01
+=====dof_v131========sum_row5.000000e+01
+=====dof_v132========sum_row2.500000e+01
+=====dof_v133========sum_row5.000000e+01
+*=====dof_v134========sum_row5.000000e+01
+=====dof_v135========sum_row5.000000e+01
+=====dof_v136========sum_row5.000000e+01
+=====dof_v137========sum_row5.000000e+01
+=====dof_v138========sum_row5.000000e+01
+=====dof_v139========sum_row5.000000e+01
+=====dof_v140========sum_row5.000000e+01
+=====dof_v141========sum_row5.000000e+01
+=====dof_v142========sum_row5.000000e+01
+*=====dof_v143========sum_row2.500000e+01
+=====dof_v144========sum_row5.000000e+01
+=====dof_v145========sum_row5.000000e+01
+=====dof_v146========sum_row5.000000e+01
+=====dof_v147========sum_row5.000000e+01
+=====dof_v148========sum_row5.000000e+01
+=====dof_v149========sum_row5.000000e+01
+=====dof_v150========sum_row5.000000e+01
+=====dof_v151========sum_row5.000000e+01
+*=====dof_v152========sum_row5.000000e+01
+=====dof_v153========sum_row5.000000e+01
+=====dof_v154========sum_row2.500000e+01
+=====dof_v155========sum_row5.000000e+01
+=====dof_v156========sum_row5.000000e+01
+=====dof_v157========sum_row5.000000e+01
+=====dof_v158========sum_row5.000000e+01
+=====dof_v159========sum_row5.000000e+01
+=====dof_v160========sum_row5.000000e+01
+*=====dof_v161========sum_row5.000000e+01
+=====dof_v162========sum_row5.000000e+01
+=====dof_v163========sum_row5.000000e+01
+=====dof_v164========sum_row5.000000e+01
+=====dof_v165========sum_row2.500000e+01
+=====dof_v166========sum_row5.000000e+01
+=====dof_v167========sum_row5.000000e+01
+=====dof_v168========sum_row5.000000e+01
+=====dof_v169========sum_row5.000000e+01
+*=====dof_v170========sum_row5.000000e+01
+=====dof_v171========sum_row5.000000e+01
+=====dof_v172========sum_row5.000000e+01
+=====dof_v173========sum_row5.000000e+01
+=====dof_v174========sum_row5.000000e+01
+=====dof_v175========sum_row5.000000e+01
+=====dof_v176========sum_row2.500000e+01
+=====dof_v177========sum_row5.000000e+01
+=====dof_v178========sum_row5.000000e+01
+*=====dof_v179========sum_row5.000000e+01
+=====dof_v180========sum_row5.000000e+01
+=====dof_v181========sum_row5.000000e+01
+=====dof_v182========sum_row5.000000e+01
+=====dof_v183========sum_row5.000000e+01
+=====dof_v184========sum_row5.000000e+01
+=====dof_v185========sum_row5.000000e+01
+=====dof_v186========sum_row5.000000e+01
+=====dof_v187========sum_row2.500000e+01
+*=====dof_v188========sum_row5.000000e+01
+=====dof_v189========sum_row5.000000e+01
+=====dof_v190========sum_row5.000000e+01
+=====dof_v191========sum_row5.000000e+01
+=====dof_v192========sum_row5.000000e+01
+=====dof_v193========sum_row5.000000e+01
+=====dof_v194========sum_row5.000000e+01
+=====dof_v195========sum_row5.000000e+01
+=====dof_v196========sum_row5.000000e+01
+*=====dof_v197========sum_row5.000000e+01
+=====dof_v198========sum_row2.500000e+01
+=====dof_v199========sum_row5.000000e+01
+=====dof_v200========sum_row5.000000e+01
+=====dof_v201========sum_row5.000000e+01
+=====dof_v202========sum_row5.000000e+01
+=====dof_v203========sum_row5.000000e+01
+=====dof_v204========sum_row5.000000e+01
+=====dof_v205========sum_row5.000000e+01
+*=====dof_v206========sum_row5.000000e+01
+=====dof_v207========sum_row5.000000e+01
+=====dof_v208========sum_row5.000000e+01
+=====dof_v209========sum_row2.500000e+01
+=====dof_v210========sum_row5.000000e+01
+=====dof_v211========sum_row5.000000e+01
+=====dof_v212========sum_row5.000000e+01
+=====dof_v213========sum_row5.000000e+01
+=====dof_v214========sum_row5.000000e+01
+*=====dof_v215========sum_row5.000000e+01
+=====dof_v216========sum_row5.000000e+01
+=====dof_v217========sum_row5.000000e+01
+=====dof_v218========sum_row5.000000e+01
+=====dof_v219========sum_row5.000000e+01
+=====dof_v220========sum_row2.500000e+01
+=====dof_v221========sum_row5.000000e+01
+=====dof_v222========sum_row5.000000e+01
+=====dof_v223========sum_row5.000000e+01
+*=====dof_v224========sum_row5.000000e+01
+=====dof_v225========sum_row5.000000e+01
+=====dof_v226========sum_row5.000000e+01
+=====dof_v227========sum_row5.000000e+01
+=====dof_v228========sum_row5.000000e+01
+=====dof_v229========sum_row5.000000e+01
+=====dof_v230========sum_row5.000000e+01
+=====dof_v231========sum_row2.500000e+01
+=====dof_v232========sum_row5.000000e+01
+*=====dof_v233========sum_row5.000000e+01
+=====dof_v234========sum_row5.000000e+01
+=====dof_v235========sum_row5.000000e+01
+=====dof_v236========sum_row5.000000e+01
+=====dof_v237========sum_row5.000000e+01
+=====dof_v238========sum_row5.000000e+01
+=====dof_v239========sum_row5.000000e+01
+=====dof_v240========sum_row5.000000e+01
+=====dof_v241========sum_row5.000000e+01
+*=====dof_v242========sum_row2.500000e+01
+=====dof_v243========sum_row5.000000e+01
+=====dof_v244========sum_row5.000000e+01
+=====dof_v245========sum_row5.000000e+01
+=====dof_v246========sum_row5.000000e+01
+=====dof_v247========sum_row5.000000e+01
+=====dof_v248========sum_row5.000000e+01
+=====dof_v249========sum_row5.000000e+01
+=====dof_v250========sum_row5.000000e+01
+*=====dof_v251========sum_row5.000000e+01
+=====dof_v252========sum_row5.000000e+01
+=====dof_v253========sum_row2.500000e+01
+=====dof_v254========sum_row5.000000e+01
+=====dof_v255========sum_row5.000000e+01
+=====dof_v256========sum_row5.000000e+01
+=====dof_v257========sum_row5.000000e+01
+=====dof_v258========sum_row5.000000e+01
+=====dof_v259========sum_row5.000000e+01
+*=====dof_v260========sum_row5.000000e+01
+=====dof_v261========sum_row5.000000e+01
+=====dof_v262========sum_row5.000000e+01
+=====dof_v263========sum_row5.000000e+01
+=====dof_v264========sum_row2.500000e+01
+=====dof_v265========sum_row5.000000e+01
+=====dof_v266========sum_row5.000000e+01
+=====dof_v267========sum_row5.000000e+01
+=====dof_v268========sum_row5.000000e+01
+*=====dof_v269========sum_row5.000000e+01
+=====dof_v270========sum_row5.000000e+01
+=====dof_v271========sum_row5.000000e+01
+=====dof_v272========sum_row5.000000e+01
+=====dof_v273========sum_row5.000000e+01
+=====dof_v274========sum_row5.000000e+01
+=====dof_v275========sum_row2.500000e+01
+=====dof_v276========sum_row5.000000e+01
+=====dof_v277========sum_row5.000000e+01
+*=====dof_v278========sum_row5.000000e+01
+=====dof_v279========sum_row5.000000e+01
+=====dof_v280========sum_row5.000000e+01
+=====dof_v281========sum_row5.000000e+01
+=====dof_v282========sum_row5.000000e+01
+=====dof_v283========sum_row5.000000e+01
+=====dof_v284========sum_row5.000000e+01
+=====dof_v285========sum_row5.000000e+01
+=====dof_v286========sum_row2.500000e+01
+*=====dof_v287========sum_row5.000000e+01
+=====dof_v288========sum_row5.000000e+01
+=====dof_v289========sum_row5.000000e+01
+=====dof_v290========sum_row5.000000e+01
+=====dof_v291========sum_row5.000000e+01
+=====dof_v292========sum_row5.000000e+01
+=====dof_v293========sum_row5.000000e+01
+=====dof_v294========sum_row5.000000e+01
+=====dof_v295========sum_row5.000000e+01
+*=====dof_v296========sum_row5.000000e+01
+=====dof_v297========sum_row2.500000e+01
+=====dof_v298========sum_row5.000000e+01
+=====dof_v299========sum_row5.000000e+01
+=====dof_v300========sum_row5.000000e+01
+=====dof_v301========sum_row5.000000e+01
+=====dof_v302========sum_row5.000000e+01
+=====dof_v303========sum_row5.000000e+01
+=====dof_v304========sum_row5.000000e+01
+*=====dof_v305========sum_row5.000000e+01
+=====dof_v306========sum_row5.000000e+01
+=====dof_v307========sum_row5.000000e+01
+=====dof_v308========sum_row2.500000e+01
+=====dof_v309========sum_row5.000000e+01
+=====dof_v310========sum_row5.000000e+01
+=====dof_v311========sum_row5.000000e+01
+=====dof_v312========sum_row5.000000e+01
+=====dof_v313========sum_row5.000000e+01
+*=====dof_v314========sum_row5.000000e+01
+=====dof_v315========sum_row5.000000e+01
+=====dof_v316========sum_row5.000000e+01
+=====dof_v317========sum_row5.000000e+01
+=====dof_v318========sum_row5.000000e+01
+=====dof_v319========sum_row2.500000e+01
+=====dof_v320========sum_row5.000000e+01
+=====dof_v321========sum_row5.000000e+01
+=====dof_v322========sum_row5.000000e+01
+*=====dof_v323========sum_row5.000000e+01
+=====dof_v324========sum_row5.000000e+01
+=====dof_v325========sum_row5.000000e+01
+=====dof_v326========sum_row5.000000e+01
+=====dof_v327========sum_row5.000000e+01
+=====dof_v328========sum_row5.000000e+01
+=====dof_v329========sum_row5.000000e+01
+=====dof_v330========sum_row2.500000e+01
+=====dof_v331========sum_row5.000000e+01
+*=====dof_v332========sum_row5.000000e+01
+=====dof_v333========sum_row5.000000e+01
+=====dof_v334========sum_row5.000000e+01
+=====dof_v335========sum_row5.000000e+01
+=====dof_v336========sum_row5.000000e+01
+=====dof_v337========sum_row5.000000e+01
+=====dof_v338========sum_row5.000000e+01
+=====dof_v339========sum_row5.000000e+01
+=====dof_v340========sum_row5.000000e+01
+*=====dof_v341========sum_row2.500000e+01
+=====dof_v342========sum_row5.000000e+01
+=====dof_v343========sum_row5.000000e+01
+=====dof_v344========sum_row5.000000e+01
+=====dof_v345========sum_row5.000000e+01
+=====dof_v346========sum_row5.000000e+01
+=====dof_v347========sum_row5.000000e+01
+=====dof_v348========sum_row5.000000e+01
+=====dof_v349========sum_row5.000000e+01
+*=====dof_v350========sum_row5.000000e+01
+=====dof_v351========sum_row5.000000e+01
+=====dof_v352========sum_row2.500000e+01
+=====dof_v353========sum_row5.000000e+01
+=====dof_v354========sum_row5.000000e+01
+=====dof_v355========sum_row5.000000e+01
+=====dof_v356========sum_row5.000000e+01
+=====dof_v357========sum_row5.000000e+01
+=====dof_v358========sum_row5.000000e+01
+*=====dof_v359========sum_row5.000000e+01
+=====dof_v360========sum_row5.000000e+01
+=====dof_v361========sum_row5.000000e+01
+=====dof_v362========sum_row5.000000e+01
+=====dof_v363========sum_row2.500000e+01
+=====dof_v364========sum_row5.000000e+01
+=====dof_v365========sum_row5.000000e+01
+=====dof_v366========sum_row5.000000e+01
+=====dof_v367========sum_row5.000000e+01
+*=====dof_v368========sum_row5.000000e+01
+=====dof_v369========sum_row5.000000e+01
+=====dof_v370========sum_row5.000000e+01
+=====dof_v371========sum_row5.000000e+01
+=====dof_v372========sum_row5.000000e+01
+=====dof_v373========sum_row5.000000e+01
+=====dof_v374========sum_row2.500000e+01
+=====dof_v375========sum_row5.000000e+01
+=====dof_v376========sum_row5.000000e+01
+*=====dof_v377========sum_row5.000000e+01
+=====dof_v378========sum_row5.000000e+01
+=====dof_v379========sum_row5.000000e+01
+=====dof_v380========sum_row5.000000e+01
+=====dof_v381========sum_row5.000000e+01
+=====dof_v382========sum_row5.000000e+01
+=====dof_v383========sum_row5.000000e+01
+=====dof_v384========sum_row5.000000e+01
+=====dof_v385========sum_row2.500000e+01
+*=====dof_v386========sum_row5.000000e+01
+=====dof_v387========sum_row5.000000e+01
+=====dof_v388========sum_row5.000000e+01
+=====dof_v389========sum_row5.000000e+01
+=====dof_v390========sum_row5.000000e+01
+=====dof_v391========sum_row5.000000e+01
+=====dof_v392========sum_row5.000000e+01
+=====dof_v393========sum_row5.000000e+01
+=====dof_v394========sum_row5.000000e+01
+*=====dof_v395========sum_row5.000000e+01
+=====dof_v396========sum_row2.500000e+01
+=====dof_v397========sum_row5.000000e+01
+=====dof_v398========sum_row5.000000e+01
+=====dof_v399========sum_row5.000000e+01
+=====dof_v400========sum_row5.000000e+01
+=====dof_v401========sum_row5.000000e+01
+=====dof_v402========sum_row5.000000e+01
+=====dof_v403========sum_row5.000000e+01
+*=====dof_v404========sum_row5.000000e+01
+=====dof_v405========sum_row5.000000e+01
+=====dof_v406========sum_row5.000000e+01
+=====dof_v407========sum_row2.500000e+01
+=====dof_v408========sum_row5.000000e+01
+=====dof_v409========sum_row5.000000e+01
+=====dof_v410========sum_row5.000000e+01
+=====dof_v411========sum_row5.000000e+01
+=====dof_v412========sum_row5.000000e+01
+*=====dof_v413========sum_row5.000000e+01
+=====dof_v414========sum_row5.000000e+01
+=====dof_v415========sum_row5.000000e+01
+=====dof_v416========sum_row5.000000e+01
+=====dof_v417========sum_row5.000000e+01
+=====dof_v418========sum_row2.500000e+01
+=====dof_v419========sum_row5.000000e+01
+=====dof_v420========sum_row5.000000e+01
+=====dof_v421========sum_row5.000000e+01
+*=====dof_v422========sum_row5.000000e+01
+=====dof_v423========sum_row5.000000e+01
+=====dof_v424========sum_row5.000000e+01
+=====dof_v425========sum_row5.000000e+01
+=====dof_v426========sum_row5.000000e+01
+=====dof_v427========sum_row5.000000e+01
+=====dof_v428========sum_row5.000000e+01
+=====dof_v429========sum_row2.500000e+01
+=====dof_v430========sum_row5.000000e+01
+*=====dof_v431========sum_row5.000000e+01
+=====dof_v432========sum_row5.000000e+01
+=====dof_v433========sum_row5.000000e+01
+=====dof_v434========sum_row5.000000e+01
+=====dof_v435========sum_row5.000000e+01
+=====dof_v436========sum_row5.000000e+01
+=====dof_v437========sum_row5.000000e+01
+=====dof_v438========sum_row5.000000e+01
+=====dof_v439========sum_row5.000000e+01
+*=====dof_v440========sum_row2.500000e+01
+=====dof_v441========sum_row5.000000e+01
+=====dof_v442========sum_row5.000000e+01
+=====dof_v443========sum_row5.000000e+01
+=====dof_v444========sum_row5.000000e+01
+=====dof_v445========sum_row5.000000e+01
+=====dof_v446========sum_row5.000000e+01
+=====dof_v447========sum_row5.000000e+01
+=====dof_v448========sum_row5.000000e+01
+*=====dof_v449========sum_row5.000000e+01
+=====dof_v450========sum_row5.000000e+01
+=====dof_v451========sum_row2.500000e+01
+=====dof_v452========sum_row5.000000e+01
+=====dof_v453========sum_row5.000000e+01
+=====dof_v454========sum_row5.000000e+01
+=====dof_v455========sum_row5.000000e+01
+=====dof_v456========sum_row5.000000e+01
+=====dof_v457========sum_row5.000000e+01
+*=====dof_v458========sum_row5.000000e+01
+=====dof_v459========sum_row5.000000e+01
+=====dof_v460========sum_row5.000000e+01
+=====dof_v461========sum_row5.000000e+01
+=====dof_v462========sum_row2.500000e+01
+=====dof_v463========sum_row5.000000e+01
+=====dof_v464========sum_row5.000000e+01
+=====dof_v465========sum_row5.000000e+01
+=====dof_v466========sum_row5.000000e+01
+*=====dof_v467========sum_row5.000000e+01
+=====dof_v468========sum_row5.000000e+01
+=====dof_v469========sum_row5.000000e+01
+=====dof_v470========sum_row5.000000e+01
+=====dof_v471========sum_row5.000000e+01
+=====dof_v472========sum_row5.000000e+01
+=====dof_v473========sum_row2.500000e+01
+=====dof_v474========sum_row5.000000e+01
+=====dof_v475========sum_row5.000000e+01
+*=====dof_v476========sum_row5.000000e+01
+=====dof_v477========sum_row5.000000e+01
+=====dof_v478========sum_row5.000000e+01
+=====dof_v479========sum_row5.000000e+01
+=====dof_v480========sum_row5.000000e+01
+=====dof_v481========sum_row5.000000e+01
+=====dof_v482========sum_row5.000000e+01
+=====dof_v483========sum_row5.000000e+01
+=====dof_v484========sum_row2.500000e+01
+*=====dof_v485========sum_row5.000000e+01
+=====dof_v486========sum_row5.000000e+01
+=====dof_v487========sum_row5.000000e+01
+=====dof_v488========sum_row5.000000e+01
+=====dof_v489========sum_row5.000000e+01
+=====dof_v490========sum_row5.000000e+01
+=====dof_v491========sum_row5.000000e+01
+=====dof_v492========sum_row5.000000e+01
+=====dof_v493========sum_row5.000000e+01
+*=====dof_v494========sum_row5.000000e+01
+=====dof_v495========sum_row2.500000e+01
+=====dof_v496========sum_row5.000000e+01
+=====dof_v497========sum_row5.000000e+01
+=====dof_v498========sum_row5.000000e+01
+=====dof_v499========sum_row5.000000e+01
+=====dof_v500========sum_row5.000000e+01
+=====dof_v501========sum_row5.000000e+01
+=====dof_v502========sum_row5.000000e+01
+*=====dof_v503========sum_row5.000000e+01
+=====dof_v504========sum_row5.000000e+01
+=====dof_v505========sum_row5.000000e+01
+=====dof_v506========sum_row2.500000e+01
+=====dof_v507========sum_row5.000000e+01
+=====dof_v508========sum_row5.000000e+01
+=====dof_v509========sum_row5.000000e+01
+=====dof_v510========sum_row5.000000e+01
+=====dof_v511========sum_row5.000000e+01
+*=====dof_v512========sum_row5.000000e+01
+=====dof_v513========sum_row5.000000e+01
+=====dof_v514========sum_row5.000000e+01
+=====dof_v515========sum_row5.000000e+01
+=====dof_v516========sum_row5.000000e+01
+=====dof_v517========sum_row2.500000e+01
+=====dof_v518========sum_row5.000000e+01
+=====dof_v519========sum_row5.000000e+01
+=====dof_v520========sum_row5.000000e+01
+*=====dof_v521========sum_row5.000000e+01
+=====dof_v522========sum_row5.000000e+01
+=====dof_v523========sum_row5.000000e+01
+=====dof_v524========sum_row5.000000e+01
+=====dof_v525========sum_row5.000000e+01
+=====dof_v526========sum_row5.000000e+01
+=====dof_v527========sum_row5.000000e+01
+=====dof_v528========sum_row2.500000e+01
+=====dof_v529========sum_row5.000000e+01
+*=====dof_v530========sum_row5.000000e+01
+=====dof_v531========sum_row5.000000e+01
+=====dof_v532========sum_row5.000000e+01
+=====dof_v533========sum_row5.000000e+01
+=====dof_v534========sum_row5.000000e+01
+=====dof_v535========sum_row5.000000e+01
+=====dof_v536========sum_row5.000000e+01
+=====dof_v537========sum_row5.000000e+01
+=====dof_v538========sum_row5.000000e+01
+*=====dof_v539========sum_row2.500000e+01
+=====dof_v540========sum_row5.000000e+01
+=====dof_v541========sum_row5.000000e+01
+=====dof_v542========sum_row5.000000e+01
+=====dof_v543========sum_row5.000000e+01
+=====dof_v544========sum_row5.000000e+01
+=====dof_v545========sum_row5.000000e+01
+=====dof_v546========sum_row5.000000e+01
+=====dof_v547========sum_row5.000000e+01
+*=====dof_v548========sum_row5.000000e+01
+=====dof_v549========sum_row5.000000e+01
+=====dof_v550========sum_row2.500000e+01
+=====dof_v551========sum_row5.000000e+01
+=====dof_v552========sum_row5.000000e+01
+=====dof_v553========sum_row5.000000e+01
+=====dof_v554========sum_row5.000000e+01
+=====dof_v555========sum_row5.000000e+01
+=====dof_v556========sum_row5.000000e+01
+*=====dof_v557========sum_row5.000000e+01
+=====dof_v558========sum_row5.000000e+01
+=====dof_v559========sum_row5.000000e+01
+=====dof_v560========sum_row5.000000e+01
+=====dof_v561========sum_row2.500000e+01
+=====dof_v562========sum_row5.000000e+01
+=====dof_v563========sum_row5.000000e+01
+=====dof_v564========sum_row5.000000e+01
+=====dof_v565========sum_row5.000000e+01
+*=====dof_v566========sum_row5.000000e+01
+=====dof_v567========sum_row5.000000e+01
+=====dof_v568========sum_row5.000000e+01
+=====dof_v569========sum_row5.000000e+01
+=====dof_v570========sum_row5.000000e+01
+=====dof_v571========sum_row5.000000e+01
+=====dof_v572========sum_row2.500000e+01
+=====dof_v573========sum_row5.000000e+01
+=====dof_v574========sum_row5.000000e+01
+*=====dof_v575========sum_row5.000000e+01
+=====dof_v576========sum_row5.000000e+01
+=====dof_v577========sum_row5.000000e+01
+=====dof_v578========sum_row5.000000e+01
+=====dof_v579========sum_row5.000000e+01
+=====dof_v580========sum_row5.000000e+01
+=====dof_v581========sum_row5.000000e+01
+=====dof_v582========sum_row5.000000e+01
+=====dof_v583========sum_row2.500000e+01
+*=====dof_v584========sum_row5.000000e+01
+=====dof_v585========sum_row5.000000e+01
+=====dof_v586========sum_row5.000000e+01
+=====dof_v587========sum_row5.000000e+01
+=====dof_v588========sum_row5.000000e+01
+=====dof_v589========sum_row5.000000e+01
+=====dof_v590========sum_row5.000000e+01
+=====dof_v591========sum_row5.000000e+01
+=====dof_v592========sum_row5.000000e+01
+*=====dof_v593========sum_row5.000000e+01
+=====dof_v594========sum_row2.500000e+01
+=====dof_v595========sum_row5.000000e+01
+=====dof_v596========sum_row5.000000e+01
+=====dof_v597========sum_row5.000000e+01
+=====dof_v598========sum_row5.000000e+01
+=====dof_v599========sum_row5.000000e+01
+=====dof_v600========sum_row5.000000e+01
+=====dof_v601========sum_row5.000000e+01
+*=====dof_v602========sum_row5.000000e+01
+=====dof_v603========sum_row5.000000e+01
+=====dof_v604========sum_row5.000000e+01
+=====dof_v605========sum_row2.500000e+01
+=====dof_v606========sum_row5.000000e+01
+=====dof_v607========sum_row5.000000e+01
+=====dof_v608========sum_row5.000000e+01
+=====dof_v609========sum_row5.000000e+01
+=====dof_v610========sum_row5.000000e+01
+*=====dof_v611========sum_row5.000000e+01
+=====dof_v612========sum_row5.000000e+01
+=====dof_v613========sum_row5.000000e+01
+=====dof_v614========sum_row5.000000e+01
+=====dof_v615========sum_row5.000000e+01
+=====dof_v616========sum_row2.500000e+01
+=====dof_v617========sum_row5.000000e+01
+=====dof_v618========sum_row5.000000e+01
+=====dof_v619========sum_row5.000000e+01
+*=====dof_v620========sum_row5.000000e+01
+=====dof_v621========sum_row5.000000e+01
+=====dof_v622========sum_row5.000000e+01
+=====dof_v623========sum_row5.000000e+01
+=====dof_v624========sum_row5.000000e+01
+=====dof_v625========sum_row5.000000e+01
+=====dof_v626========sum_row5.000000e+01
+=====dof_v627========sum_row2.500000e+01
+=====dof_v628========sum_row5.000000e+01
+*=====dof_v629========sum_row5.000000e+01
+=====dof_v630========sum_row5.000000e+01
+=====dof_v631========sum_row5.000000e+01
+=====dof_v632========sum_row5.000000e+01
+=====dof_v633========sum_row5.000000e+01
+=====dof_v634========sum_row5.000000e+01
+=====dof_v635========sum_row5.000000e+01
+=====dof_v636========sum_row5.000000e+01
+=====dof_v637========sum_row5.000000e+01
+*=====dof_v638========sum_row2.500000e+01
+=====dof_v639========sum_row5.000000e+01
+=====dof_v640========sum_row5.000000e+01
+=====dof_v641========sum_row5.000000e+01
+=====dof_v642========sum_row5.000000e+01
+=====dof_v643========sum_row5.000000e+01
+=====dof_v644========sum_row5.000000e+01
+=====dof_v645========sum_row5.000000e+01
+=====dof_v646========sum_row5.000000e+01
+*=====dof_v647========sum_row5.000000e+01
+=====dof_v648========sum_row5.000000e+01
+=====dof_v649========sum_row2.500000e+01
+=====dof_v650========sum_row5.000000e+01
+=====dof_v651========sum_row5.000000e+01
+=====dof_v652========sum_row5.000000e+01
+=====dof_v653========sum_row5.000000e+01
+=====dof_v654========sum_row5.000000e+01
+=====dof_v655========sum_row5.000000e+01
+*=====dof_v656========sum_row5.000000e+01
+=====dof_v657========sum_row5.000000e+01
+=====dof_v658========sum_row5.000000e+01
+=====dof_v659========sum_row5.000000e+01
+=====dof_v660========sum_row2.500000e+01
+=====dof_v661========sum_row5.000000e+01
+=====dof_v662========sum_row5.000000e+01
+=====dof_v663========sum_row5.000000e+01
+=====dof_v664========sum_row5.000000e+01
+*=====dof_v665========sum_row5.000000e+01
+=====dof_v666========sum_row5.000000e+01
+=====dof_v667========sum_row5.000000e+01
+=====dof_v668========sum_row5.000000e+01
+=====dof_v669========sum_row5.000000e+01
+=====dof_v670========sum_row5.000000e+01
+=====dof_v671========sum_row2.500000e+01
+=====dof_v672========sum_row5.000000e+01
+=====dof_v673========sum_row5.000000e+01
+*=====dof_v674========sum_row5.000000e+01
+=====dof_v675========sum_row5.000000e+01
+=====dof_v676========sum_row5.000000e+01
+=====dof_v677========sum_row5.000000e+01
+=====dof_v678========sum_row5.000000e+01
+=====dof_v679========sum_row5.000000e+01
+=====dof_v680========sum_row5.000000e+01
+=====dof_v681========sum_row5.000000e+01
+=====dof_v682========sum_row2.500000e+01
+*=====dof_v683========sum_row5.000000e+01
+=====dof_v684========sum_row5.000000e+01
+=====dof_v685========sum_row5.000000e+01
+=====dof_v686========sum_row5.000000e+01
+=====dof_v687========sum_row5.000000e+01
+=====dof_v688========sum_row5.000000e+01
+=====dof_v689========sum_row5.000000e+01
+=====dof_v690========sum_row5.000000e+01
+=====dof_v691========sum_row5.000000e+01
+*=====dof_v692========sum_row5.000000e+01
+=====dof_v693========sum_row2.500000e+01
+=====dof_v694========sum_row5.000000e+01
+=====dof_v695========sum_row5.000000e+01
+=====dof_v696========sum_row5.000000e+01
+=====dof_v697========sum_row5.000000e+01
+=====dof_v698========sum_row5.000000e+01
+=====dof_v699========sum_row5.000000e+01
+=====dof_v700========sum_row5.000000e+01
+*=====dof_v701========sum_row5.000000e+01
+=====dof_v702========sum_row5.000000e+01
+=====dof_v703========sum_row5.000000e+01
+=====dof_v704========sum_row2.500000e+01
+=====dof_v705========sum_row5.000000e+01
+=====dof_v706========sum_row5.000000e+01
+=====dof_v707========sum_row5.000000e+01
+=====dof_v708========sum_row5.000000e+01
+=====dof_v709========sum_row5.000000e+01
+*=====dof_v710========sum_row5.000000e+01
+=====dof_v711========sum_row5.000000e+01
+=====dof_v712========sum_row5.000000e+01
+=====dof_v713========sum_row5.000000e+01
+=====dof_v714========sum_row5.000000e+01
+=====dof_v715========sum_row2.500000e+01
+=====dof_v716========sum_row5.000000e+01
+=====dof_v717========sum_row5.000000e+01
+=====dof_v718========sum_row5.000000e+01
+*=====dof_v719========sum_row5.000000e+01
+=====dof_v720========sum_row5.000000e+01
+=====dof_v721========sum_row5.000000e+01
+=====dof_v722========sum_row5.000000e+01
+=====dof_v723========sum_row5.000000e+01
+=====dof_v724========sum_row5.000000e+01
+=====dof_v725========sum_row5.000000e+01
+=====dof_v726========sum_row2.500000e+01
+=====dof_v727========sum_row5.000000e+01
+*=====dof_v728========sum_row5.000000e+01
+=====dof_v729========sum_row5.000000e+01
+=====dof_v730========sum_row5.000000e+01
+=====dof_v731========sum_row5.000000e+01
+=====dof_v732========sum_row5.000000e+01
+=====dof_v733========sum_row5.000000e+01
+=====dof_v734========sum_row5.000000e+01
+=====dof_v735========sum_row5.000000e+01
+=====dof_v736========sum_row5.000000e+01
+*=====dof_v737========sum_row2.500000e+01
+=====dof_v738========sum_row5.000000e+01
+=====dof_v739========sum_row5.000000e+01
+=====dof_v740========sum_row5.000000e+01
+=====dof_v741========sum_row5.000000e+01
+=====dof_v742========sum_row5.000000e+01
+=====dof_v743========sum_row5.000000e+01
+=====dof_v744========sum_row5.000000e+01
+=====dof_v745========sum_row5.000000e+01
+*=====dof_v746========sum_row5.000000e+01
+=====dof_v747========sum_row5.000000e+01
+=====dof_v748========sum_row2.500000e+01
+=====dof_v749========sum_row5.000000e+01
+=====dof_v750========sum_row5.000000e+01
+=====dof_v751========sum_row5.000000e+01
+=====dof_v752========sum_row5.000000e+01
+=====dof_v753========sum_row5.000000e+01
+=====dof_v754========sum_row5.000000e+01
+*=====dof_v755========sum_row5.000000e+01
+=====dof_v756========sum_row5.000000e+01
+=====dof_v757========sum_row5.000000e+01
+=====dof_v758========sum_row5.000000e+01
+=====dof_v759========sum_row2.500000e+01
+=====dof_v760========sum_row5.000000e+01
+=====dof_v761========sum_row5.000000e+01
+=====dof_v762========sum_row5.000000e+01
+=====dof_v763========sum_row5.000000e+01
+*=====dof_v764========sum_row5.000000e+01
+=====dof_v765========sum_row5.000000e+01
+=====dof_v766========sum_row5.000000e+01
+=====dof_v767========sum_row5.000000e+01
+=====dof_v768========sum_row5.000000e+01
+=====dof_v769========sum_row5.000000e+01
+=====dof_v770========sum_row2.500000e+01
+=====dof_v771========sum_row5.000000e+01
+=====dof_v772========sum_row5.000000e+01
+*=====dof_v773========sum_row5.000000e+01
+=====dof_v774========sum_row5.000000e+01
+=====dof_v775========sum_row5.000000e+01
+=====dof_v776========sum_row5.000000e+01
+=====dof_v777========sum_row5.000000e+01
+=====dof_v778========sum_row5.000000e+01
+=====dof_v779========sum_row5.000000e+01
+=====dof_v780========sum_row5.000000e+01
+=====dof_v781========sum_row2.500000e+01
+*=====dof_v782========sum_row5.000000e+01
+=====dof_v783========sum_row5.000000e+01
+=====dof_v784========sum_row5.000000e+01
+=====dof_v785========sum_row5.000000e+01
+=====dof_v786========sum_row5.000000e+01
+=====dof_v787========sum_row5.000000e+01
+=====dof_v788========sum_row5.000000e+01
+=====dof_v789========sum_row5.000000e+01
+=====dof_v790========sum_row5.000000e+01
+*=====dof_v791========sum_row5.000000e+01
+=====dof_v792========sum_row2.500000e+01
+=====dof_v793========sum_row5.000000e+01
+=====dof_v794========sum_row5.000000e+01
+=====dof_v795========sum_row5.000000e+01
+=====dof_v796========sum_row5.000000e+01
+=====dof_v797========sum_row5.000000e+01
+=====dof_v798========sum_row5.000000e+01
+=====dof_v799========sum_row5.000000e+01
+*=====dof_v800========sum_row5.000000e+01
+=====dof_v801========sum_row5.000000e+01
+=====dof_v802========sum_row5.000000e+01
+=====dof_v803========sum_row2.500000e+01
+=====dof_v804========sum_row5.000000e+01
+=====dof_v805========sum_row5.000000e+01
+=====dof_v806========sum_row5.000000e+01
+=====dof_v807========sum_row5.000000e+01
+=====dof_v808========sum_row5.000000e+01
+*=====dof_v809========sum_row5.000000e+01
+=====dof_v810========sum_row5.000000e+01
+=====dof_v811========sum_row5.000000e+01
+=====dof_v812========sum_row5.000000e+01
+=====dof_v813========sum_row5.000000e+01
+=====dof_v814========sum_row2.500000e+01
+=====dof_v815========sum_row5.000000e+01
+=====dof_v816========sum_row5.000000e+01
+=====dof_v817========sum_row5.000000e+01
+*=====dof_v818========sum_row5.000000e+01
+=====dof_v819========sum_row5.000000e+01
+=====dof_v820========sum_row5.000000e+01
+=====dof_v821========sum_row5.000000e+01
+=====dof_v822========sum_row5.000000e+01
+=====dof_v823========sum_row5.000000e+01
+=====dof_v824========sum_row5.000000e+01
+=====dof_v825========sum_row2.500000e+01
+=====dof_v826========sum_row5.000000e+01
+*=====dof_v827========sum_row5.000000e+01
+=====dof_v828========sum_row5.000000e+01
+=====dof_v829========sum_row5.000000e+01
+=====dof_v830========sum_row5.000000e+01
+=====dof_v831========sum_row5.000000e+01
+=====dof_v832========sum_row5.000000e+01
+=====dof_v833========sum_row5.000000e+01
+=====dof_v834========sum_row5.000000e+01
+=====dof_v835========sum_row5.000000e+01
+*=====dof_v836========sum_row2.500000e+01
+=====dof_v837========sum_row5.000000e+01
+=====dof_v838========sum_row5.000000e+01
+=====dof_v839========sum_row5.000000e+01
+=====dof_v840========sum_row5.000000e+01
+=====dof_v841========sum_row5.000000e+01
+=====dof_v842========sum_row5.000000e+01
+=====dof_v843========sum_row5.000000e+01
+=====dof_v844========sum_row5.000000e+01
+*=====dof_v845========sum_row5.000000e+01
+=====dof_v846========sum_row5.000000e+01
+=====dof_v847========sum_row2.500000e+01
+=====dof_v848========sum_row5.000000e+01
+=====dof_v849========sum_row5.000000e+01
+=====dof_v850========sum_row5.000000e+01
+=====dof_v851========sum_row5.000000e+01
+=====dof_v852========sum_row5.000000e+01
+=====dof_v853========sum_row5.000000e+01
+*=====dof_v854========sum_row5.000000e+01
+=====dof_v855========sum_row5.000000e+01
+=====dof_v856========sum_row5.000000e+01
+=====dof_v857========sum_row5.000000e+01
+=====dof_v858========sum_row2.500000e+01
+=====dof_v859========sum_row5.000000e+01
+=====dof_v860========sum_row5.000000e+01
+=====dof_v861========sum_row5.000000e+01
+=====dof_v862========sum_row5.000000e+01
+*=====dof_v863========sum_row5.000000e+01
+=====dof_v864========sum_row5.000000e+01
+=====dof_v865========sum_row5.000000e+01
+=====dof_v866========sum_row5.000000e+01
+=====dof_v867========sum_row5.000000e+01
+=====dof_v868========sum_row5.000000e+01
+=====dof_v869========sum_row2.500000e+01
+=====dof_v870========sum_row5.000000e+01
+=====dof_v871========sum_row5.000000e+01
+*=====dof_v872========sum_row5.000000e+01
+=====dof_v873========sum_row5.000000e+01
+=====dof_v874========sum_row5.000000e+01
+=====dof_v875========sum_row5.000000e+01
+=====dof_v876========sum_row5.000000e+01
+=====dof_v877========sum_row5.000000e+01
+=====dof_v878========sum_row5.000000e+01
+=====dof_v879========sum_row5.000000e+01
+=====dof_v880========sum_row2.500000e+01
+*=====dof_v881========sum_row5.000000e+01
+=====dof_v882========sum_row5.000000e+01
+=====dof_v883========sum_row5.000000e+01
+=====dof_v884========sum_row5.000000e+01
+=====dof_v885========sum_row5.000000e+01
+=====dof_v886========sum_row5.000000e+01
+=====dof_v887========sum_row5.000000e+01
+=====dof_v888========sum_row5.000000e+01
+=====dof_v889========sum_row5.000000e+01
+*=====dof_v890========sum_row5.000000e+01
+
+    Assembling Bvv ...
+    Assembling Bvt ...
+    Assembling Btv (alternative form) ...
+    Assembling Btt (alternative form) ...
+transport3d1d::solve: solve transport problem
+
+transport3d1d::solve Solving the monolithic system ... 
+iteration number:1.000000e+00
+time = 0.000000e+00 s
+Assembling the monolithic rhs FM ... 
+  Initializing RHS for FM ...
+ho aggiumnto rhs=1
+  Building tissue boundary term ...
+assemble BC for tissue
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 5.717257e-03
+
+... time to solve the system using Super LU method: 2.347080e-01 seconds
+solved! going to export...
+Exporting the solution (vtk format) to ./vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+Exporting the solution (vtk format) to ./vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+Exporting the solution (vtk format) to ./vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported! now new iteration...
+
+... total time to solve : 1.822845e+00 seconds
+mesht description: GT='GT_PK(3,1)'; NSUBDIV=[11,11,11]; ORG=[0,0,0]; SIZES=[0.1,0.1,1]; NOISED=0
