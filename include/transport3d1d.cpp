@@ -27,8 +27,9 @@
 //#define AMG_STAND_ALONE
 //#define AMG_ACCELERATED
 
-
+#ifdef USE_SAMG
 #include "samg.h"
+#endif
 
 /* default 4 Byte integer types */
 #ifndef APPL_INT
@@ -539,20 +540,20 @@ transport3d1d::build_vessel_boundary(void)
 
 		// Ckeck network assembly
 #ifdef M3D1D_VERBOSE_
-		cout << "--- NETWORK ASSEMBLY ------------------ "   << endl;
-		cout << "  Branches:   " << nb_branches << endl
-			<< "  Vertices:   " << nn.size()+1 << endl;
-		cout << "  Extrema:    " << extrema << endl;	  
-		for (size_type i=0; i<BCv_transp.size(); ++i)
-			cout << "    -  label=" << BCv_transp[i].label 
-				<< ", value=" << BCv_transp[i].value << ", ind=" << BCv_transp[i].idx 
-				<< ", rg=" << BCv_transp[i].rg << ", branches=" << BCv_transp[i].branches << endl; 
-		cout << "  Junctions: " << junctions << endl;
-		for (size_type i=0; i<Jv.size(); ++i)
-			cout << "    -  label=" << Jv[i].label 
-				<< ", value=" << Jv[i].value << ", ind=" << Jv[i].idx 
-				<< ", rg=" << Jv[i].rg << ", branches=" << Jv[i].branches << endl; 
-		cout << "---------------------------------------- "   << endl;
+// 		cout << "--- NETWORK ASSEMBLY ------------------ "   << endl;
+// 		cout << "  Branches:   " << nb_branches << endl
+// 			<< "  Vertices:   " << nn.size()+1 << endl;
+// 		cout << "  Extrema:    " << extrema << endl;	  
+// 		for (size_type i=0; i<BCv_transp.size(); ++i)
+// 			cout << "    -  label=" << BCv_transp[i].label 
+// 				<< ", value=" << BCv_transp[i].value << ", ind=" << BCv_transp[i].idx 
+// 				<< ", rg=" << BCv_transp[i].rg << ", branches=" << BCv_transp[i].branches << endl; 
+// 		cout << "  Junctions: " << junctions << endl;
+// 		for (size_type i=0; i<Jv.size(); ++i)
+// 			cout << "    -  label=" << Jv[i].label 
+// 				<< ", value=" << Jv[i].value << ", ind=" << Jv[i].idx 
+// 				<< ", rg=" << Jv[i].rg << ", branches=" << Jv[i].branches << endl; 
+// 		cout << "---------------------------------------- "   << endl;
 #endif
 
 	} 
@@ -1105,6 +1106,7 @@ export_vtk("2");
 
 	bool transport3d1d::solve_samg (void)
 	{
+#ifdef USE_SAMG
 		std::cout<<"solve transport problem"<<std::endl<<std::endl;
 #ifdef M3D1D_VERBOSE_
 		cout << "Solving the monolithic system ... " << endl;
@@ -1802,7 +1804,7 @@ export_vtk("2");
 
 
 			cout << endl<<"... time to solve : " << gmm::uclock_sec() - time << " seconds\n";
-
+#endif //USE_SAMG
 			return true;
 			}; // end of solve
 
