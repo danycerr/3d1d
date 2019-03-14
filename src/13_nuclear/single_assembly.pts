@@ -2,16 +2,16 @@ BEGIN_LIST
 BEGIN_ARC
 BC MIX  0.0000
 BC MIX  0.0000
-	1	0.05	0.05	0	begin
-	1	0.05	0.05	1	end
-	1	0.05	0.05	0.1	point
-	1	0.05	0.05	0.2	point
-	1	0.05	0.05	0.3	point
-	1	0.05	0.05	0.4	point
-	1	0.05	0.05	0.5	point
-	1	0.05	0.05	0.6	point
-	1	0.05	0.05	0.7	point
-	1	0.05	0.05	0.8	point
-	1	0.05	0.05	0.9	point
+	1	0.051	0.051	0	begin
+	1	0.051	0.051	1	end
+	1	0.051	0.051	0.1	point
+	1	0.051	0.051	0.2	point
+	1	0.051	0.051	0.3	point
+	1	0.051	0.051	0.4	point
+	1	0.051	0.051	0.5	point
+	1	0.051	0.051	0.6	point
+	1	0.051	0.051	0.7	point
+	1	0.051	0.051	0.8	point
+	1	0.051	0.051	0.9	point
 END_ARC
 END_LIST

@@ -48,9 +48,9 @@ LINEAR_LYMPHATIC_DRAINAGE = 1;
 %Flag to add adhesive term in vessel
 NANO=0;
 %Flag to have coupling of the problem
-COUPLING=1;	%=1 coupling
+COUPLING=0;	%=1 coupling
 %Flag to have fixed source
-FIXED_SOURCE=0;	%=0 no fixed source
+FIXED_SOURCE=1;	%=0 no fixed source
 %Flag to have non null rhs
 NONNULL_RHS=1;	%=0 null rhs
 %Flag for the new formulation
@@ -66,10 +66,10 @@ OutputDirectory = './vtk/';
 %  MESH
 %===================================
 % Flags to build a regular 3d mesh
-TEST_GEOMETRY = 0;
-GT_T       = 'GT_PK(3,1)'; 
-NSUBDIV_T  = '[12,11,11]';  
-%NSUBDIV_T = '[11,11,11]';
+TEST_GEOMETRY = 1;
+GT_T       = 'GT_LINEAR_QK(3)'; 
+%NSUBDIV_T  = '[12,11,11]';  
+NSUBDIV_T = '[11,11,11]';
 %ORG_T      = '[-0.1,0,0]'; 
 ORG_T      = '[0,0,0]';
 SIZES_T    = '[0.1,0.1,1]';
@@ -77,12 +77,12 @@ SIZES_T    = '[0.1,0.1,1]';
 %SIZES_T    = '[0.1,0.1,1]';
 NOISED_T   = '0';
 % Path to import the 3d mesh
-MESH_FILET = './mesh/esagonal_assembly_tri.msh'; 
+MESH_FILET = ' '; 
 % Path to import the 1d list of points
 MESH_FILEV = './segment.pts'; 
  MESH_FILEV_TRANSP = './single_assembly.pts'; 
-MESH_FILEV_TRANSP = './assembly_grid_9p9.pts';
-%MESH_FILEV_TRANSP = './assembly_grid_17p17.pts';
+% MESH_FILEV_TRANSP = './assembly_grid_9p9.pts';
+MESH_FILEV_TRANSP = './assembly_grid_17p17.pts';
 % read interpolator operator from file
 READ_ITERPOLATOR = 1; 
 RFILE= './radius.pts';
@@ -90,21 +90,21 @@ RFILE= './radius.pts';
 %  GETFEM DESCRIPTORS
 %===================================
 % GetFem type for the 3D mesh
-MESH_TYPET  = 'GT_PK(3,1)';   
+MESH_TYPET  = 'GT_LINEAR_QK(3)';   
 % GetFem type for the 1D mesh
 MESH_TYPEV  = 'GT_PK(1,1)';        
 % GetFem type for the 3D Finite Element Methods
-FEM_TYPET   = 'FEM_RT0(3)';
-FEM_TYPET_P = 'FEM_PK_DISCONTINUOUS(3,0)';
-FEM_TYPET_DATA = 'FEM_PK(3,0)';
-FEM_TYPET_C = 'FEM_PK(3,1)';
+FEM_TYPET   = 'FEM_QK(3,2)';
+FEM_TYPET_P = 'FEM_QK_DISCONTINUOUS(3,0)';
+FEM_TYPET_DATA = 'FEM_QK(3,0)';
+FEM_TYPET_C = 'FEM_QK(3,1)';
 % GetFem type for the 1D Finite Element Methods
 FEM_TYPEV   = 'FEM_PK(1,2)';  
 FEM_TYPEV_P = 'FEM_PK(1,1)';  
 FEM_TYPEV_DATA = 'FEM_PK(1,0)';  
 FEM_TYPEV_C = 'FEM_PK(1,1)';  
 % GetFem type for the 3D Integration Method
-IM_TYPET    = 'IM_TETRAHEDRON(6)'; 
+IM_TYPET    = 'IM_GAUSS_PARALLELEPIPED(3,6)'; 
 % GetFem type for the 1D Integration Method
 IM_TYPEV    = 'IM_GAUSS1D(6)'; 
 % GetFem type for the 1D Integration Method
@@ -272,9 +272,9 @@ P0=0;
 
 % Faces:   x=0  x=L  y=0  y=L  z=0  z=L
 % BC labels (DIR / MIX)
-BClabel_transp = 'MIX MIX MIX MIX DIR MIX'
+BClabel_transp = 'MIX DIR MIX MIX MIX MIX '
 % BC values
-BCvalue_transp = '0.0 0.0  0.00  0.0 20.0  0.0';
+BCvalue_transp = '0.0 20.0  0.00  0.0 0.0  0.0';
 % Coefficient for MIX condition in tissue
 %BETAtissue_transp = 1.0;
 BETAtissue_transp = 1.0E-14;
