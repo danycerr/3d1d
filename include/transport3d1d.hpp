@@ -28,6 +28,7 @@
 #include <getfem/getfem_superlu.h>
 #include <getfem/getfem_partial_mesh_fem.h>
 #include <getfem/getfem_interpolated_fem.h>
+#include <getfem/getfem_generic_assembly.h>// for generic assembly
 #include <gmm/gmm.h>
 #include <gmm/gmm_matrix.h>
 #include <gmm/gmm_inoutput.h>

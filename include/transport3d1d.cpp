@@ -20,10 +20,10 @@
 
 //SAMG
 //#define CSC_INTERFACE 
-//#define SPARSE_INTERFACE
+#define SPARSE_INTERFACE
 //#define CSR_INTERFACE 
 // ------------------------------------
-// #define DIRECT_SOLVER 
+ #define DIRECT_SOLVER 
 //#define AMG_STAND_ALONE
 //#define AMG_ACCELERATED
 
@@ -80,11 +80,17 @@ namespace getfem {
 		mesht.clear();
 		bool test = 0;
 		test = PARAM.int_value("TEST_GEOMETRY");
+                int nref =  PARAM.int_value("N_REFINE");
 		if(test==0){
 #ifdef M3D1D_VERBOSE_
 			cout << "Importing the 3D mesh for the tissue ...  "   << endl;
 #endif
-			import_msh_file(descr.MESH_FILET, mesht);
+// 			import_msh_file(descr.MESH_FILET, mesht);
+                        
+                        std::string namefilecmd="gmsh:"+descr.MESH_FILET;
+                        getfem::import_mesh(namefilecmd.c_str(),mesht);
+                        for (int iref=0; iref<nref; iref++) mesht.Bank_refine(mesht.convex_index());
+                
 		}else{
 #ifdef M3D1D_VERBOSE_
 			cout << "Building the regular 3D mesh for the tissue ...  "   << endl;
@@ -569,7 +575,7 @@ void transport3d1d::assembly (void)
 	//1 Build the monolithic matrix AM
 	assembly_mat(); 
 	//2 Build the monolithic rhs FM
-	//assembly_rhs();
+// 	assembly_rhs();
 } // end of assembly
 
 	void 
@@ -584,6 +590,7 @@ transport3d1d::assembly_mat(void)
 	gmm::resize(FM_transp, dof_transp.tot()); gmm::clear(FM_transp);
 #ifdef M3D1D_VERBOSE_
 	cout << "Assembling the monolithic matrix AM ..." << endl;
+        std::cout<<"dof_transp.Ct() " << dof_transp.Ct() <<" dof_transp.Cv() " << dof_transp.Cv()<<std::endl; 
 #endif
 
 	sparse_matrix_type Dt(dof_transp.Ct(), dof_transp.Ct());gmm::clear(Dt);
@@ -602,7 +609,10 @@ transport3d1d::assembly_mat(void)
 	sparse_matrix_type Bvv(dof_transp.Cv(), dof_transp.Cv());gmm::clear(Bvv);
 
 	// Aux tissue-to-vessel averaging matrix
+        
 	sparse_matrix_type Mbar(dof_transp.Cv(), dof_transp.Ct());gmm::clear(Mbar);
+        
+        std::cout<<" Mbar from transp"<< Mbar.nrows()<< " "<< Mbar.ncols()<<std::endl;
 	// Aux tissue-to-vessel interpolation matrix
 	sparse_matrix_type Mlin(dof_transp.Cv(), dof_transp.Ct());gmm::clear(Mlin);
 
@@ -620,6 +630,20 @@ transport3d1d::assembly_mat(void)
 					gmm::sub_interval(0, dof_transp.Ct()))); 
 
 	} 
+	{
+	getfem::ga_workspace workspace;
+        getfem::size_type nbdof = mf_Ct.nb_dof();
+        getfem::base_vector T(nbdof);
+        workspace.add_fem_variable("t", mf_Ct, gmm::sub_interval(0, nbdof), T);
+        workspace.add_expression("[0.,0.,1].Grad_t*Test_t", mimt);
+// getfem::model_real_sparse_matrix K(nbdof, nbdof);
+// workspace.set_assembled_matrix(K);
+        workspace.assembly(2);
+	gmm::add(gmm::scaled(workspace.assembled_matrix(),3./1.5e-4),
+				gmm::sub_matrix(AM_transp, 
+					gmm::sub_interval(0, dof_transp.Ct()), 
+					gmm::sub_interval(0, dof_transp.Ct()))); 
+	}
 #ifdef M3D1D_VERBOSE_
 	cout << "  Assembling  Dv ..." << endl;
 #endif
@@ -642,8 +666,27 @@ transport3d1d::assembly_mat(void)
 #ifdef M3D1D_VERBOSE_
 	cout << "  Assembling aux exchange matrices Mbar and Mlin ..." << endl;
 #endif
-	asm_exchange_aux_mat(Mbar, Mlin, 
-			mimv, mf_Ct, mf_Cv, param.R(), descr.NInt);
+	bool READ_ITERPOLATOR = PARAM.int_value("READ_ITERPOLATOR", "flag for read interpolator from file ");
+	if (!READ_ITERPOLATOR){
+	  asm_exchange_aux_mat(Mbar, Mlin, 
+			  mimv, mf_Ct, mf_Cv, param.R(), descr.NInt);
+          
+        std::cout<<" Mbar from after calc "<< Mbar.nrows()<< " "<< Mbar.ncols()<<std::endl;
+	  std::ostringstream mbar_name,mlin_name;
+	  mbar_name << "./vtk/Mbar";
+	  mlin_name << "./vtk/Mlin";
+	  gmm::MatrixMarket_IO::write(mbar_name.str().c_str(), Mbar);
+	  gmm::MatrixMarket_IO::write(mlin_name.str().c_str(), Mlin);
+	}
+	else
+	{
+	  std::ostringstream mbar_name,mlin_name;
+	  mbar_name << "./vtk/Mbar";
+	  mlin_name << "./vtk/Mlin";
+	  gmm::MatrixMarket_load(mbar_name.str().c_str(), Mbar);
+	  gmm::MatrixMarket_load(mlin_name.str().c_str(), Mlin);
+	}
+
 #ifdef M3D1D_VERBOSE_
 	cout << "  Assembling exchange matrices ..." << endl;
 #endif
@@ -653,13 +696,16 @@ transport3d1d::assembly_mat(void)
 	//ricalcolo Rv_coeff=(1-sigma)*Q*((p_v-\bar(p_t) -sigma*(pi_v-pi_t)))*0.5
 
 
-	sparse_matrix_type Mbar_(dof.Pv(), dof.Pt());
-	sparse_matrix_type Mlin_(dof.Pv(), dof.Pt());
+// 	sparse_matrix_type Mbar_(dof.Pv(), dof.Pt());
+// 	sparse_matrix_type Mlin_(dof.Pv(), dof.Pt());
 
-	asm_exchange_aux_mat(Mbar_, Mlin_, mimv, mf_Pt, mf_Pv, param.R(), descr.NInt);
-
+// 	asm_exchange_aux_mat(Mbar_, Mlin_, mimv, mf_Pt, mf_Pv, param.R(), descr.NInt);
+if(1){ // not working properly to check here
+    
+        std::cout<<" Mbar from transp"<< Mbar.nrows()<< " "<< Mbar.ncols()<<std::endl;
 	asm_exchange_mat_transp(Btt, Btv, Bvt, Bvv,
 			mimv, mf_Cv, mf_coefv, Mbar, Mlin, param_transp.Y(), NEWFORM);
+}
 	
 
 	
@@ -673,7 +719,7 @@ transport3d1d::assembly_mat(void)
 				gmm::sub_interval(0, dof_transp.Ct()), 
 				gmm::sub_interval(0, dof_transp.Ct()))); 
 
-		gmm::MatrixMarket_IO::write("Btt_fede.mm",gmm::scaled(Btt, 2.0*pi*param.R(0)));
+// 		gmm::MatrixMarket_IO::write("Btt_fede.mm",gmm::scaled(Btt, 2.0*pi*param.R(0)));
 		
 		gmm::add(gmm::scaled(Btv, -2.0*pi*param.R(0)),									
 
@@ -783,6 +829,9 @@ bool NONNULL_RHS = PARAM.int_value("NONNULL_RHS", "flag for non null rhs ");
 		}
 		for (int i=dof_transp.Ct();i<dof_transp.tot();i++){
 			RHS_coef[i]=source;	
+		}
+		for (int i=0;i<dof_transp.Cv();i++){
+			RHS_coef[i+dof_transp.Ct()]=1.0e+9/(17*17);	
 		}
 		vector_type RHS(dof_transp.tot());
 		getfem::asm_source_term(gmm::sub_vector(RHS,gmm::sub_interval(0, dof_transp.Ct())),mimt,mf_Ct,mf_Ct,gmm::sub_vector(RHS_coef,gmm::sub_interval(0, dof_transp.Ct())));
@@ -913,9 +962,9 @@ void transport3d1d::update (vector_type Pigreco){
 
 bool transport3d1d::solve (void)
 {
-	std::cout<<"solve transport problem"<<std::endl<<std::endl;
+	std::cout<<"transport3d1d::solve: solve transport problem"<<std::endl<<std::endl;
 #ifdef M3D1D_VERBOSE_
-	cout << "Solving the monolithic system ... " << endl;
+	cout << "transport3d1d::solve Solving the monolithic system ... " << endl;
 #endif
 	gmm::resize(AM_temp, dof_transp.tot(), dof_transp.tot()); gmm::clear(AM_temp);
 	gmm::resize(FM_temp, dof_transp.tot()); gmm::clear(FM_temp);

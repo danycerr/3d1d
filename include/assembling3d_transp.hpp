@@ -127,7 +127,8 @@ asm_tissue_bc_transp
 
 
 	for (size_type bc=0; bc < BC.size(); ++bc) {
-		GMM_ASSERT1(mf_c.linked_mesh().has_region(bc), "missed mesh region" << bc);
+// 		GMM_ASSERT1(mf_c.linked_mesh().has_region(bc), "missed mesh region" << bc); //this assert works only with hexaedral domain
+                
 		if (BC[bc].label=="DIR") { // Dirichlet BC
 			// Add cv_in contribution to Fv, and add a penalty as a mass matrix
 			VEC BC_temp(mf_data.nb_dof(), BC[bc].value);

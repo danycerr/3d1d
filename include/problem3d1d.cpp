@@ -96,12 +96,17 @@ void
 problem3d1d::build_mesh(void)
 {
 	bool test = 0;
-	test = PARAM.int_value("TEST_GEOMETRY");
+	test =  PARAM.int_value("TEST_GEOMETRY");
+        int nref =  PARAM.int_value("N_REFINE");
 	if(test==0){
 		#ifdef M3D1D_VERBOSE_
 		cout << "Importing the 3D mesh for the tissue ...  "   << endl;
 		#endif
-		 import_msh_file(descr.MESH_FILET, mesht);
+// 		 import_msh_file(descr.MESH_FILET, mesht);
+                std::string namefilecmd="gmsh:"+descr.MESH_FILET;
+                getfem::import_mesh(namefilecmd.c_str(),mesht);
+                for (int iref=0; iref<nref; iref++) mesht.Bank_refine(mesht.convex_index());
+                
 	}else{
 		#ifdef M3D1D_VERBOSE_
 		cout << "Building the regular 3D mesh for the tissue ...  "   << endl;
@@ -151,8 +156,8 @@ problem3d1d::set_im_and_fem(void)
 	mf_Ut.set_qdim(bgeot::dim_type(DIMT)); 
 	
 	mf_Ut.set_finite_element(mesht.convex_index(), pf_Ut);
-	GMM_ASSERT1(mf_Ut.get_qdim() == mf_Ut.fem_of_element(0)->target_dim(), 
-		"Intrinsic vectorial FEM used"); // RT0 IS INTRINSIC VECTORIAL!!!
+// 	GMM_ASSERT1(mf_Ut.get_qdim() == mf_Ut.fem_of_element(0)->target_dim(), 
+// 		"Intrinsic vectorial FEM used"); // RT0 IS INTRINSIC VECTORIAL!!! // here
 	mf_Pt.set_finite_element(mesht.convex_index(), pf_Pt);
 	mf_coeft.set_finite_element(mesht.convex_index(), pf_coeft); 
 	#ifdef M3D1D_VERBOSE_
