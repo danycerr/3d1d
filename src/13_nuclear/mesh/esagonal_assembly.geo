@@ -1,6 +1,6 @@
-Point(1) = {0.1, 0., 0., 0. };
+Point(1) = {0.15, 0.05, 0., 0. };
 For i In {1:5:1}
-Rotate {{0, 0, 1}, {0, 0, 0}, Pi/3} {
+Rotate {{0, 0, 1}, {0.05, 0.05, 0}, Pi/3} {
   Duplicata { Point{i}; }
 }
 EndFor
@@ -33,3 +33,4 @@ Recombine Surface {7};
          Recombine;
         };
         
+Physical Volume(54) = {2, 1};

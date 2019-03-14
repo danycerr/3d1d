@@ -78,13 +78,14 @@ SIZES_T    = '[0.1,0.1,1]';
 NOISED_T   = '0';
 % Path to import the 3d mesh
 MESH_FILET = './mesh/esagonal_assembly_tri.msh'; 
+N_REFINE =1;
 % Path to import the 1d list of points
 MESH_FILEV = './segment.pts'; 
  MESH_FILEV_TRANSP = './single_assembly.pts'; 
-MESH_FILEV_TRANSP = './assembly_grid_9p9.pts';
-%MESH_FILEV_TRANSP = './assembly_grid_17p17.pts';
+% MESH_FILEV_TRANSP = './assembly_grid_9p9.pts';
+% MESH_FILEV_TRANSP = './assembly_grid_17p17.pts';
 % read interpolator operator from file
-READ_ITERPOLATOR = 1; 
+READ_ITERPOLATOR = 0; 
 RFILE= './radius.pts';
 %===================================
 %  GETFEM DESCRIPTORS
