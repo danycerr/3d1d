@@ -21,9 +21,9 @@
 //SAMG
 //#define CSC_INTERFACE 
 //#define SPARSE_INTERFACE
-//#define CSR_INTERFACE 
+#define CSR_INTERFACE 
 // ------------------------------------
-// #define DIRECT_SOLVER 
+#define DIRECT_SOLVER 
 //#define AMG_STAND_ALONE
 //#define AMG_ACCELERATED
 
@@ -638,10 +638,12 @@ transport3d1d::assembly_mat(void)
 	}
 
 
-
 #ifdef M3D1D_VERBOSE_
 	cout << "  Assembling aux exchange matrices Mbar and Mlin ..." << endl;
 #endif
+	cout << "R " <<  param.R()[0] << endl;
+	cout << "Nint " << descr.NInt << endl; 
+	
 	asm_exchange_aux_mat(Mbar, Mlin, 
 			mimv, mf_Ct, mf_Cv, param.R(), descr.NInt);
 #ifdef M3D1D_VERBOSE_
@@ -655,9 +657,11 @@ transport3d1d::assembly_mat(void)
 
 	sparse_matrix_type Mbar_(dof.Pv(), dof.Pt());
 	sparse_matrix_type Mlin_(dof.Pv(), dof.Pt());
-
+	
+	
 	asm_exchange_aux_mat(Mbar_, Mlin_, mimv, mf_Pt, mf_Pv, param.R(), descr.NInt);
-
+	
+	cout << "Y " << param_transp.Y() << endl;
 	asm_exchange_mat_transp(Btt, Btv, Bvt, Bvv,
 			mimv, mf_Cv, mf_coefv, Mbar, Mlin, param_transp.Y(), NEWFORM);
 	
@@ -666,7 +670,10 @@ transport3d1d::assembly_mat(void)
 
 	bool COUPLING = PARAM.int_value("COUPLING", "flag for coupling-exchange term ");
 	if(COUPLING==1){
-		
+
+	gmm::MatrixMarket_IO::write("Mbar_fede.mm",Mbar);
+	gmm::MatrixMarket_IO::write("Mlin_fede.mm",Mlin);
+	
 		gmm::add(gmm::scaled(Btt, 2.0*pi*param.R(0)),			 
 
 			gmm::sub_matrix(AM_transp, 
@@ -681,16 +688,30 @@ transport3d1d::assembly_mat(void)
 					gmm::sub_interval(0, dof_transp.Ct()),
 					gmm::sub_interval(dof_transp.Ct(), dof_transp.Cv()))); 
 
+		gmm::MatrixMarket_IO::write("Btv_fede.mm",gmm::scaled(Btv, -2.0*pi*param.R(0)));
+
 		gmm::add(gmm::scaled(Bvt, -2.0/param.R(0)),  	
 				gmm::sub_matrix(AM_transp, 
 					gmm::sub_interval(dof_transp.Ct(), dof_transp.Cv()),
 					gmm::sub_interval(0, dof_transp.Ct())));
 
-
+		gmm::MatrixMarket_IO::write("Bvt_fede.mm",gmm::scaled(Bvt, -2.0/param.R(0)));
+		
 		gmm::add(gmm::scaled(Bvv, 2.0/param.R(0)),								
 				gmm::sub_matrix(AM_transp, 
 					gmm::sub_interval(dof_transp.Ct(), dof_transp.Cv()), 
 					gmm::sub_interval(dof_transp.Ct(), dof_transp.Cv()))); 
+		
+		gmm::MatrixMarket_IO::write("Bvv_fede.mm",gmm::scaled(Bvv, 2.0/param.R(0)));
+	
+ 	 std::cout << " Btt " << dof_transp.Ct() << " "  <<dof_transp.Ct() << std::endl;
+         // Vessel-to-tissue exchange matrix
+         std::cout << " Btv " << dof_transp.Ct() << " " <<  dof_transp.Cv() << std::endl;
+         // Tissue-to-vessel exchange matrix 
+         std::cout << " Bvt " << dof_transp.Cv() << " " <<  dof_transp.Ct() << std::endl;
+         // Vessel-to-vessel exchange matrix
+         std::cout << " Bvv " << dof_transp.Cv() << " " <<  dof_transp.Cv() << std::endl;
+
 
 	}
 
@@ -913,6 +934,7 @@ void transport3d1d::update (vector_type Pigreco){
 
 bool transport3d1d::solve (void)
 {
+	gmm::MatrixMarket_IO::write("AM_transp.mm", AM_transp);
 	std::cout<<"solve transport problem"<<std::endl<<std::endl;
 #ifdef M3D1D_VERBOSE_
 	cout << "Solving the monolithic system ... " << endl;
@@ -1110,7 +1132,12 @@ export_vtk("2");
 
 
 	bool transport3d1d::solve_samg (void)
-	{
+	{	
+		/*gmm::csr_matrix <scalar_type> AM_csr;
+		gmm::copy(AM_transp, AM_csr);
+		gmm::MatrixMarket_IO::write("AM_csr_v2.mm", AM_csr);
+		gmm::MatrixMarket_IO::write("FM_v2", FM_transp);
+		*/
 		std::cout<<"solve transport problem"<<std::endl<<std::endl;
 #ifdef M3D1D_VERBOSE_
 		cout << "Solving the monolithic system ... " << endl;
@@ -1651,7 +1678,7 @@ gmm::copy(AM_temp, A_csr);
 				// 7  Write matrices to disk: level 2 up to the coarsest level. 
 				// 8  Write finest‐level matrix to disk (incl. right hand side etc.). 
 				// 9  Write all matrices to disk. 
-				APPL_INT idump     = -1;       // minimum output during setup
+				APPL_INT idump     = 9;       // minimum output during setup
 				//============================================
 				// iout page 44 Userguide. it controls display outpu. default 2 very verbose 43
 				APPL_INT iout      = 43;        // display residuals per iteration and work statistics
